@@ -1,0 +1,1084 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#111a3a"><meta name="description" content="TITAN GYM: schede personalizzate, esercizi muscolari, posturali e stretching con foto reali, recupero automatico e Cloud Sync.">
+<link rel="manifest" href="manifest.json">
+<title>TITAN GYM — Forza, Postura, Risultati</title>
+<style>
+:root{--navy:#111a3a;--navy2:#1b2852;--blue:#5267f2;--accent:#5267f2;--cyan:#19b6c9;--violet:#8b5cf6;--green:#16a679;--orange:#f59e0b;--bg:#f3f5fb;--card:#fff;--ink:#17213c;--muted:#6b7691;--line:#e4e8f2;--shadow:0 12px 34px #17234a0d}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer;border:0;border-radius:12px;padding:11px 15px;font-weight:700;background:var(--blue);color:white;transition:.15s}button:hover{filter:brightness(1.05);transform:translateY(-1px)}button:disabled{opacity:.45;cursor:not-allowed;transform:none}.btn-dark{background:var(--navy)}.btn-soft{background:#edf0ff;color:#3e50cf}.btn-light{background:#eef1f7;color:#35415e}.btn-green{background:var(--green)}.btn-orange{background:var(--orange);color:#fff}.btn-danger{background:#fff0f0;color:#c43c48}.btn-small{padding:8px 11px;font-size:13px}
+.row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.app{min-height:100vh}.sidebar{position:fixed;inset:0 auto 0 0;width:238px;background:linear-gradient(165deg,#0d142c,#1d2b5e 70%,#253f7d);color:white;padding:25px 15px;display:flex;flex-direction:column;z-index:15}.brand{display:flex;gap:11px;align-items:center;padding:4px 10px 28px}.brandmark{width:44px;height:44px;border-radius:14px;background:linear-gradient(135deg,#f59e0b,#ef4444 55%,#7c8cff);display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:0 6px 18px #f59e0b44}.brand strong{font-size:20px;letter-spacing:.6px}.brand small{display:block;color:#aab6e4;font-size:10px;letter-spacing:.8px;margin-top:2px}.navlabel{color:#8190c2;font-size:10px;font-weight:800;letter-spacing:1.3px;padding:12px 12px 7px}.navbtn{display:flex;align-items:center;gap:12px;width:100%;text-align:left;background:transparent;color:#c7d0f0;padding:12px;border-radius:12px;margin:2px 0;font-weight:600}.navbtn.active,.navbtn:hover{background:#ffffff19;color:#fff}.navbtn span:first-child{width:23px;text-align:center;font-size:18px}.sidefoot{margin-top:auto;color:#9ba9d4;font-size:11px;padding:12px}
+.main{margin-left:238px;max-width:1500px;padding:28px 34px 50px}.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:25px;gap:10px;flex-wrap:wrap}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:1.4px;color:var(--blue);font-weight:800}.topbar h1{margin:3px 0 0;font-size:27px}.top-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.online{font-size:12px;color:var(--muted);background:#fff;padding:8px 12px;border-radius:20px;border:1px solid var(--line);font-weight:600}.cloud-badge{font-size:12px;color:#0f6848;background:#e8faf3;padding:8px 12px;border-radius:20px;border:1px solid #8ce0c0;font-weight:700}
+.page{display:none}.page.active{display:block}.grid{display:grid;gap:16px}.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}.grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}.card{background:var(--card);border:1px solid var(--line);border-radius:19px;padding:19px;box-shadow:var(--shadow);min-width:0}.card h3{margin:0 0 8px}.muted{color:var(--muted)}.small{font-size:12px}.hero{background:linear-gradient(120deg,#16204a,#4458e3 58%,#14a8be);color:white;border-radius:22px;padding:25px;position:relative;overflow:hidden;box-shadow:0 16px 36px #4558c533}.hero:after{content:"";position:absolute;width:220px;height:220px;border:36px solid #ffffff18;border-radius:50%;right:-50px;top:-95px}.hero h2{font-size:25px;margin:5px 0 8px}.hero p{color:#e3e8ff;max-width:580px;margin:0 0 18px}.hero button{background:white;color:#283bc0;position:relative;z-index:1}.stat{display:flex;align-items:center;gap:12px}.stat-icon{width:43px;height:43px;border-radius:14px;background:#eef0ff;display:grid;place-items:center;font-size:20px}.stat strong{display:block;font-size:24px}.stat small{color:var(--muted)}
+.section-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:24px 0 12px}.section-head h2{font-size:18px;margin:0}.field{margin:10px 0}.field label{display:block;font-size:12px;font-weight:700;color:#68748e;margin:0 0 6px}.field input,.field select,.field textarea,input,select,textarea{width:100%;border:1px solid #dce2ef;border-radius:11px;background:#fff;padding:11px 12px;color:var(--ink);outline:none}.field input:focus,.field select:focus,.field textarea:focus,input:focus,select:focus,textarea:focus{border-color:#8492ff;box-shadow:0 0 0 3px #5369f21b}.field textarea{min-height:78px;resize:vertical}.filters{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:10px}.pill{display:inline-flex;align-items:center;gap:5px;padding:5px 9px;background:#eff2ff;color:#4d5ac2;border-radius:30px;font-size:11px;font-weight:700;margin:2px}.pill.green{background:#e8faf3;color:#16835e}.pill.orange{background:#fff5df;color:#a76a00}.pill.violet{background:#f3e8ff;color:#6d28d9}
+.exercise-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.exercise-card{background:white;border:1px solid var(--line);border-radius:17px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .15s,box-shadow .15s}.exercise-card:hover{transform:translateY(-2px);box-shadow:0 16px 38px #17234a17}.exercise-img{height:190px;background:#f8fafc;display:grid;place-items:center;color:#7a87b7;font-size:35px;overflow:hidden;position:relative;border-bottom:1px solid var(--line)}.exercise-img img{width:100%;height:100%;object-fit:cover;transition:opacity .2s}.exercise-img .photo-tag{position:absolute;bottom:8px;left:8px;background:#111a3acc;backdrop-filter:blur(4px);color:white;padding:4px 8px;border-radius:7px;font-size:10px;font-weight:700;pointer-events:none}.exercise-img .phase-btn{position:absolute;bottom:8px;right:8px;background:#ffffffeb;color:#111a3a;border:1px solid #cbd5e1;padding:4px 9px;border-radius:8px;font-size:11px;font-weight:700;box-shadow:0 2px 8px #0002;cursor:pointer}.exercise-img .phase-btn:hover{background:#5267f2;color:#fff;border-color:#5267f2}.exercise-body{padding:14px;display:flex;flex-direction:column;gap:8px;flex:1}.exercise-body h3{font-size:16px;margin:0}.exercise-body p{font-size:12px;line-height:1.45;color:var(--muted);margin:0}.exercise-actions{display:flex;gap:7px;margin-top:auto;padding-top:5px}.exercise-actions button{flex:1}
+.machine-row{display:flex;gap:12px;align-items:center;border:1px solid var(--line);padding:10px;border-radius:13px;background:#fff;margin:8px 0}.machine-row img{width:78px;height:66px;object-fit:cover;border-radius:10px;border:1px solid var(--line)}.machine-row .placeholder{width:78px;height:66px;display:grid;place-items:center;background:#eef1ff;border-radius:10px;font-size:24px}
+.work-card{padding:0;overflow:hidden}.work-photo{height:260px;background:#f8fafc;display:grid;place-items:center;overflow:hidden;position:relative;border-bottom:1px solid var(--line)}.work-photo img{width:100%;height:100%;object-fit:contain;background:#f8fafc}.work-photo .photo-tag{position:absolute;bottom:10px;left:10px;background:#111a3acc;color:white;padding:5px 9px;border-radius:8px;font-size:11px;font-weight:700}.work-photo .phase-btn{position:absolute;bottom:10px;right:10px;background:#ffffffeb;color:#111a3a;border:1px solid #cbd5e1;padding:6px 11px;border-radius:9px;font-size:12px;font-weight:700;cursor:pointer}.work-content{padding:20px}
+.sethead{display:grid;grid-template-columns:42px 1fr 1fr 165px;gap:8px;padding:0 0 6px;font-size:11px;font-weight:800;color:var(--muted);text-transform:uppercase;border-bottom:1px solid var(--line)}
+.setline{display:grid;grid-template-columns:42px 1fr 1fr 165px;gap:8px;align-items:center;padding:10px 6px;border-bottom:1px solid var(--line);border-radius:12px;transition:background .2s}.setline:last-child{border-bottom:0}.setline.active-set{background:#eef4ff;border:1px solid #93afff;padding:10px 8px;margin:4px 0}.setline.done-set{background:#f7fcf9}.setnum{width:32px;height:32px;border-radius:10px;background:#edf0ff;color:#4658d0;display:grid;place-items:center;font-weight:800}.setline.active-set .setnum{background:var(--blue);color:#fff}.setline.done-set .setnum{background:var(--green);color:#fff}.setline input{padding:9px;font-weight:600}
+.timerbox{border-radius:16px;background:linear-gradient(120deg,#141f47,#344da8);color:white;padding:18px;text-align:center;margin:14px 0;box-shadow:0 12px 28px #1e2f6f33}.timerbox strong{font-size:42px;display:block;font-variant-numeric:tabular-nums;margin:4px 0}.timerbox small{color:#d4ddff;font-weight:700;letter-spacing:.6px}.progressbar{height:8px;border-radius:20px;background:#e9edf6;overflow:hidden}.progressbar span{display:block;height:100%;background:linear-gradient(90deg,var(--blue),var(--cyan));width:0;transition:width .3s}
+.empty{padding:28px;text-align:center;color:var(--muted);border:1px dashed #cbd3e4;border-radius:16px;background:#ffffff8c}.empty b{display:block;color:var(--ink);margin-bottom:6px}.modal{display:none;position:fixed;inset:0;background:#0c143b88;z-index:40;align-items:center;justify-content:center;padding:15px}.modal.open{display:flex}.modal-box{width:min(760px,100%);max-height:92vh;overflow:auto;background:#fff;border-radius:22px;padding:22px;box-shadow:0 25px 80px #0003}.modal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.modal-head h2{font-size:20px;margin:0}.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#111a3a;color:white;border-radius:12px;padding:12px 18px;z-index:90;display:none;box-shadow:0 8px 30px #0003;font-weight:600}.table{width:100%;border-collapse:collapse;font-size:13px}.table th,.table td{text-align:left;padding:11px;border-bottom:1px solid var(--line)}.table th{color:var(--muted);font-size:11px;text-transform:uppercase}.chart{display:flex;align-items:end;gap:8px;height:150px;padding:12px 5px 0;border-bottom:1px solid var(--line)}.bar{flex:1;min-width:10px;background:linear-gradient(180deg,#1ab7c8,#5869ef);border-radius:7px 7px 0 0;position:relative}.bar small{position:absolute;bottom:-22px;left:50%;transform:translateX(-50%);font-size:9px;color:var(--muted);white-space:nowrap}
+.dual-photos{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}.dual-photos figure{margin:0;background:#f8fafc;border:1px solid var(--line);border-radius:14px;overflow:hidden;position:relative}.dual-photos img{width:100%;height:200px;object-fit:cover;display:block}.dual-photos figcaption{padding:6px 10px;font-size:11px;font-weight:700;color:var(--muted);text-align:center;background:#fff;border-top:1px solid var(--line)}
+.mobilebar{display:none}.hidden{display:none!important}.notice{background:#fff8e8;border:1px solid #f6e2b6;color:#77530c;border-radius:13px;padding:12px;font-size:12px;line-height:1.45}
+@media(max-width:1100px){.exercise-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.sidebar{display:none}.main{margin:0;padding:17px 14px 95px}.topbar{margin-bottom:17px}.topbar h1{font-size:22px}.online{display:none}.mobilebar{display:grid;position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--line);grid-template-columns:repeat(5,1fr);padding:5px 4px calc(5px + env(safe-area-inset-bottom));z-index:20;box-shadow:0 -5px 18px #17234a0a}.mobilebar button{background:transparent;color:#65708a;padding:6px 1px;border-radius:9px;font-size:10px}.mobilebar button.active{color:var(--blue);background:#f0f2ff}.mobilebar span{display:block;font-size:18px;margin-bottom:2px}.grid-2,.grid-3{grid-template-columns:1fr}.exercise-grid{grid-template-columns:1fr 1fr;gap:9px}.exercise-img{height:135px}.exercise-body{padding:10px}.exercise-body h3{font-size:14px}.exercise-body p{font-size:11px}.exercise-actions{flex-direction:column}.filters{grid-template-columns:1fr}.hero{padding:20px}.hero h2{font-size:21px}.card{padding:15px}.sethead,.setline{grid-template-columns:32px 1fr 1fr 130px;gap:5px}.setline input{padding:8px 6px;font-size:13px}.work-photo{height:200px}.dual-photos{grid-template-columns:1fr}}
+.photo-placeholder{display:flex;align-items:center;justify-content:center;text-align:center;min-height:130px;padding:18px;color:#64748b;font-size:13px;font-weight:700;background:linear-gradient(135deg,#edf2f7,#dce5ef);border-radius:12px}
+</style></head>
+<body><div class="app">
+<aside class="sidebar">
+ <div class="brand"><div class="brandmark">⚡</div><div><strong>TITAN GYM</strong><small>FORZA · POSTURA · CLOUD</small></div></div>
+ <div class="navlabel">IL TUO SPAZIO</div>
+ <button class="navbtn active" data-page="home" onclick="go('home')"><span>⌂</span>Panoramica</button>
+ <button class="navbtn" data-page="catalog" onclick="go('catalog')"><span>▦</span>Catalogo esercizi</button>
+ <button class="navbtn" data-page="plans" onclick="go('plans')"><span>▤</span>Schede allenamento</button>
+ <button class="navbtn" data-page="workout" onclick="go('workout')"><span>▶</span>Allenamento</button>
+ <button class="navbtn" data-page="progress" onclick="go('progress')"><span>↗</span>Progressi</button>
+ <div class="navlabel">GESTIONE</div>
+ <button class="navbtn" data-page="library" onclick="go('library')"><span>🏋</span>I miei attrezzi</button>
+ <button class="navbtn" data-page="settings" onclick="go('settings')"><span>⚙</span>Impostazioni e Cloud</button>
+ <div class="sidefoot">TITAN GYM Cloud · Sincronizzato in tempo reale</div>
+</aside>
+<main class="main">
+ <div class="topbar">
+   <div><div class="eyebrow" id="eyebrow">TITAN GYM · IL TUO PERCORSO</div><h1 id="pageTitle">Panoramica</h1></div>
+   <div class="top-actions">
+     <span class="cloud-badge" id="cloudStatus" onclick="syncFromCloud(true)" style="cursor:pointer" title="Clicca per sincronizzare ora">☁️ Cloud Attivo</span>
+     <span class="online" id="connection">● Online</span>
+     <button class="btn-soft btn-small" onclick="openBackup()">⇧ Backup</button>
+   </div>
+ </div>
+ <section id="home" class="page active">
+  <div class="hero"><div class="eyebrow" style="color:#ffd88a">⚡ TITAN GYM · CLOUD & PERSONAL TRAINER</div><h2>Supera i tuoi limiti, serie dopo serie.</h2><p>Include 157 esercizi completi (Sala Pesi, Posturali e Stretching con foto Fase 1 e Fase 2), avvio automatico della 2ª e 3ª serie dopo il recupero e salvataggio Cloud automatico tra PC e smartphone.</p><button onclick="beginActiveWorkout()">▶ Inizia allenamento ora</button></div>
+  <div class="grid grid-4" style="margin-top:16px">
+   <div class="card stat"><div class="stat-icon">📋</div><div><strong id="statPlans">0</strong><small>Schede in Cloud</small></div></div>
+   <div class="card stat"><div class="stat-icon">🏋️</div><div><strong id="statExercises">0</strong><small>Esercizi con foto</small></div></div>
+   <div class="card stat"><div class="stat-icon">🔥</div><div><strong id="statWorkouts">0</strong><small>Allenamenti registrati</small></div></div>
+   <div class="card stat"><div class="stat-icon">⏱️</div><div><strong id="statMinutes">0</strong><small>Minuti allenati</small></div></div>
+  </div>
+  <div class="grid grid-2" style="margin-top:16px"><div class="card"><div class="section-head" style="margin-top:0"><h2>La tua scheda attiva</h2><button class="btn-soft btn-small" onclick="go('plans')">Gestisci</button></div><div id="activePlanBox"></div></div><div class="card"><div class="section-head" style="margin-top:0"><h2>Ultimo allenamento</h2><button class="btn-soft btn-small" onclick="go('progress')">Progressi</button></div><div id="lastWorkout"></div></div></div>
+  <div class="section-head"><h2>Accesso rapido</h2></div><div class="grid grid-3"><div class="card"><h3>🧘 Posturali & Stretching</h3><p class="muted small">35 esercizi specifici per postura, schiena, cervicale, psoas e mobilità.</p><button class="btn-soft" onclick="openZoneQuick('Posturale')">Esplora Posturali</button></div><div class="card"><h3>📝 Crea una scheda</h3><p class="muted small">Imposta serie, ripetizioni e peso predefinito per ogni esercizio.</p><button class="btn-soft" onclick="newPlan()">Nuova scheda</button></div><div class="card"><h3>📈 Registra il peso</h3><p class="muted small">Tieni traccia delle misurazioni personali sincronizzate in Cloud.</p><button class="btn-soft" onclick="addMeasurement()">Aggiungi misurazione</button></div></div>
+ </section>
+ <section id="catalog" class="page">
+  <div class="card"><p class="muted small" style="margin-top:0">Catalogo completo organizzato per distretto muscolare, <b>Posturale</b> e <b>Stretching</b>. Ogni scheda include le foto reali (premi <b>⇄ Fase 2</b> sulla foto per vedere il movimento finale, oppure apri <b>Dettagli</b> per vedere entrambe le fasi affiancate).</p><div class="filters"><input id="catSearch" placeholder="⌕ Cerca esercizio, postura, stretching, muscolo, attrezzo…" oninput="renderCatalog()"><select id="catZone" onchange="renderCatalog()"><option value="">Tutti i gruppi (Pesi, Posturale, Stretching)</option></select><select id="catTool" onchange="renderCatalog()"><option value="">Tutte le attrezzature</option></select></div></div>
+  <div class="section-head"><h2 id="catalogCount">Esercizi</h2><span class="muted small">Clicca su ⇄ Fase 2 per vedere l'esecuzione o su Dettagli</span></div><div class="exercise-grid" id="catalogGrid"></div>
+ </section>
+ <section id="plans" class="page"><div class="section-head" style="margin-top:0"><div><h2>Le tue schede</h2><p class="muted small">Sincronizzate automaticamente in Cloud tra PC e telefono. Serie e ripetizioni sono già pronte quando avvii l'allenamento.</p></div><button onclick="newPlan()">＋ Nuova scheda</button></div><div id="plansList"></div></section>
+ <section id="workout" class="page"><div id="workoutRoot"></div></section>
+ <section id="library" class="page"><div class="section-head" style="margin-top:0"><div><h2>I miei attrezzi ed esercizi</h2><p class="muted small">La tua raccolta personale, con foto e dettagli modificabili.</p></div><button onclick="newCustomExercise()">＋ Personalizzato</button></div><input id="libSearch" placeholder="Cerca nella tua libreria…" oninput="renderLibrary()"><div id="libraryList" style="margin-top:12px"></div></section>
+ <section id="progress" class="page"><div class="grid grid-3"><div class="card"><div class="muted small">Allenamenti completati</div><strong style="font-size:28px" id="pCount">0</strong></div><div class="card"><div class="muted small">Tempo totale registrato</div><strong style="font-size:28px" id="pTime">0 min</strong></div><div class="card"><div class="muted small">Peso corporeo più recente</div><strong style="font-size:28px" id="pWeight">—</strong></div></div><div class="grid grid-2" style="margin-top:16px"><div class="card"><div class="section-head" style="margin-top:0"><h2>Andamento peso</h2><button class="btn-soft btn-small" onclick="addMeasurement()">＋ Registra</button></div><div id="weightChart"></div></div><div class="card"><div class="section-head" style="margin-top:0"><h2>Volume allenamento</h2></div><div id="volumeChart"></div></div></div><div class="section-head"><h2>Storico allenamenti</h2></div><div id="historyList"></div></section>
+ <section id="settings" class="page"><div class="grid grid-2"><div class="card"><h3>⏱️ Recupero predefinito</h3><p class="muted small">Puoi comunque cambiare il recupero in ogni esercizio.</p><div class="field"><label>Secondi di recupero</label><select id="defaultRest" onchange="saveSettings()"><option>30</option><option>45</option><option>60</option><option>75</option><option>90</option><option>120</option><option>150</option><option>180</option></select></div><div class="field"><label>Unità di peso</label><select id="weightUnit" onchange="saveSettings()"><option value="kg">Chilogrammi (kg)</option><option value="lb">Libbre (lb)</option></select></div></div><div class="card"><h3>☁️ Cloud Sync & Backup</h3><p class="muted small">I tuoi dati sono salvati automaticamente sul tuo Cloud Firebase (<code>titan_gym</code>) così non vanno mai persi e sono sempre aggiornati su PC e cellulare.</p><div class="row"><button class="btn-green" onclick="syncFromCloud(true)">🔄 Sincronizza ora con il Cloud</button><button class="btn-soft" onclick="openBackup()">Esporta JSON</button></div><div class="field"><label>Ripristina un backup JSON</label><input type="file" id="restoreFile" accept=".json,application/json" onchange="restoreBackup(event)"></div></div><div class="card"><h3>📲 Installazione su Smartphone e PC</h3><p class="muted small">Apri il link di TITAN GYM sul telefono o PC e premi "Installa app" (o "Aggiungi a schermata Home" dal menu del browser).</p><button class="btn-soft" id="installBtn" onclick="installApp()" disabled>Installa app</button><p class="small muted" id="installHelp">Disponibile quando il browser riconosce l'app installabile.</p></div><div class="card"><h3>ℹ️ Informazioni</h3><p class="muted small">TITAN GYM è collegata al Cloud esattamente come Apollo Events: ogni modifica fatta da qui o da qualsiasi dispositivo è salvata in tempo reale.</p><span class="pill green">TITAN GYM Cloud</span><span class="pill violet">Posturale & Stretching</span></div></div></section>
+</main>
+<nav class="mobilebar"><button class="active" data-page="home" onclick="go('home')"><span>⌂</span>Home</button><button data-page="catalog" onclick="go('catalog')"><span>▦</span>Esercizi</button><button data-page="plans" onclick="go('plans')"><span>▤</span>Schede</button><button data-page="workout" onclick="go('workout')"><span>▶</span>Workout</button><button data-page="progress" onclick="go('progress')"><span>↗</span>Progressi</button></nav>
+</div>
+<div class="modal" id="modal" onclick="window.planEditorOpen?closePlanEditor():closeModal()"><div class="modal-box" onclick="event.stopPropagation()"><div class="modal-head"><h2 id="modalTitle"></h2><button class="btn-light btn-small" onclick="window.planEditorOpen?closePlanEditor():closeModal()">Chiudi ✕</button></div><div id="modalBody"></div></div></div><div class="toast" id="toast"></div>
+<script>
+const seedRaw=[
+['Petto','Chest Press','Macchina guidata','Grande pettorale','Tricipiti, deltoide anteriore','Regola il sedile con le maniglie al centro del petto. Spingi e ritorna lentamente.','Schiena appoggiata, scapole stabili.','Inarcare la schiena o bloccare bruscamente i gomiti.','chest press gym machine','3','10'],
+['Petto','Pec Deck','Macchina','Grande pettorale','Deltoide anteriore','Apri le braccia in modo controllato e richiudile davanti al petto.','Sedile regolato con gomiti all’altezza delle spalle.','Slancio e apertura eccessiva.','pec deck machine gym','3','12'],
+['Petto','Panca piana','Bilanciere e panca','Grande pettorale','Tricipiti, deltoide anteriore','Abbassa il bilanciere verso il petto e spingi con traiettoria stabile.','Piedi a terra, scapole stabili, polsi allineati.','Rimbalzo sul petto e polsi piegati.','barbell bench press gym','4','8'],
+['Petto','Panca inclinata manubri','Manubri e panca','Pettorale alto','Tricipiti, deltoide anteriore','Spingi i manubri verso l’alto e scendi lentamente.','Panca inclinata moderatamente.','Inclinazione eccessiva e discesa incontrollata.','incline dumbbell bench press','3','10'],
+['Petto','Cable Crossover','Cavi','Grande pettorale','Deltoide anteriore','Porta le maniglie davanti al petto con un arco controllato.','Busto stabile, cavi regolati.','Usare slancio.','cable crossover gym machine','3','12'],
+['Schiena','Lat Machine avanti','Macchina a cavo','Gran dorsale','Bicipiti, romboidi','Tira la barra verso la parte alta del petto guidando i gomiti in basso.','Cosce bloccate, busto appena inclinato.','Tirare dietro la nuca o dondolare.','lat pulldown machine gym','4','10'],
+['Schiena','Pulley basso','Cavo','Gran dorsale, romboidi','Bicipiti, trapezio','Tira la maniglia verso l’addome avvicinando le scapole.','Schiena neutra, busto stabile.','Oscillare o incurvare la schiena.','seated cable row machine','3','10'],
+['Schiena','Rematore manubrio','Manubrio e panca','Gran dorsale','Bicipiti, deltoide posteriore','Tira il manubrio verso il fianco senza ruotare il busto.','Bacino e spalle paralleli al pavimento.','Strattonare o ruotare il busto.','one arm dumbbell row','3','10'],
+['Schiena','Pullover al cavo','Cavo alto','Gran dorsale','Grande rotondo, core','Porta la barra dall’alto verso le cosce con gomiti morbidi.','Busto stabile e addome attivo.','Piegare troppo i gomiti.','cable straight arm pulldown','3','12'],
+['Schiena','Back Extension','Panca lombari','Erettori spinali','Glutei, femorali','Rialza il busto fino all’allineamento neutro.','Supporto sotto le anche.','Iperestendere la zona lombare.','back extension bench gym','3','12'],
+['Spalle','Shoulder Press','Macchina','Deltoide anteriore e laterale','Tricipiti','Spingi le maniglie sopra la testa e scendi con controllo.','Schienale regolato, polsi sopra i gomiti.','Inarcare la schiena.','shoulder press machine gym','3','10'],
+['Spalle','Alzate laterali','Manubri','Deltoide laterale','Sovraspinato','Solleva lateralmente i manubri fino circa alle spalle.','Busto fermo, gomiti morbidi.','Slancio e carico eccessivo.','dumbbell lateral raise exercise','3','12'],
+['Spalle','Reverse Pec Deck','Macchina','Deltoide posteriore','Romboidi, trapezio','Apri le braccia all’indietro con il petto appoggiato.','Impugnature allineate alle spalle.','Inarcare la schiena.','reverse pec deck machine','3','12'],
+['Spalle','Face Pull','Cavo e corda','Deltoide posteriore','Rotatori esterni, trapezio','Tira la corda verso il viso separando le mani.','Cavo all’altezza del viso.','Tirare verso il petto.','face pull cable exercise','3','12'],
+['Bicipiti','Curl machine','Macchina bicipiti','Bicipite brachiale','Brachiale, avambracci','Fletti i gomiti senza staccare le braccia dal supporto.','Asse macchina allineato al gomito.','Usare slancio.','biceps curl machine gym','3','10'],
+['Bicipiti','Curl manubri','Manubri','Bicipite brachiale','Brachiale, avambracci','Fletti i gomiti mantenendoli vicini al busto.','Polsi neutri, busto fermo.','Dondolare.','dumbbell biceps curl','3','10'],
+['Tricipiti','Push Down','Cavo alto e barra/corda','Tricipite brachiale','Anconeo','Estendi i gomiti verso il basso tenendoli vicini al busto.','Spalle ferme, polsi neutri.','Muovere le spalle.','triceps cable pushdown','3','12'],
+['Tricipiti','French Press','Manubrio o bilanciere EZ','Tricipite brachiale','Anconeo','Fletti i gomiti portando il peso dietro la testa e poi estendi.','Carico gestibile, gomiti orientati in alto.','Inarcare la schiena.','lying triceps extension ez bar','3','10'],
+['Addome','Crunch Machine','Macchina addominali','Retto addominale','Obliqui','Avvicina torace e bacino con flessione controllata.','Regola sedile e appoggi.','Tirare il collo o usare slancio.','abdominal crunch machine','3','15'],
+['Addome','Cable Crunch','Cavo e corda','Retto addominale','Obliqui','Fletti il tronco verso il basso contraendo l’addome.','In ginocchio, corda vicino alla testa.','Tirare solo con le braccia.','kneeling cable crunch','3','15'],
+['Addome','Plank','Corpo libero','Trasverso e retto addominale','Obliqui, glutei','Mantieni una linea retta da testa a talloni respirando.','Gomiti sotto le spalle.','Bacino che cede o apnea.','forearm plank exercise','3','30'],
+['Glutei','Hip Thrust','Panca e bilanciere/macchina','Grande gluteo','Femorali, adduttori','Spingi il bacino verso l’alto contraendo i glutei.','Panca stabile, piedi alla larghezza del bacino.','Iperestendere la schiena.','hip thrust machine gym','4','10'],
+['Glutei','Glute Kickback','Macchina o cavo','Grande gluteo','Medio gluteo','Spingi la gamba indietro senza ruotare il bacino.','Bacino stabile.','Inarcare la schiena.','glute kickback machine','3','12'],
+['Glutei','Abductor Machine','Macchina abduttori','Gluteo medio e minimo','Grande gluteo','Apri le ginocchia contro la resistenza e ritorna lentamente.','Schiena appoggiata.','Rimbalzi e carico eccessivo.','hip abductor machine gym','3','15'],
+['Quadricipiti','Leg Extension','Macchina','Quadricipite','Retto femorale','Estendi le ginocchia e abbassa lentamente.','Asse allineato al ginocchio, rullo sopra la caviglia.','Slancio o blocco violento.','leg extension machine gym','3','12'],
+['Quadricipiti','Leg Press','Pressa','Quadricipite','Glutei, adduttori','Scendi fin dove il bacino resta appoggiato e spingi.','Schiena aderente allo schienale.','Bacino che si stacca dalla seduta.','45 degree leg press machine','4','10'],
+['Quadricipiti','Squat','Bilanciere o corpo libero','Quadricipite','Glutei, adduttori, core','Fletti anche e ginocchia mantenendo il piede appoggiato.','Stance naturale; sicurezze se usi bilanciere.','Talloni sollevati o ginocchia che cedono.','barbell squat gym','3','10'],
+['Femorali','Leg Curl sdraiato','Macchina','Ischiocrurali','Gastrocnemio','Fletti le ginocchia portando i talloni verso i glutei.','Rullo sopra i talloni, bacino stabile.','Sollevare il bacino.','lying leg curl machine gym','3','12'],
+['Femorali','Leg Curl seduto','Macchina','Ischiocrurali','Gastrocnemio','Fletti le ginocchia contro il rullo mantenendo le cosce bloccate.','Asse allineato al ginocchio.','Sollevare le cosce.','seated leg curl machine','3','12'],
+['Polpacci','Calf Raise','Macchina o pressa','Gastrocnemio','Soleo','Sali sulle punte e scendi lentamente senza rimbalzi.','Avampiede stabile sulla pedana.','Rimbalzi o escursione corta.','standing calf raise machine','4','15'],
+['Polpacci','Seated Calf Raise','Macchina seduto','Soleo','Gastrocnemio','Solleva i talloni mantenendo le ginocchia flesse.','Rullo sulle cosce, avampiedi sulla pedana.','Rimbalzi.','seated calf raise machine gym','3','15'],
+['Avambracci','Wrist Curl','Manubri o bilanciere','Flessori avambraccio','Muscoli della presa','Fletti i polsi mantenendo gli avambracci appoggiati.','Carico leggero, movimento controllato.','Muovere tutto l’avambraccio.','wrist curl dumbbell exercise','3','15'],
+['Petto','Chest Press inclinata','Macchina convergente','Parte alta del pettorale','Tricipiti, deltoide anteriore','Spingi le maniglie in avanti e leggermente verso l’alto, tornando lentamente.','Regola il sedile per avere le maniglie sotto la linea delle spalle.','Spalle sollevate, schiena inarcata, rimbalzo.','incline chest press machine gym','3','10'],
+['Petto','Croci ai cavi','Doppio cavo','Grande pettorale','Deltoide anteriore','Avvicina le mani davanti al torace con gomiti morbidi e traiettoria controllata.','Regola l’altezza dei cavi in base all’angolo di lavoro.','Carico eccessivo e movimento a scatto.','cable chest fly gym','3','12'],
+['Schiena','Trazioni assistite','Macchina trazioni assistite','Gran dorsale','Bicipiti, romboidi','Tira il corpo verso la barra guidando i gomiti verso il basso.','Scegli un’assistenza che consenta ripetizioni pulite.','Slancio delle gambe e spalle incassate.','assisted pull up machine gym','3','8'],
+['Schiena','Rematore T-Bar','T-Bar / bilanciere','Dorsali e trapezio medio','Bicipiti, romboidi','Tira il carico verso il busto mantenendo la colonna neutra.','Piedi stabili e busto inclinato in modo controllato.','Arrotondare la schiena e strattonare.','t bar row gym equipment','3','10'],
+['Schiena','Scrollate manubri','Manubri','Trapezio superiore','Elevatore della scapola','Solleva le spalle verso l’alto senza ruotarle e abbassa lentamente.','Braccia distese e collo in posizione neutra.','Ruotare le spalle o fare slanci.','dumbbell shrug exercise gym','3','12'],
+['Spalle','Arnold Press','Manubri','Deltoide anteriore e laterale','Tricipiti','Spingi i manubri sopra la testa accompagnando la rotazione degli avambracci.','Schienale stabile e carico moderato.','Inarcare la schiena o forzare la rotazione.','arnold dumbbell press exercise','3','10'],
+['Spalle','Alzate frontali','Manubri o disco','Deltoide anteriore','Fasci clavicolari del pettorale','Solleva il carico davanti al corpo fino all’altezza delle spalle.','Busto fermo e gomiti leggermente morbidi.','Slancio del busto e carico eccessivo.','dumbbell front raise exercise','3','12'],
+['Bicipiti','Hammer Curl','Manubri','Brachiale e brachioradiale','Bicipite brachiale','Fletti i gomiti mantenendo i palmi rivolti uno verso l’altro.','Polsi neutri e gomiti vicini al busto.','Dondolare o piegare i polsi.','dumbbell hammer curl gym','3','10'],
+['Bicipiti','Curl concentrato','Manubrio','Bicipite brachiale','Brachiale','Fletti il gomito mantenendo il braccio appoggiato all’interno della coscia.','Seduto, busto stabile, carico controllabile.','Ruotare il busto o accelerare la discesa.','concentration curl dumbbell','3','10'],
+['Tricipiti','Estensioni sopra la testa al cavo','Cavo e corda','Capo lungo del tricipite','Altri capi del tricipite','Estendi i gomiti sopra la testa mantenendo le braccia relativamente ferme.','Cavo basso dietro il corpo, postura stabile.','Aprire eccessivamente i gomiti o inarcare la schiena.','overhead cable triceps extension','3','12'],
+['Tricipiti','Panca presa stretta','Bilanciere e panca','Tricipite brachiale','Pettorale, deltoide anteriore','Abbassa il bilanciere con presa moderatamente stretta e spingi con controllo.','Polsi allineati e scapole stabili; usa sicurezze.','Presa troppo stretta o gomiti forzati.','close grip bench press gym','3','8'],
+['Addome','Reverse Crunch','Corpo libero / tappetino','Retto addominale','Obliqui','Avvicina il bacino al torace sollevando leggermente il sacro dal tappetino.','Schiena appoggiata e movimento lento.','Slanciare le gambe o usare inerzia.','reverse crunch exercise mat','3','12'],
+['Addome','Wood Chop','Cavo','Obliqui','Trasverso, core','Ruota il busto in modo controllato seguendo la traiettoria del cavo.','Piedi stabili e bacino controllato.','Torcere bruscamente la zona lombare.','cable wood chop exercise','3','12'],
+['Adduttori','Adductor Machine','Macchina adduttori','Adduttori della coscia','Gracile, pettineo','Avvicina le cosce contro la resistenza e ritorna lentamente.','Regola i supporti per una partenza confortevole.','Rimbalzi e apertura forzata.','hip adductor machine gym','3','15'],
+['Quadricipiti','Bulgarian Split Squat','Manubri e panca','Quadricipite','Grande gluteo, adduttori','Scendi piegando la gamba anteriore e risali mantenendo equilibrio.','Piede posteriore appoggiato su supporto stabile.','Passo troppo corto o perdita di equilibrio.','bulgarian split squat dumbbells gym','3','10'],
+['Femorali','Stacco rumeno','Bilanciere o manubri','Ischiocrurali','Grande gluteo, erettori spinali','Spingi indietro le anche facendo scendere il carico vicino alle gambe, poi risali.','Ginocchia morbide, schiena neutra, carico vicino al corpo.','Curvare la schiena o cercare profondità a tutti i costi.','romanian deadlift barbell gym','3','10'],
+['Glutei','Pull Through','Cavo basso','Grande gluteo','Ischiocrurali','Porta le anche in avanti contraendo i glutei, poi arretra controllando il movimento.','Cavo basso dietro il corpo e piedi stabili.','Trasformare il gesto in uno squat o iperestendere la schiena.','cable pull through exercise gym','3','12'],
+['Polpacci','Calf Raise alla pressa','Pressa','Gastrocnemio e soleo','Muscoli stabilizzatori della caviglia','Muovi la pedana con l’avampiede, salendo e scendendo in modo controllato.','Ginocchia distese ma non bloccate, avampiede stabile.','Rimbalzi e carico eccessivo.','leg press calf raise gym','3','15']
+];
+
+const extraRaw=[
+["Quadricipiti","Pressa orizzontale","Pressa orizzontale","Quadricipiti e glutei","Femorali","Spingi la pedana senza bloccare le ginocchia e torna lentamente.","Schiena aderente allo schienale; piedi alla larghezza delle anche.","Ginocchia che collassano verso l'interno; profondità forzata.","Pressa orizzontale gym equipment","3","10"],
+["Quadricipiti","Pressa verticale","Pressa verticale","Quadricipiti e glutei","Femorali","Spingi la pedana verso l'alto mantenendo il bacino stabile.","Regola sedile e fermi di sicurezza prima di iniziare.","Bloccare le ginocchia o sollevare il bacino.","Pressa verticale gym equipment","3","10"],
+["Quadricipiti","Hack Squat","Hack squat machine","Quadricipiti","Gluteo massimo, adduttori","Scendi piegando le ginocchia e risali spingendo con tutto il piede.","Spalle sotto i supporti, schiena aderente al piano.","Staccare la schiena o chiudere le ginocchia verso l'interno.","Hack Squat machine","3","10"],
+["Quadricipiti","Squat al multipower","Smith machine","Quadricipiti e glutei","Adduttori, core","Scendi in squat controllato e risali mantenendo il busto stabile.","Posiziona la barra sulle spalle e regola i fermi di sicurezza.","Piedi troppo avanti o ginocchia che collassano.","Smith machine squat","3","10"],
+["Quadricipiti","Squat a vuoto","Corpo libero","Quadricipiti e glutei","Adduttori, core","Porta indietro il bacino e piega le ginocchia fino alla profondità controllabile.","Piedi stabili, punte leggermente aperte.","Sollevare i talloni o incurvare la schiena.","Bodyweight squat","3","12"],
+["Quadricipiti","Squat Sissy","Sissy squat machine","Quadricipite","Retto femorale, core","Mantieni il corpo allineato e piega le ginocchia con controllo.","Blocca correttamente i polpacci nel supporto.","Scendere oltre la mobilità disponibile o perdere l'allineamento.","Sissy squat machine","3","10"],
+["Quadricipiti","Affondi frontali","Corpo libero o manubri","Glutei e quadricipiti","Femorali, core","Fai un passo avanti e scendi verticalmente, poi torna alla posizione iniziale.","Passo abbastanza ampio e busto stabile.","Ginocchio che cede all'interno o spinta incontrollata.","Affondi frontali","3","10"],
+["Femorali","Leg Curl","Macchina leg curl","Ischiocrurali","Gastrocnemio","Fletti le ginocchia avvicinando i talloni ai glutei e torna lentamente.","Allinea il perno al ginocchio e regola il rullo appena sopra il tallone.","Sollevare il bacino o usare slancio.","Leg Curl machine","3","12"],
+["Adduttori","Adductor ai cavi","Cavo basso con cavigliera","Adduttori","Gracile, pettineo","Porta la gamba verso la linea mediana mantenendo il busto fermo.","Cavigliera ben fissata e appoggio stabile.","Ruotare il bacino o usare slancio.","Cable hip adduction","3","12"],
+["Glutei","Slanci laterali interni","Macchina adduzione/abduzione","Adduttori e glutei","Gracile, pettineo","Esegui il movimento laterale previsto dalla macchina con controllo.","Regola seduta e supporti in base alla direzione del movimento.","Usare inerzia o forzare l'ampiezza.","Macchina adduzione","3","12"],
+["Glutei","Rear Kick","Macchina glutei kickback","Grande gluteo","Femorali","Spingi il tallone indietro mantenendo il bacino fermo.","Regola il supporto e usa un carico gestibile.","Ruotare il bacino o inarcare la schiena.","Rear Kick machine","3","12"],
+["Glutei","Glutei ai cavi","Cavo basso con cavigliera","Grande gluteo","Femorali","Estendi l'anca portando la gamba indietro senza muovere il busto.","Cavigliera fissata e appoggio stabile.","Slanciare la gamba o ruotare il bacino.","Cable glute kickback","3","12"],
+["Femorali","Stacchi gambe flesse","Bilanciere o manubri","Ischiocrurali","Grande gluteo, erettori spinali","Fletti le anche mantenendo la schiena neutra e il carico vicino alle gambe.","Ginocchia leggermente flesse e piedi stabili.","Arrotondare la schiena o scendere oltre la mobilità.","Stacchi gambe flesse","3","10"],
+["Glutei","Stacco da terra","Bilanciere","Glutei e catena posteriore","Femorali, quadricipiti, core","Spingi il pavimento e porta il bilanciere vicino al corpo fino alla stazione eretta.","Bilanciere sopra il mesopiede, schiena neutra e presa salda.","Strappare il carico o allontanare la barra dal corpo.","Barbell deadlift","3","8"],
+["Glutei","Stacco Sumo","Bilanciere","Glutei e adduttori","Quadricipiti, femorali","Spingi il pavimento mantenendo le ginocchia in linea con le punte.","Stance ampia, punte aperte e barra vicino alle tibie.","Ginocchia che collassano o schiena che si arrotonda.","Sumo deadlift","3","8"],
+["Glutei","Stacco Trap Bar","Trap bar","Glutei e quadricipiti","Femorali, trapezio, core","Afferra le maniglie e spingi il pavimento fino a stare in piedi.","Centra il corpo nella trap bar e scegli le maniglie adatte.","Iperestendere la schiena o strattonare.","Trap bar deadlift","3","10"],
+["Glutei","Estensioni dell'anca","Panca / macchina hip extension","Grande gluteo","Femorali","Estendi l'anca mantenendo il tronco stabile e ritorna lentamente.","Regola il supporto in modo che l'anca possa muoversi liberamente.","Iperestendere la zona lombare.","Hip extension","3","12"],
+["Polpacci","Calf in piedi","Calf raise machine in piedi","Gastrocnemio","Soleo","Sali sulle punte e scendi lentamente fino a un allungamento confortevole.","Spalle sotto i supporti e avampiedi sul bordo della pedana.","Rimbalzare o ridurre eccessivamente l'escursione.","Standing calf raise","3","15"],
+["Polpacci","Calf seduto","Seated calf raise machine","Soleo","Gastrocnemio","Solleva i talloni mantenendo le ginocchia flesse e torna lentamente.","Rullo sulle cosce, avampiedi sulla pedana.","Rimbalzi e movimento troppo rapido.","Seated calf raise","3","15"],
+["Polpacci","Press-Calf","Pressa per calf","Gastrocnemio e soleo","Muscoli stabilizzatori della caviglia","Muovi la pedana con l'avampiede, senza piegare eccessivamente le ginocchia.","Avampiedi stabili sul bordo della pedana.","Rimbalzi o bloccare le ginocchia.","Calf press","3","15"],
+["Polpacci","Donkey Calf","Donkey calf machine","Gastrocnemio","Soleo","Solleva i talloni mantenendo il busto inclinato e il bacino stabile.","Supporto ben regolato e avampiedi sul rialzo.","Rimbalzare o incurvare la schiena.","Donkey calf raise","3","15"],
+["Petto","Distensioni piane","Panca piana e bilanciere","Grande pettorale","Tricipiti, deltoide anteriore","Abbassa il bilanciere al torace e spingi verso l'alto con controllo.","Scapole addotte, piedi a terra e sicurezze impostate.","Rimbalzare sul petto o perdere l'assetto delle spalle.","Bench press","3","10"],
+["Petto","Distensioni inclinate","Panca inclinata e bilanciere","Parte clavicolare del pettorale","Tricipiti, deltoide anteriore","Abbassa il bilanciere nella parte alta del torace e spingi controllando.","Inclinazione moderata e polsi sopra i gomiti.","Aprire troppo i gomiti o inarcare eccessivamente.","Incline bench press","3","10"],
+["Petto","Multi Power panca","Smith machine e panca","Grande pettorale","Tricipiti, deltoide anteriore","Esegui la distensione seguendo la traiettoria guidata.","Regola panca, barra e fermi prima di iniziare.","Fermi non impostati o traiettoria dolorosa.","Smith machine bench press","3","10"],
+["Petto","Spinte/Croci piane","Manubri e panca piana","Grande pettorale","Tricipiti, deltoide anteriore","Per le spinte distendi i gomiti; per le croci apri e chiudi con gomiti morbidi.","Panca piana e carico adatto al controllo.","Scendere troppo in profondità o perdere il controllo.","Dumbbell flyes","3","10"],
+["Petto","Spinte/Croci inclinate","Manubri e panca inclinata","Parte alta del pettorale","Deltoide anteriore, tricipiti","Esegui spinte o croci su panca inclinata con movimento controllato.","Regola l'inclinazione e stabilizza le scapole.","Usare carichi eccessivi o forzare le spalle.","Incline dumbbell flyes","3","10"],
+["Petto","Spinte declinate/Croci declinate","Panca declinata e manubri","Parte sternocostale del pettorale","Tricipiti","Esegui la spinta o la croce mantenendo controllo e stabilità.","Blocca bene le gambe nei supporti della panca.","Perdere stabilità o scendere oltre il comfort.","Decline dumbbell flyes","3","10"],
+["Petto","Fless. parallele gomiti larghi","Parallele","Grande pettorale","Tricipiti, deltoide anteriore","Scendi piegando i gomiti e risali senza perdere il controllo delle spalle.","Usa assistenza se necessario e limita la profondità confortevole.","Scendere troppo o incassare le spalle.","Chest dips","3","10"],
+["Petto","Flessioni","Corpo libero","Grande pettorale","Tricipiti, core","Abbassa il corpo in asse e spingi fino a distendere le braccia.","Mani poco oltre la larghezza delle spalle e corpo allineato.","Bacino che cede o gomiti troppo aperti.","Pushups","3","12"],
+["Petto","Pec Deck / Pec Front","Pec deck","Grande pettorale","Deltoide anteriore","Avvicina le braccia davanti al torace e ritorna lentamente.","Regola sedile e braccioli all'altezza del torace.","Spalle sollevate o ritorno incontrollato.","Pec deck","3","12"],
+["Petto","Chest Press Incline","Macchina incline chest press","Parte alta del pettorale","Tricipiti, deltoide anteriore","Spingi in avanti e leggermente verso l'alto con controllo.","Regola il sedile per avere le maniglie sotto la linea delle spalle.","Inarcare la schiena o sollevare le spalle.","Incline chest press","3","10"],
+["Schiena","Lat Machine presa inversa","Lat machine, presa supina","Gran dorsale","Bicipiti, romboidi","Tira la barra verso la parte alta del petto mantenendo i gomiti vicini al busto.","Cosce bloccate sotto i rulli e presa supina.","Tirare dietro la nuca o dondolare.","Underhand lat pulldown","3","10"],
+["Schiena","Lat Machine dietro","Lat machine","Gran dorsale","Bicipiti, romboidi","Variante dietro la nuca: da usare solo se mobilità e comfort lo consentono; preferire la tirata al petto.","Carico leggero e traiettoria senza dolore.","Forzare la spalla o portare la testa in avanti.","Behind neck lat pulldown","3","10"],
+["Schiena","Rematore bilanciere","Bilanciere","Dorsali e trapezio medio","Bicipiti, romboidi","Tira il bilanciere verso l'addome mantenendo il busto inclinato e stabile.","Piedi saldi e colonna neutra.","Arrotondare la schiena o usare slancio.","Bent over barbell row","3","10"],
+["Schiena","Trazioni alla barra","Sbarra trazioni","Gran dorsale","Bicipiti, romboidi","Tira il corpo verso la barra senza slanci e scendi controllando.","Presa stabile e spalle attive.","Dondolare o lasciarsi cadere.","Pullups","3","8"],
+["Schiena","Low Row stretta","Macchina low row","Dorsali","Bicipiti, romboidi","Tira la maniglia verso l'addome con gomiti vicini al corpo.","Regola sedile e appoggio toracico se presente.","Arretrare eccessivamente il busto.","Leverage iso row","3","10"],
+["Schiena","Tirate ai cavi","Cavo / pulley","Dorsali e romboidi","Bicipiti, trapezio","Tira la maniglia verso il corpo mantenendo il busto stabile.","Regola altezza e impugnatura in base alla variante.","Usare slancio o incurvare la schiena.","Seated cable rows","3","12"],
+["Schiena","Rematore Rowing Bar","Macchina rowing bar","Dorsali e romboidi","Bicipiti, trapezio medio","Tira le maniglie verso il busto e ritorna lentamente.","Petto stabile sul supporto, se presente.","Sollevare le spalle o strattonare.","Rowing machine","3","10"],
+["Schiena","Tirate in basso ai cavi","Cavo alto","Gran dorsale","Grande rotondo, bicipiti","Porta la maniglia verso il basso mantenendo le braccia nella traiettoria prevista.","Regola carrucola e postura stabile.","Inclinare troppo il busto o usare slancio.","Close grip lat pulldown","3","12"],
+["Schiena","Pull-Over","Cavo alto o macchina pullover","Gran dorsale","Grande rotondo, tricipite capo lungo","Porta le braccia dall'alto verso le cosce mantenendo gomiti leggermente flessi.","Stabilizza il busto e scegli una resistenza leggera all'inizio.","Flettere eccessivamente i gomiti o inarcare la schiena.","Straight arm pulldown","3","12"],
+["Spalle","Pull Face","Cavo alto con corda","Deltoide posteriore e trapezio","Romboidi, cuffia dei rotatori","Tira la corda verso il viso separando le mani e ruotando esternamente le spalle.","Carrucola all'altezza del viso e postura stabile.","Inarcare la schiena o tirare solo con i bicipiti.","Face pull","3","12"],
+["Schiena","Pull Down","Lat machine / cavo alto","Gran dorsale","Bicipiti, grande rotondo","Porta la barra verso il petto o le cosce secondo la variante, controllando il ritorno.","Regola i rulli e mantieni il busto stabile.","Dondolare o tirare dietro la nuca.","Lat pulldown","3","10"],
+["Spalle","Spinte verticali","Macchina shoulder press / manubri","Deltoide anteriore","Deltoide laterale, tricipiti","Spingi sopra la testa mantenendo il tronco stabile.","Carico gestibile e traiettoria senza dolore.","Compensare con la zona lombare.","Dumbbell shoulder press","3","10"],
+["Spalle","Tirate al mento","Bilanciere o cavo","Deltoide laterale e trapezio","Bicipiti","Solleva il carico vicino al corpo senza forzare l'altezza dei gomiti.","Presa confortevole e carico moderato.","Forzare una presa stretta o salire oltre la mobilità.","Upright barbell row","3","10"],
+["Spalle","Alzate ai cavi","Cavo basso","Deltoide laterale","Sovraspinato","Solleva il braccio lateralmente seguendo una traiettoria controllata.","Carrucola bassa e busto stabile.","Ruotare il busto o usare slancio.","Cable lateral raise","3","12"],
+["Spalle","Lento dietro","Bilanciere o macchina","Deltoide anteriore e laterale","Tricipiti","Variante dietro la nuca: richiede mobilità elevata; preferire il lento avanti se crea fastidio.","Carico leggero e ROM confortevole.","Forzare la posizione dietro la testa.","Seated barbell military press","3","10"],
+["Spalle","Scrollate","Manubri o bilanciere","Trapezio superiore","Elevatore della scapola","Solleva le spalle verso l'alto e abbassale lentamente senza ruotarle.","Braccia distese e collo neutro.","Ruotare le spalle o fare slanci.","Dumbbell shrug","3","12"],
+["Spalle","Alzate 90°","Manubri / panca inclinata","Deltoide posteriore","Romboidi, trapezio medio","Apri le braccia lateralmente con busto inclinato e gomiti morbidi.","Schiena neutra e carico leggero.","Slanciare il busto o alzare le spalle.","Rear delt raise","3","12"],
+["Spalle","Lento avanti","Bilanciere o manubri","Deltoide anteriore","Deltoide laterale, tricipiti","Spingi il carico sopra la testa e scendi con controllo davanti al viso.","Addome attivo e traiettoria naturale.","Iperestendere la schiena.","Standing military press","3","10"],
+["Spalle","Alzate frontali ai cavi","Cavo basso","Deltoide anteriore","Fasci clavicolari del pettorale","Solleva la maniglia davanti al corpo fino all'altezza delle spalle.","Carrucola bassa e busto fermo.","Slancio e carico eccessivo.","Front cable raise","3","12"],
+["Spalle","Tirate al mento ai cavi","Cavo basso con barra","Deltoide laterale e trapezio","Bicipiti","Tira la barra verso il petto mantenendola vicina al corpo.","Presa comoda e movimento senza dolore.","Forzare i polsi o alzare troppo i gomiti.","Upright cable row","3","12"],
+["Spalle","Low Row alta","Macchina high row","Dorsali e deltoide posteriore","Romboidi, bicipiti","Tira le maniglie verso la parte alta del torace mantenendo il petto stabile.","Regola sedile e appoggio toracico.","Sollevare le spalle o strattonare.","Leverage high row","3","10"],
+["Spalle","Pec-Back","Macchina pec deck / rear delt","Deltoide posteriore","Romboidi, trapezio medio","Esegui aperture posteriori controllando il movimento di ritorno.","Regola i braccioli all'altezza delle spalle.","Usare slancio o forzare l'articolazione.","Reverse machine flyes","3","12"],
+["Bicipiti","Curl con bilanciere","Bilanciere","Bicipite brachiale","Brachiale, brachioradiale","Fletti i gomiti mantenendoli vicini al busto e scendi lentamente.","Presa supina e polsi neutri.","Dondolare il busto o spostare i gomiti.","Barbell curl","3","10"],
+["Bicipiti","Curl Larry Scott","Panca Scott e bilanciere EZ","Bicipite brachiale","Brachiale","Fletti i gomiti sul supporto e distendi senza bloccare bruscamente.","Regola il sedile e appoggia bene le braccia.","Estendere completamente sotto carico o rimbalzare.","Preacher curl","3","10"],
+["Bicipiti","Curl concentrato manubrio","Manubrio","Bicipite brachiale","Brachiale","Fletti il gomito mantenendo il braccio appoggiato all'interno della coscia.","Seduto, busto stabile e carico controllabile.","Ruotare il busto o accelerare la discesa.","Concentration curls","3","10"],
+["Bicipiti","Curl a martello","Manubri","Brachiale e brachioradiale","Bicipite brachiale","Fletti i gomiti mantenendo i palmi rivolti uno verso l'altro.","Polsi neutri e gomiti vicini al busto.","Dondolare o piegare i polsi.","Hammer curls","3","10"],
+["Bicipiti","Arm Curl","Macchina arm curl","Bicipite brachiale","Brachiale","Fletti i gomiti contro la resistenza e ritorna lentamente.","Allinea il gomito al perno della macchina.","Sollevare le spalle o staccare le braccia dal supporto.","Machine bicep curl","3","10"],
+["Bicipiti","Curl manubri in piedi","Manubri","Bicipite brachiale","Brachiale, brachioradiale","Fletti i gomiti mantenendo il busto fermo.","Piedi stabili e gomiti lungo i fianchi.","Oscillare il busto.","Dumbbell bicep curl","3","10"],
+["Bicipiti","Curl presa inversa","Bilanciere EZ o barra","Brachioradiale e brachiale","Bicipite brachiale","Fletti i gomiti con presa prona e ritorna lentamente.","Polsi neutri e presa comoda.","Piegare i polsi o usare slancio.","Reverse barbell curl","3","10"],
+["Bicipiti","Curl cavo alto","Doppio cavo alto","Bicipite brachiale","Brachiale","Fletti i gomiti portando le mani verso le tempie senza muovere le spalle.","Carrucole alte e postura stabile.","Inarcare la schiena o muovere i gomiti.","Overhead cable curl","3","12"],
+["Tricipiti","Spinte in basso","Cavo alto con barra o corda","Tricipite brachiale","Anconeo","Estendi i gomiti verso il basso mantenendoli vicini al busto.","Carrucola alta e gomiti fermi ai fianchi.","Usare il peso del corpo o aprire i gomiti.","Triceps pushdown","3","12"],
+["Tricipiti","Tricipiti manubrio/bilanciere","Manubrio o bilanciere","Tricipite brachiale","Anconeo","Estendi i gomiti sopra la testa o da sdraiato secondo la variante scelta.","Carico controllabile e polsi allineati.","Aprire eccessivamente i gomiti.","Standing dumbbell triceps extension","3","10"],
+["Tricipiti","Distensioni con manubrio","Manubrio","Tricipite brachiale","Anconeo","Estendi il gomito portando il manubrio sopra la testa e ritorna lentamente.","Braccio stabile e addome attivo.","Muovere la spalla o inarcare la schiena.","One arm dumbbell triceps extension","3","10"],
+["Tricipiti","Distensioni 90°","Manubri o bilanciere EZ","Tricipite brachiale","Anconeo","Da posizione con gomiti piegati, estendi le braccia mantenendo i gomiti stabili.","Spalle ferme e traiettoria controllata.","Aprire i gomiti o forzare la discesa.","Lying triceps press","3","10"],
+["Tricipiti","Distensioni 90° ai cavi","Cavo","Tricipite brachiale","Anconeo","Estendi i gomiti contro il cavo mantenendo stabile la parte alta del braccio.","Regola carrucola e posizione di partenza.","Muovere le spalle o usare slancio.","Low cable triceps extension","3","12"],
+["Tricipiti","Estensioni alternate","Manubrio o cavo singolo","Tricipite brachiale","Anconeo","Estendi un gomito alla volta mantenendo il braccio stabile.","Carico leggero e controllo del polso.","Ruotare il busto o muovere il braccio.","Tricep dumbbell kickback","3","12"],
+["Tricipiti","Piegamenti","Corpo libero","Tricipite brachiale","Pettorale, deltoide anteriore","Esegui il piegamento mantenendo i gomiti relativamente vicini al busto.","Corpo in linea e mani sotto le spalle.","Bacino che cede o gomiti eccessivamente aperti.","Pushups","3","12"],
+["Tricipiti","Flessioni gomiti stretti","Corpo libero","Tricipite brachiale","Pettorale, core","Abbassa il corpo mantenendo i gomiti vicini ai fianchi e risali.","Mani sotto le spalle e corpo allineato.","Perdere l'assetto del tronco.","Close pushups","3","10"],
+["Tricipiti","Spinte busto inclinato","Cavo o manubri","Tricipite brachiale","Anconeo","Estendi i gomiti mantenendo il busto inclinato e le braccia ferme.","Schiena neutra e gomiti vicini al corpo.","Oscillare il busto o muovere le spalle.","Triceps rope pushdown","3","12"],
+["Tricipiti","Parallele gomiti stretti","Parallele","Tricipite brachiale","Pettorale, deltoide anteriore","Scendi piegando i gomiti vicino al busto e risali con controllo.","Usa assistenza se necessario e ROM confortevole.","Scendere troppo o incassare le spalle.","Triceps dips","3","10"],
+["Tricipiti","Spinte presa stretta","Bilanciere e panca","Tricipite brachiale","Pettorale, deltoide anteriore","Abbassa il bilanciere al torace e spingi mantenendo una presa moderatamente stretta.","Polsi sopra i gomiti e scapole stabili.","Presa eccessivamente stretta o gomiti forzati.","Close grip bench press","3","8"],
+
+// --- SEZIONE COMPLETA STRETCHING ---
+["Stretching","Stretching tricipite sopra la testa","Corpo libero","Tricipite brachiale","Deltoide, gran dorsale","Porta una mano dietro la testa e accompagna delicatamente il gomito verso il basso.","Busto eretto, collo rilassato e respirazione profonda (30 secondi per lato).","Tirare con forza, inarcare la schiena o trattenere il respiro.","Triceps stretch","3","30"],
+["Stretching","Stretching pettorale alla parete","Parete","Grande e piccolo pettorale","Deltoide anteriore, bicipite","Appoggia l'avambraccio alla parete a 90° e ruota lentamente il busto in direzione opposta.","Spalla bassa (depressa) e scapola stabile.","Forzare la rotazione o sollevare la spalla verso l'orecchio.","Chest stretch","3","30"],
+["Stretching","Stretching dorsale in allungamento","Spalliera o appoggio","Gran dorsale","Grande rotondo, quadrato dei lombi","Allunga le braccia in avanti su un supporto e porta il bacino indietro lasciando scendere il torace.","Schiena lunga, ginocchia leggermente morbide e respiro diaframmatico.","Forzare la zona lombare o irrigidire il collo.","Upper back stretch","3","30"],
+["Stretching","Stretching quadricipite in piedi","Corpo libero","Quadricipite femorale","Ileopsoas","In piedi, afferra la caviglia e avvicina il tallone al gluteo mantenendo il bacino in leggera retroversione.","Ginocchia vicine tra loro e mano opposta in appoggio per equilibrio.","Inarcare la zona lombare o aprire il ginocchio verso l'esterno.","Quad stretch","3","30"],
+["Stretching","Stretching femorali in piedi","Corpo libero / rialzo","Ischiocrurali","Gastrocnemio, catena posteriore","Appoggia il tallone avanti con gamba distesa e inclina il busto in avanti partendo dal bacino.","Schiena dritta e testa in linea con il rachide.","Curvare la parte alta della schiena o molleggiare.","Hamstring stretch","3","30"],
+["Stretching","Stretching femorali seduto a terra","Tappetino","Ischiocrurali","Polpacci, erettori spinali","Da seduto con gambe distese, fletti il busto in avanti mantenendo l'allungamento assiale della colonna.","Ischi ben appoggiati a terra, caviglie rilassate.","Tirare con strappi o trattenere il respiro.","Seated floor hamstring stretch","3","30"],
+["Stretching","Stretching glutei e piriforme a terra","Tappetino","Grande gluteo e piriforme"," Medio gluteo, pelvi-trocanterici","Sdraiato supino, incrocia una caviglia sul ginocchio opposto e tira delicatamente la coscia verso il petto.","Sacro e spalle ben appoggiati al tappetino, mento retratto.","Sollevare la testa o il bacino dal pavimento.","Glute stretch","3","30"],
+["Stretching","Stretching polpacci alla parete","Parete","Gastrocnemio e soleo","Tendine d'Achille, fascia plantare","Con le mani alla parete, porta indietro una gamba mantenendo il tallone incollato a terra.","Piede posteriore dritto in avanti e bacino allineato.","Sollevare il tallone o ruotare il piede verso l'esterno.","Calf stretch","3","30"],
+["Stretching","Stretching Ileopsoas in affondo","Tappetino","Ileopsoas e retto femorale","Flessori dell'anca","Con un ginocchio a terra e l'altro piede avanti a 90°, spingi dolcemente il bacino in avanti attivando il gluteo posteriore.","Busto eretto, addome attivo in retroversione pelvica.","Inarcare la schiena invece di estendere l'anca.","Kneeling hip flexor stretch","3","30"],
+["Stretching","Stretching del Corridore (Runner Stretch)","Tappetino","Flessori dell'anca e ischiocrurali","Glutei, polpacci","Da affondo profondo appoggia le mani a terra all'interno del piede anteriore, allungando l'anca posteriore.","Colonna allungata e ginocchio anteriore sopra la caviglia.","Incassare le spalle o forzare se c'è rigidità articolare.","Runners stretch","3","30"],
+["Stretching","Stretching Adduttori a Farfalla","Tappetino","Adduttori della coscia","Pavimento pelvico, zona lombare","Seduto a terra con piante dei piedi unite, lascia scendere le ginocchia verso l'esterno mantenendo la schiena dritta.","Seduto sugli ischi (usa un cuscino sotto il bacino se necessario).","Spingere con forza sulle ginocchia o curvare il dorso.","Groin and back stretch","3","30"],
+["Stretching","Stretching Spalla e Deltoide Posteriore","Corpo libero","Deltoide posteriore","Romboidi, cuffia dei rotatori","Porta un braccio teso davanti al petto e accompagnalo verso di te con l'altro braccio.","Spalle basse lontane dalle orecchie e busto fermo.","Ruotare il tronco o alzare la spalla.","Shoulder stretch","3","30"],
+["Stretching","Stretching Catena Laterale in piedi","Corpo libero","Quadrato dei lombi e obliqui","Gran dorsale, intercostali","In piedi, solleva un braccio sopra la testa e fletti lentamente il busto lateralmente espirando.","Bacino fermo al centro e piedi alla larghezza delle anche.","Ruotare il busto in avanti o piegare il collo.","Standing lateral stretch","3","30"],
+["Stretching","Stretching Catena Laterale da seduto","Tappetino / Panca","Gran dorsale e obliqui","Quadrato dei lombi","Da seduto, allunga un braccio verso l'alto e inclina il tronco lateralmente mantenendo entrambi i glutei appoggiati.","Gluteo opposto ben saldo a terra.","Staccare il bacino dal pavimento.","Seated overhead stretch","3","30"],
+["Stretching","Stretching Quadricipite in quadrupedia","Tappetino","Quadricipite e flessori anca","Flessori plantari","Dalla quadrupedia, siediti parzialmente verso i talloni sentendo l'allungamento di cosce e collo del piede.","Schiena neutra e movimento graduale.","Forzare le ginocchia in presenza di fastidio articolare.","All fours quad stretch","3","30"],
+["Stretching","Rilascio Piriforme su rullo (Foam Roller)","Foam Roller / Tappetino","Piriforme e gluteo profondo","Fascia lata","Seduto sul rullo con una caviglia incrociata sul ginocchio opposto, scorri lentamente sulla zona glutea.","Movimento lento respirando sui punti di maggiore tensione.","Scorrere troppo velocemente o sulla zona ossea.","Piriformis smr","3","40"],
+
+// --- SEZIONE ESERCIZI POSTURALI, MOBILITÀ E RIEDUCAZIONE COLONNA ---
+["Posturale","Gatto-Mucca (Cat-Cow Mobilità Colonna)","Tappetino","Erettori spinali e retto addominale","Multifido, mobilizzatori scapole","In quadrupedia: inspira inarcando dolcemente la colonna (sguardo avanti), espira arrotondando il dorso verso il soffitto.","Mani esattamente sotto le spalle e ginocchia sotto le anche.","Muovere il tratto lombare a scatti o andare in apnea.","Cat stretch","3","12"],
+["Posturale","Posizione del Bambino (Scarico Lombare)","Tappetino","Muscoli paravertebrali lombari","Gran dorsale, glutei, spalle","In ginocchio, porta i glutei sui talloni e allunga le braccia avanti a terra appoggiando la fronte al tappetino.","Respira profondamente gonfiando la zona dorso-lombare.","Tenere le spalle contratte o forzare le ginocchia.","Childs pose","3","45"],
+["Posturale","Torsione Spinale Posturale (Spinal Twist)","Tappetino","Paravertebrali, obliqui e multifido","Piriforme, pettorale, fascia toraco-lombare","Da seduto o supino, incrocia una gamba e ruota dolcemente il busto dal lato opposto allungando la colonna verso l'alto.","Cresci con il vertice della testa verso il soffitto prima di ruotare.","Forzare la rotazione con la leva delle braccia a schiena curva.","Spinal stretch","3","30"],
+["Posturale","Retroversione Bacino e Ponte Posturale","Tappetino","Grande gluteo e trasverso dell'addome","Ischiocrurali, erettori spinali, pavimento pelvico","Supino con ginocchia piegate: appiattisci la zona lombare a terra (retroversione) e solleva il bacino vertebra dopo vertebra.","Piedi paralleli alla larghezza delle anche, collo lungo e mento retratto.","Spanciare o inarcare la schiena in cima al movimento.","Pelvic tilt into bridge","3","12"],
+["Posturale","Controllo Posturale del Bacino in piedi","Corpo libero / Parete","Trasverso dell'addome e glutei","Rettori spinali, pavimento pelvico","In piedi (o appoggiato al muro), esegui una dolce retroversione del bacino riducendo l'iperlordosi lombare.","Ginocchia sbloccate, spalle rilassate e respirazione fluida.","Contrarre le spalle o bloccare il respiro.","Standing pelvic tilt","3","15"],
+["Posturale","Dead Bug (Stabilizzazione Lombo-Pelvica)","Tappetino","Trasverso dell'addome e core profondo","Retto addominale, flessori dell'anca","Supino con braccia verso il soffitto e gambe a 90°: distendi lentamente braccio e gamba opposti senza mai staccare la zona lombare da terra.","Zona lombare incollata al pavimento per tutta l'esecuzione.","Inarcare la schiena quando gamba e braccio scendono.","Dead bug","3","10"],
+["Posturale","Superman Posturale (Catena Posteriore)","Tappetino","Erettori spinali, multifido e glutei","Deltoide posteriore, romboidi, trapezio inferiore","Prono a terra con fronte rivolta in basso, solleva contemporaneamente di pochi centimetri braccia e gambe allungandole lontano dal centro.","Sguardo sempre rivolto al tappetino per mantenere il collo in asse.","Iperestendere il collo guardando avanti o salire troppo di slancio.","Superman","3","10"],
+["Posturale","Vacuum Addominale (Postura Profonda)","Corpo libero / Tappetino","Trasverso dell'addome e diaframma","Pavimento pelvico, obliqui interni","Espira tutta l'aria e richiama l'ombelico verso la colonna vertebrale come per stringere una cintura interna, mantenendo la tenuta.","Colonna ben allungata, spalle basse e torace aperto.","Alzare le spalle o curvare la schiena in avanti.","Stomach vacuum","3","20"],
+["Posturale","Side Plank Posturale (Simmetria Tronco)","Tappetino","Quadrato dei lombi, obliqui e gluteo medio","Trasverso, stabilizzatori della spalla","In appoggio sull'avambraccio laterale, mantieni testa, busto e bacino su un'unica linea retta.","Gomito esattamente sotto la spalla; variante facilitata con ginocchia piegate.","Lasciar cadere il bacino o ruotare la spalla superiore in avanti.","Side bridge","3","25"],
+["Posturale","Allungamento Cervicale Anteriore (Mento-Sterno)","Corpo libero / Sedia","Muscoli suboccipitali e paravertebrali cervicali","Trapezio superiore","Seduto con schiena ben dritta, retrai il mento (doppio mento) e fletti lentamente il capo portando il mento verso lo sterno.","Spalle basse e ferme; usa solo il peso della testa o una lievissima pressione.","Piegare tutta la schiena invece del solo tratto cervicale.","Chin to chest stretch","3","30"],
+["Posturale","Allungamento Cervicale Laterale (Trapezio)","Corpo libero / Sedia","Trapezio superiore, scaleni e SCOM","Elevatore della scapola","Con schiena eretta, inclina l'orecchio verso la spalla abbassando attivamente la spalla opposta verso il pavimento.","Sguardo dritto avanti senza ruotare il mento.","Sollevare la spalla o tirare con forza la testa.","Side neck stretch","3","30"],
+["Posturale","Apertura Toracica Anti-Cifosi su Fitball","Fitball / Tappetino","Pettorale, intercostali e rachide dorsale","Deltoide anteriore, retto addominale","Adagia la parte alta della schiena sulla Fitball aprendo le braccia lateralmente con i palmi rivolti verso l'alto per contrastare la chiusura delle spalle.","Respira profondamente nel torace mantenendo il bacino controllato.","Inarcare eccessivamente il tratto lombare invece di aprire il torace.","Chest stretch on stability ball","3","40"],
+["Posturale","Circonduzioni e Apertura Spalle con Bastone","Bastone / Elastico","Pettorale, deltoide anteriore e mobilità scapole","Cuffia dei rotatori, romboidi","Impugna un bastone o asciugamano con presa ampia e portalo lentamente sopra la testa e dietro il dorso a braccia tese.","Addome attivo per non compensare inarcando la schiena.","Piegare un gomito o forzare una presa troppo stretta.","Round the world shoulder stretch","3","10"],
+["Posturale","Estensione del Cobra (Decompressione Anteriore)","Tappetino","Retto addominale, psoas e mobilità dorsale","Erettori spinali, glutei","Prono con mani sotto le spalle, estendi gradualmente il torace mantenendo il bacino appoggiato e le spalle lontane dalle orecchie.","Gomiti vicini ai fianchi e collo lungo.","Incassare la testa nelle spalle o comprimere con dolore la zona lombare.","Upward stretch","3","30"],
+["Posturale","Scarico Lombare da Seduto","Sedia / Panca","Erettori spinali lombari e quadrato dei lombi","Gran dorsale","Seduto con piedi larghi, lascia scendere lentamente testa, spalle e busto tra le ginocchia rilassando completamente il collo.","Risali molto lentamente srotolando una vertebra alla volta.","Risalire di scatto a schiena rigida.","Chair lower back stretch","3","30"],
+["Posturale","Allungamento Assiale Colonna da Seduto","Sedia / Panca","Muscoli paravertebrali, gran dorsale e spalle","Intercostali","Seduto sugli ischi, intreccia le dita e spingi i palmi verso l'alto allungando ogni vertebra verso il soffitto.","Mento in asse, spalle basse anche con le braccia sollevate.","Spingere la pancia in avanti inarcando i lombi.","Chair upper body stretch","3","30"],
+["Posturale","Rotazione Toracica da Seduto (Dorsale Medio)","Tappetino / Sedia","Romboidi, trapezio medio e rotatori toracici","Obliqui, paravertebrali","Seduto con schiena eretta, ruota il torace a destra e a sinistra mantenendo il bacino immobile.","Incrocia le braccia al petto e guida il movimento con le spalle, non col collo.","Curvare la schiena durante la rotazione.","Middle back stretch","3","12"],
+["Posturale","Mobilità Dinamica Scapolo-Toracica","Corpo libero","Romboidi, trapezio e pettorale","Deltoidi, colonna dorsale","Alterna un'apertura ampia delle braccia (adduzione scapolare inspirando) a una chiusura anteriore (abduzione scapolare espirando).","Postura eretta, ginocchia morbide e movimento ritmico col respiro.","Alzare le spalle verso le orecchie.","Dynamic back stretch","3","12"],
+["Posturale","World's Greatest Stretch (Mobilità Globale)","Tappetino","Catena posteriore, anca, psoas e rachide toracico","Glutei, pettorale, deltoide","Da affondo lungo, appoggia una mano a terra e ruota il braccio opposto verso il soffitto aprendo tutto il torace.","Segui la mano superiore con lo sguardo respirando profondamente.","Collapsare sulla spalla d'appoggio.","Worlds greatest stretch","3","8"]
+];
+
+const existingNames=new Set(seedRaw.map(x=>x[1].toLowerCase()));
+extraRaw.forEach(x=>{if(!existingNames.has(x[1].toLowerCase())){seedRaw.push(x);existingNames.add(x[1].toLowerCase())}});
+
+const photoDbMap={
+  "Chest Press":"Leverage_Chest_Press",
+  "Pec Deck":"Butterfly",
+  "Pec Deck / Pec Front":"Butterfly",
+  "Panca piana":"Barbell_Bench_Press_-_Medium_Grip",
+  "Distensioni piane":"Barbell_Bench_Press_-_Medium_Grip",
+  "Panca inclinata manubri":"Incline_Dumbbell_Press",
+  "Cable Crossover":"Cable_Crossover",
+  "Croci ai cavi":"Cable_Crossover",
+  "Chest Press inclinata":"Leverage_Incline_Chest_Press",
+  "Chest Press Incline":"Leverage_Incline_Chest_Press",
+  "Distensioni inclinate":"Barbell_Incline_Bench_Press_-_Medium_Grip",
+  "Multi Power panca":"Smith_Machine_Bench_Press",
+  "Spinte/Croci piane":"Dumbbell_Flyes",
+  "Spinte/Croci inclinate":"Incline_Dumbbell_Flyes",
+  "Spinte declinate/Croci declinate":"Decline_Dumbbell_Flyes",
+  "Fless. parallele gomiti larghi":"Dips_-_Chest_Version",
+  "Flessioni":"Pushups",
+  "Lat Machine avanti":"Wide-Grip_Lat_Pulldown",
+  "Lat Machine presa inversa":"Underhand_Cable_Pulldowns",
+  "Lat Machine dietro":"Wide-Grip_Pulldown_Behind_The_Neck",
+  "Pulley basso":"Seated_Cable_Rows",
+  "Rematore manubrio":"One-Arm_Dumbbell_Row",
+  "Rematore bilanciere":"Bent_Over_Barbell_Row",
+  "Pullover al cavo":"Straight-Arm_Pulldown",
+  "Pull-Over":"Straight-Arm_Pulldown",
+  "Back Extension":"Hyperextensions_Back_Extensions",
+  "Trazioni assistite":"Band_Assisted_Pull-Up",
+  "Trazioni alla barra":"Pullups",
+  "Rematore T-Bar":"T-Bar_Row_with_Handle",
+  "Scrollate manubri":"Dumbbell_Shrug",
+  "Low Row stretta":"Leverage_Iso_Row",
+  "Tirate ai cavi":"Seated_Cable_Rows",
+  "Rematore Rowing Bar":"Leverage_Iso_Row",
+  "Tirate in basso ai cavi":"Close-Grip_Front_Lat_Pulldown",
+  "Pull Face":"Face_Pull",
+  "Pull Down":"Wide-Grip_Lat_Pulldown",
+  "Shoulder Press":"Leverage_Shoulder_Press",
+  "Spinte verticali":"Dumbbell_Shoulder_Press",
+  "Alzate laterali":"Side_Lateral_Raise",
+  "Reverse Pec Deck":"Reverse_Machine_Flyes",
+  "Pec-Back":"Reverse_Machine_Flyes",
+  "Face Pull":"Face_Pull",
+  "Arnold Press":"Arnold_Dumbbell_Press",
+  "Alzate frontali":"Front_Dumbbell_Raise",
+  "Tirate al mento":"Upright_Barbell_Row",
+  "Alzate ai cavi":"Cable_Seated_Lateral_Raise",
+  "Lento dietro":"Seated_Barbell_Military_Press",
+  "Scrollate":"Dumbbell_Shrug",
+  "Alzate 90°":"Seated_Bent-Over_Rear_Delt_Raise",
+  "Lento avanti":"Standing_Military_Press",
+  "Alzate frontali ai cavi":"Front_Cable_Raise",
+  "Tirate al mento ai cavi":"Upright_Cable_Row",
+  "Low Row alta":"Leverage_High_Row",
+  "Curl machine":"Machine_Bicep_Curl",
+  "Arm Curl":"Machine_Bicep_Curl",
+  "Curl manubri":"Dumbbell_Bicep_Curl",
+  "Curl manubri in piedi":"Dumbbell_Bicep_Curl",
+  "Hammer Curl":"Hammer_Curls",
+  "Curl a martello":"Hammer_Curls",
+  "Curl concentrato":"Concentration_Curls",
+  "Curl concentrato manubrio":"Concentration_Curls",
+  "Curl con bilanciere":"Barbell_Curl",
+  "Curl Larry Scott":"Preacher_Curl",
+  "Curl presa inversa":"Reverse_Barbell_Curl",
+  "Curl cavo alto":"Overhead_Cable_Curl",
+  "Push Down":"Triceps_Pushdown",
+  "Spinte in basso":"Triceps_Pushdown",
+  "French Press":"Lying_Triceps_Press",
+  "Estensioni sopra la testa al cavo":"Cable_Rope_Overhead_Triceps_Extension",
+  "Panca presa stretta":"Close-Grip_Barbell_Bench_Press",
+  "Spinte presa stretta":"Close-Grip_Barbell_Bench_Press",
+  "Tricipiti manubrio/bilanciere":"Standing_Dumbbell_Triceps_Extension",
+  "Distensioni con manubrio":"Dumbbell_One-Arm_Triceps_Extension",
+  "Distensioni 90°":"Lying_Triceps_Press",
+  "Distensioni 90° ai cavi":"Low_Cable_Triceps_Extension",
+  "Estensioni alternate":"Tricep_Dumbbell_Kickback",
+  "Piegamenti":"Pushups",
+  "Flessioni gomiti stretti":"Pushups_Close_and_Wide_Hand_Positions",
+  "Spinte busto inclinato":"Triceps_Pushdown_-_Rope_Attachment",
+  "Parallele gomiti stretti":"Dips_-_Triceps_Version",
+  "Crunch Machine":"Ab_Crunch_Machine",
+  "Cable Crunch":"Cable_Crunch",
+  "Plank":"Plank",
+  "Reverse Crunch":"Reverse_Crunch",
+  "Wood Chop":"Standing_Cable_Wood_Chop",
+  "Hip Thrust":"Barbell_Glute_Bridge",
+  "Glute Kickback":"Glute_Kickback",
+  "Rear Kick":"Glute_Kickback",
+  "Glutei ai cavi":"One-Legged_Cable_Kickback",
+  "Abductor Machine":"Thigh_Abductor",
+  "Pull Through":"Pull_Through",
+  "Slanci laterali interni":"Thigh_Adductor",
+  "Stacco da terra":"Barbell_Deadlift",
+  "Stacco Sumo":"Sumo_Deadlift",
+  "Stacco Trap Bar":"Trap_Bar_Deadlift",
+  "Estensioni dell'anca":"Hip_Extension_with_Bands",
+  "Adductor Machine":"Thigh_Adductor",
+  "Adductor ai cavi":"Cable_Hip_Adduction",
+  "Leg Extension":"Leg_Extensions",
+  "Leg Press":"Leg_Press",
+  "Pressa orizzontale":"Leg_Press",
+  "Pressa verticale":"Narrow_Stance_Leg_Press",
+  "Squat":"Barbell_Squat",
+  "Bulgarian Split Squat":"Split_Squat_with_Dumbbells",
+  "Hack Squat":"Hack_Squat",
+  "Squat al multipower":"Smith_Machine_Squat",
+  "Squat a vuoto":"Bodyweight_Squat",
+  "Squat Sissy":"Weighted_Sissy_Squat",
+  "Affondi frontali":"Barbell_Lunge",
+  "Leg Curl sdraiato":"Lying_Leg_Curls",
+  "Leg Curl seduto":"Seated_Leg_Curl",
+  "Leg Curl":"Lying_Leg_Curls",
+  "Stacco rumeno":"Romanian_Deadlift",
+  "Stacchi gambe flesse":"Romanian_Deadlift",
+  "Calf Raise":"Standing_Calf_Raises",
+  "Calf in piedi":"Standing_Calf_Raises",
+  "Seated Calf Raise":"Seated_Calf_Raise",
+  "Calf seduto":"Seated_Calf_Raise",
+  "Calf Raise alla pressa":"Calf_Press_On_The_Leg_Press_Machine",
+  "Press-Calf":"Calf_Press_On_The_Leg_Press_Machine",
+  "Donkey Calf":"Donkey_Calf_Raises",
+  "Wrist Curl":"Palms-Up_Dumbbell_Wrist_Curl_Over_A_Bench",
+
+  // Stretching
+  "Stretching tricipite sopra la testa":"Triceps_Stretch",
+  "Stretching pettorale alla parete":"Chest_And_Front_Of_Shoulder_Stretch",
+  "Stretching dorsale in allungamento":"Upper_Back_Stretch",
+  "Stretching quadricipite in piedi":"Quad_Stretch",
+  "Stretching femorali in piedi":"Hamstring_Stretch",
+  "Stretching femorali seduto a terra":"Seated_Floor_Hamstring_Stretch",
+  "Stretching glutei e piriforme a terra":"IT_Band_and_Glute_Stretch",
+  "Stretching polpacci alla parete":"Calf_Stretch_Hands_Against_Wall",
+  "Stretching Ileopsoas in affondo":"Kneeling_Hip_Flexor",
+  "Stretching del Corridore (Runner Stretch)":"Runners_Stretch",
+  "Stretching Adduttori a Farfalla":"Groin_and_Back_Stretch",
+  "Stretching Spalla e Deltoide Posteriore":"Shoulder_Stretch",
+  "Stretching Catena Laterale in piedi":"Standing_Lateral_Stretch",
+  "Stretching Catena Laterale da seduto":"Seated_Overhead_Stretch",
+  "Stretching Quadricipite in quadrupedia":"All_Fours_Quad_Stretch",
+  "Rilascio Piriforme su rullo (Foam Roller)":"Piriformis-SMR",
+
+  // Posturali
+  "Gatto-Mucca (Cat-Cow Mobilità Colonna)":"Cat_Stretch",
+  "Posizione del Bambino (Scarico Lombare)":"Childs_Pose",
+  "Torsione Spinale Posturale (Spinal Twist)":"Spinal_Stretch",
+  "Retroversione Bacino e Ponte Posturale":"Pelvic_Tilt_Into_Bridge",
+  "Controllo Posturale del Bacino in piedi":"Standing_Pelvic_Tilt",
+  "Dead Bug (Stabilizzazione Lombo-Pelvica)":"Dead_Bug",
+  "Superman Posturale (Catena Posteriore)":"Superman",
+  "Vacuum Addominale (Postura Profonda)":"Stomach_Vacuum",
+  "Side Plank Posturale (Simmetria Tronco)":"Side_Bridge",
+  "Allungamento Cervicale Anteriore (Mento-Sterno)":"Chin_To_Chest_Stretch",
+  "Allungamento Cervicale Laterale (Trapezio)":"Side_Neck_Stretch",
+  "Apertura Toracica Anti-Cifosi su Fitball":"Chest_Stretch_on_Stability_Ball",
+  "Circonduzioni e Apertura Spalle con Bastone":"Round_The_World_Shoulder_Stretch",
+  "Estensione del Cobra (Decompressione Anteriore)":"Upward_Stretch",
+  "Scarico Lombare da Seduto":"Chair_Lower_Back_Stretch",
+  "Allungamento Assiale Colonna da Seduto":"Chair_Upper_Body_Stretch",
+  "Rotazione Toracica da Seduto (Dorsale Medio)":"Middle_Back_Stretch",
+  "Mobilità Dinamica Scapolo-Toracica":"Dynamic_Back_Stretch",
+  "World's Greatest Stretch (Mobilità Globale)":"Worlds_Greatest_Stretch"
+};
+
+const CDN_BASE = 'https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/';
+const IS_LOCAL = location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.protocol === 'file:';
+
+function cleanNumber(val, fallback=10){
+  if(val===undefined || val===null || val==='') return fallback;
+  const nums = String(val).match(/\d+/g);
+  if(!nums || !nums.length) return fallback;
+  return parseInt(nums[0], 10) || fallback;
+}
+
+const catalog=seedRaw.map((x,i)=>{
+  const dbId = photoDbMap[x[1]] || 'Barbell_Squat';
+  const cdn0 = `${CDN_BASE}${dbId}/0.jpg`;
+  const cdn1 = `${CDN_BASE}${dbId}/1.jpg`;
+  return {
+    id:'ex'+i,
+    zone:x[0],
+    name:x[1],
+    tool:x[2],
+    main:x[3],
+    secondary:x[4],
+    how:x[5],
+    setup:x[6],
+    mistakes:x[7],
+    query:x[8],
+    sets:cleanNumber(x[9], 3),
+    reps:String(cleanNumber(x[10], 10)),
+    rest:60,
+    notes:'',
+    dbId,
+    image: IS_LOCAL ? `assets/exercises/${dbId}_0.jpg` : cdn0,
+    image2: IS_LOCAL ? `assets/exercises/${dbId}_1.jpg` : cdn1,
+    remoteImage: cdn0,
+    remoteImage2: cdn1,
+    imageSource:'Foto esercizio (Fase 1 / Fase 2)'
+  };
+});
+
+// --- SINCRONIZZAZIONE AUTOMATICA IN CLOUD (FIREBASE FIRESTORE) ---
+const KEY='mygym-professional-v9-clean';
+const WORK_KEY='mygym-active-workout-v9';
+const CLOUD_URL='https://firestore.googleapis.com/v1/projects/apollo-evens-2be21/databases/(default)/documents/titan_gym/user_data';
+
+let db=loadDB(),currentPage='home',deferredInstall=null,workState=loadWorkState(),timerHandle=null;
+
+function blankDB(){return {plans:[],activePlan:null,custom:[],history:[],measurements:[],settings:{rest:60,unit:'kg'},updatedAt:0}}
+function loadDB(){
+  try{
+    let fresh=localStorage.getItem(KEY);
+    if(fresh)return Object.assign(blankDB(),JSON.parse(fresh));
+    let legacy=JSON.parse(localStorage.getItem('mygym-v4')||'null');
+    if(legacy){
+      let migrated=blankDB(),map={};
+      (legacy.machines||[]).forEach(m=>{
+        let id='legacy-'+m.id;map[m.id]=id;
+        migrated.custom.push({id,name:m.name||'Esercizio',zone:m.zone||m.muscle||'Personalizzato',main:m.muscle||'',secondary:m.secondary||'',tool:m.tool||'',how:m.how||'',setup:m.setup||'',mistakes:m.mistakes||'',sets:m.sets||3,reps:m.reps||'10',rest:legacy.rest||60,image:m.image||'',custom:true});
+      });
+      migrated.plans=(legacy.plans||[]).map(p=>({id:'legacy-plan-'+p.id,name:p.name,description:'Scheda importata dalla versione precedente',ids:(p.ids||[]).map(x=>map[x]).filter(Boolean)}));
+      migrated.activePlan=migrated.plans.find(p=>p.id==='legacy-plan-'+legacy.active)?.id||migrated.plans[0]?.id||null;
+      migrated.settings.rest=legacy.rest||60;
+      migrated.history=(legacy.history||[]).map((h,i)=>({id:'legacy-history-'+i,date:h.date||new Date().toISOString(),plan:h.plan||'Allenamento importato',minutes:0,items:(h.items||[]).map(it=>({id:map[it.id]||'',name:legacy.machines?.find(m=>m.id===it.id)?.name||'Esercizio',sets:[{kg:it.kg||'',reps:it.reps||'',done:true}]}))}));
+      localStorage.setItem(KEY,JSON.stringify(migrated));
+      return migrated;
+    }
+    return blankDB();
+  }catch(e){return blankDB()}
+}
+
+function setCloudBadge(text, ok=true){
+  const el = document.getElementById('cloudStatus');
+  if(!el) return;
+  el.textContent = text;
+  el.style.background = ok ? '#e8faf3' : '#fff5df';
+  el.style.color = ok ? '#0f6848' : '#a76a00';
+}
+
+function mergeById(localArr=[], remoteArr=[]){
+  const map = new Map();
+  remoteArr.forEach(item => { if(item && item.id) map.set(item.id, item); });
+  localArr.forEach(item => { if(item && item.id) map.set(item.id, item); });
+  return Array.from(map.values());
+}
+
+async function pushToCloud(){
+  if(!navigator.onLine) return;
+  try{
+    setCloudBadge('☁️ Salvataggio Cloud…', true);
+    const body = {
+      fields: {
+        payload: { stringValue: JSON.stringify(db) },
+        updatedAt: { integerValue: String(db.updatedAt || Date.now()) }
+      }
+    };
+    const res = await fetch(CLOUD_URL, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body)
+    });
+    if(res.ok){
+      setCloudBadge('☁️ Cloud Sincronizzato', true);
+    }
+  }catch(e){
+    setCloudBadge('☁️ Salvato in locale', false);
+  }
+}
+
+async function syncFromCloud(manual=false){
+  if(!navigator.onLine) return;
+  try{
+    const res = await fetch(CLOUD_URL, { cache: 'no-store' });
+    if(res.status === 404){
+      // Primo avvio assoluto sul Cloud: carica subito i dati presenti sul PC!
+      if(db.plans.length || db.custom.length || db.history.length || db.measurements.length){
+        db.updatedAt = Date.now();
+        await pushToCloud();
+        if(manual) toast('Dati caricati sul Cloud!');
+      }
+      return;
+    }
+    if(!res.ok) return;
+    const doc = await res.json();
+    const raw = doc?.fields?.payload?.stringValue;
+    if(!raw) return;
+    const remoteDB = JSON.parse(raw);
+    const remoteTime = Number(doc?.fields?.updatedAt?.integerValue || remoteDB.updatedAt || 0);
+    const localTime = Number(db.updatedAt || 0);
+    const localEmpty = !db.plans.length && !db.custom.length && !db.history.length && !db.measurements.length;
+
+    if(localEmpty || remoteTime > localTime){
+      // Unisce comunque eventuali elementi creati localmente non ancora presenti
+      const mergedPlans = remoteTime >= localTime ? mergeById(remoteDB.plans, db.plans) : mergeById(db.plans, remoteDB.plans);
+      const mergedCustom = mergeById(db.custom, remoteDB.custom);
+      const mergedHistory = mergeById(db.history, remoteDB.history);
+      db = Object.assign(blankDB(), remoteDB, {
+        plans: mergedPlans,
+        custom: mergedCustom,
+        history: mergedHistory,
+        activePlan: remoteDB.activePlan || db.activePlan || mergedPlans[0]?.id || null,
+        updatedAt: Math.max(remoteTime, localTime)
+      });
+      localStorage.setItem(KEY, JSON.stringify(db));
+      renderAll();
+      setCloudBadge('☁️ Cloud Sincronizzato', true);
+      if(manual) toast('☁️ Dati sincronizzati con il Cloud!');
+    } else if(localTime > remoteTime || db.plans.length > (remoteDB.plans||[]).length){
+      await pushToCloud();
+      if(manual) toast('☁️ Cloud aggiornato con i tuoi ultimi dati!');
+    } else {
+      setCloudBadge('☁️ Cloud Sincronizzato', true);
+      if(manual) toast('☁️ I tuoi dati sono già aggiornati!');
+    }
+  }catch(e){
+    setCloudBadge('☁️ Offline (Locale)', false);
+  }
+}
+
+function persist(){
+  try{
+    db.updatedAt = Date.now();
+    localStorage.setItem(KEY,JSON.stringify(db));
+    pushToCloud();
+  }catch(e){
+    toast('Spazio di memoria pieno: esporta un backup e riduci le foto caricate.');
+  }
+}
+function loadWorkState(){try{return JSON.parse(localStorage.getItem(WORK_KEY)||'null')}catch(e){return null}}
+function persistWorkState(){try{if(workState)localStorage.setItem(WORK_KEY,JSON.stringify(workState));else localStorage.removeItem(WORK_KEY);}catch(e){}}
+
+function playBeep(){
+  try{
+    const Ctx = window.AudioContext || window.webkitAudioContext;
+    if(!Ctx) return;
+    const ctx = new Ctx();
+    [0, 0.18].forEach(delay => {
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.type = 'sine';
+      osc.frequency.value = 880;
+      gain.gain.setValueAtTime(0.18, ctx.currentTime + delay);
+      gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + delay + 0.14);
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.start(ctx.currentTime + delay);
+      osc.stop(ctx.currentTime + delay + 0.15);
+    });
+  }catch(e){}
+}
+
+function toast(s){const t=document.getElementById('toast');t.textContent=s;t.style.display='block';clearTimeout(toast.t);toast.t=setTimeout(()=>t.style.display='none',2800)}
+function go(page){currentPage=page;document.querySelectorAll('.page').forEach(e=>e.classList.toggle('active',e.id===page));document.querySelectorAll('[data-page]').forEach(e=>e.classList.toggle('active',e.dataset.page===page));const titles={home:'Panoramica',catalog:'Catalogo esercizi',plans:'Schede allenamento',workout:'Allenamento',library:'I miei attrezzi',progress:'Progressi',settings:'Impostazioni e Cloud'};document.getElementById('pageTitle').textContent=titles[page];document.getElementById('eyebrow').textContent=page==='workout'?'SESSIONE IN CORSO':'TITAN GYM · IL TUO PERCORSO';renderAll();window.scrollTo({top:0,behavior:'smooth'})}
+function openZoneQuick(zoneName){
+  go('catalog');
+  const z=document.getElementById('catZone');
+  if(z){z.value=zoneName;renderCatalog();}
+}
+function modal(title,body){document.getElementById('modalTitle').textContent=title;document.getElementById('modalBody').innerHTML=body;document.getElementById('modal').classList.add('open')}
+function closeModal(){if(window.planEditorOpen){writePlanDraft();window.planEditorOpen=false}document.getElementById('modal').classList.remove('open')}
+function esc(s=''){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function allExercises(){return [...catalog,...db.custom]}
+function getExercise(id){return allExercises().find(x=>x.id===id)}
+function dateFmt(d){return new Date(d).toLocaleDateString('it-IT',{day:'2-digit',month:'short',year:'numeric'})}
+function renderAll(){renderHome();if(currentPage==='catalog')renderCatalog();if(currentPage==='plans')renderPlans();if(currentPage==='workout')renderWorkout();if(currentPage==='library')renderLibrary();if(currentPage==='progress')renderProgress();if(currentPage==='settings')syncSettings();document.getElementById('connection').textContent=navigator.onLine?'● Online':'● Offline';}
+function renderHome(){document.getElementById('statPlans').textContent=db.plans.length;document.getElementById('statExercises').textContent=allExercises().length;document.getElementById('statWorkouts').textContent=db.history.length;document.getElementById('statMinutes').textContent=db.history.reduce((s,h)=>s+(h.minutes||0),0);let p=db.plans.find(x=>x.id===db.activePlan);document.getElementById('activePlanBox').innerHTML=p?`<h3>${esc(p.name)}</h3><p class="muted small">${p.ids.length} esercizi · ${esc(p.description||'Pronta per iniziare')}</p><div class="row"><button class="btn-green" onclick="beginActiveWorkout()">▶ Inizia questa scheda</button><button class="btn-soft btn-small" onclick="newPlan('${p.id}')">Modifica</button></div>`:'<div class="empty"><b>Nessuna scheda attiva</b>Crea una scheda per iniziare.<br><br><button onclick="newPlan()">Crea scheda</button></div>';let h=db.history.at(-1);document.getElementById('lastWorkout').innerHTML=h?`<b>${esc(h.plan)}</b><p class="muted small">${dateFmt(h.date)} · ${h.items.length} esercizi · ${h.minutes||0} min</p>`:'<p class="muted">Non hai ancora registrato allenamenti.</p>'}
+
+function imageHtml(ex,cls='exercise-img'){
+  const src1 = ex.image || ex.remoteImage || '';
+  const fallback1 = ex.remoteImage || '';
+  const hasPhase2 = Boolean(ex.image2 || ex.remoteImage2);
+  return `<div class="${cls}" id="img-${esc(ex.id)}" data-phase="1">
+    ${src1 ? `<img id="pic-${esc(ex.id)}" src="${esc(src1)}" alt="Foto ${esc(ex.name)}" loading="lazy" onerror="if(this.dataset.fb&&this.src!==this.dataset.fb){this.src=this.dataset.fb}" data-fb="${esc(fallback1)}">` : '<div class="photo-placeholder">Foto non disponibile</div>'}
+    <span class="photo-tag" id="tag-${esc(ex.id)}">Fase 1 · Partenza</span>
+    ${hasPhase2 ? `<button type="button" class="phase-btn" onclick="event.stopPropagation();togglePhase('${esc(ex.id)}')">⇄ Fase 2</button>` : ''}
+  </div>`;
+}
+
+function togglePhase(id){
+  const ex = getExercise(id);
+  if(!ex) return;
+  const wrap = document.getElementById('img-'+id);
+  const pic = document.getElementById('pic-'+id);
+  const tag = document.getElementById('tag-'+id);
+  if(!wrap || !pic) return;
+  const isPhase1 = wrap.dataset.phase !== '2';
+  if(isPhase1){
+    wrap.dataset.phase = '2';
+    pic.dataset.fb = ex.remoteImage2 || '';
+    pic.src = ex.image2 || ex.remoteImage2;
+    if(tag) tag.textContent = 'Fase 2 · Esecuzione';
+    const btn = wrap.querySelector('.phase-btn');
+    if(btn) btn.textContent = '⇄ Fase 1';
+  } else {
+    wrap.dataset.phase = '1';
+    pic.dataset.fb = ex.remoteImage || '';
+    pic.src = ex.image || ex.remoteImage;
+    if(tag) tag.textContent = 'Fase 1 · Partenza';
+    const btn = wrap.querySelector('.phase-btn');
+    if(btn) btn.textContent = '⇄ Fase 2';
+  }
+}
+
+function renderCatalog(){
+  let zones=[...new Set(catalog.map(x=>x.zone))],tools=[...new Set(catalog.map(x=>x.tool))];
+  let z=document.getElementById('catZone'),t=document.getElementById('catTool');
+  if(!z.dataset.ready){
+    z.innerHTML='<option value="">Tutti i gruppi (Pesi, Posturale, Stretching)</option>'+zones.map(x=>`<option>${esc(x)}</option>`).join('');
+    z.dataset.ready=1;
+    t.innerHTML='<option value="">Tutte le attrezzature</option>'+tools.map(x=>`<option>${esc(x)}</option>`).join('');
+  }
+  let q=document.getElementById('catSearch').value.toLowerCase(),zone=z.value,tool=t.value;
+  let list=catalog.filter(x=>(!zone||x.zone===zone)&&(!tool||x.tool===tool)&&(!q||[x.name,x.zone,x.main,x.secondary,x.tool].join(' ').toLowerCase().includes(q)));
+  document.getElementById('catalogCount').textContent=list.length+' esercizi disponibili';
+  document.getElementById('catalogGrid').innerHTML=list.map(x=>{
+    const pillClass = x.zone==='Posturale' ? 'pill violet' : x.zone==='Stretching' ? 'pill green' : 'pill';
+    return `<article class="exercise-card">${imageHtml(x)}<div class="exercise-body"><div><span class="${pillClass}">${esc(x.zone)}</span></div><h3>${esc(x.name)}</h3><p><b>Principale:</b> ${esc(x.main)}<br><b>Secondari:</b> ${esc(x.secondary)}<br><b>Attrezzo:</b> ${esc(x.tool)}</p><div class="exercise-actions"><button class="btn-soft btn-small" onclick="exerciseDetail('${x.id}')">Dettagli</button><button class="btn-small" onclick="addExerciseToLibrary('${x.id}')">＋ Libreria</button></div></div></article>`;
+  }).join('')||'<div class="empty">Nessun esercizio corrisponde ai filtri.</div>';
+}
+
+function exerciseDetail(id){
+  let x=getExercise(id);if(!x)return;
+  const src1 = x.image || x.remoteImage || '';
+  const src2 = x.image2 || x.remoteImage2 || '';
+  const fb1 = x.remoteImage || '';
+  const fb2 = x.remoteImage2 || '';
+  const photosHtml = src1 && src2 ? `
+    <div class="dual-photos">
+      <figure>
+        <img src="${esc(src1)}" data-fb="${esc(fb1)}" onerror="if(this.dataset.fb&&this.src!==this.dataset.fb){this.src=this.dataset.fb}" alt="${esc(x.name)} Fase 1">
+        <figcaption>1. Posizione iniziale / Impostazione</figcaption>
+      </figure>
+      <figure>
+        <img src="${esc(src2)}" data-fb="${esc(fb2)}" onerror="if(this.dataset.fb&&this.src!==this.dataset.fb){this.src=this.dataset.fb}" alt="${esc(x.name)} Fase 2">
+        <figcaption>2. Fase di esecuzione / Allungamento</figcaption>
+      </figure>
+    </div>` : (src1 ? `<img src="${esc(src1)}" style="width:100%;max-height:260px;object-fit:contain;border-radius:14px;background:#f8fafc;margin-bottom:12px">` : '');
+  const unitLabel = (x.zone==='Stretching' || (x.zone==='Posturale' && +x.reps>=20)) ? 'secondi / rip.' : 'ripetizioni';
+  modal(x.name,`${photosHtml}<div class="pill">${esc(x.zone)}</div><div class="pill">${esc(x.tool)}</div><p><b>Muscolo/Distretto principale:</b> ${esc(x.main)}<br><b>Coinvolti:</b> ${esc(x.secondary)}</p><h3>Esecuzione tecnica</h3><p>${esc(x.how)}</p><h3>Allineamento posturale e preparazione</h3><p>${esc(x.setup)}</p><h3>Errori da evitare</h3><p>${esc(x.mistakes)}</p><p><b>Indicazione iniziale:</b> ${esc(x.sets)} serie · ${esc(x.reps)} ${unitLabel}</p><div class="notice">Esegui ogni movimento con controllo e respirazione fluida. Se avverti dolore acuto, interrompi.</div><br><button onclick="addExerciseToLibrary('${x.id}');closeModal()">＋ Aggiungi alla libreria</button>`);
+}
+
+function addExerciseToLibrary(id){let x=getExercise(id);if(!x)return;if(db.custom.some(e=>e.sourceId===id)){toast('È già nella tua libreria');return}db.custom.push({...x,id:'custom-'+Date.now(),sourceId:id,image:x.image||'',imageSource:'',custom:true});persist();renderAll();toast('Esercizio aggiunto alla libreria')}
+function newCustomExercise(id){let x=id?getExercise(id):{name:'',zone:'',main:'',secondary:'',tool:'',how:'',setup:'',mistakes:'',sets:3,reps:'10',rest:60,image:''};modal(id?'Modifica esercizio':'Nuovo esercizio personalizzato',`<div class="field"><label>Nome esercizio</label><input id="eName" value="${esc(x.name)}"></div><div class="grid grid-2"><div class="field"><label>Zona (es. Petto, Posturale, Stretching)</label><input id="eZone" value="${esc(x.zone)}"></div><div class="field"><label>Attrezzatura</label><input id="eTool" value="${esc(x.tool)}"></div><div class="field"><label>Muscolo principale</label><input id="eMain" value="${esc(x.main)}"></div><div class="field"><label>Muscoli secondari</label><input id="eSecondary" value="${esc(x.secondary)}"></div></div><div class="field"><label>Esecuzione</label><textarea id="eHow">${esc(x.how)}</textarea></div><div class="field"><label>Preparazione e regolazioni</label><textarea id="eSetup">${esc(x.setup)}</textarea></div><div class="field"><label>Errori da evitare</label><textarea id="eMistakes">${esc(x.mistakes)}</textarea></div><div class="grid grid-2"><div class="field"><label>Serie consigliate</label><input id="eSets" type="number" min="1" max="20" value="${esc(cleanNumber(x.sets,3))}"></div><div class="field"><label>Ripetizioni consigliate</label><input id="eReps" type="number" min="1" value="${esc(cleanNumber(x.reps,10))}"></div></div><div class="field"><label>Foto reale dal telefono</label><input type="file" id="ePhoto" accept="image/*"></div><button onclick="saveCustomExercise('${id||''}')">Salva esercizio</button>`)}
+async function compressImage(file){return new Promise((resolve,reject)=>{let r=new FileReader();r.onload=()=>{let im=new Image();im.onload=()=>{let scale=Math.min(1,1200/Math.max(im.width,im.height)),c=document.createElement('canvas');c.width=Math.round(im.width*scale);c.height=Math.round(im.height*scale);c.getContext('2d').drawImage(im,0,0,c.width,c.height);resolve(c.toDataURL('image/jpeg',.78))};im.onerror=reject;im.src=r.result};r.onerror=reject;r.readAsDataURL(file)})}
+async function saveCustomExercise(id){let x=id?getExercise(id):null;let o={id:id||'custom-'+Date.now(),name:eName.value.trim(),zone:eZone.value.trim(),tool:eTool.value.trim(),main:eMain.value.trim(),secondary:eSecondary.value.trim(),how:eHow.value.trim(),setup:eSetup.value.trim(),mistakes:eMistakes.value.trim(),sets:cleanNumber(eSets.value,3),reps:String(cleanNumber(eReps.value,10)),rest:db.settings.rest,custom:true,image:x?.image||''};if(!o.name)return toast('Inserisci il nome dell’esercizio');let f=ePhoto.files[0];if(f)o.image=await compressImage(f);if(x)Object.assign(x,o);else db.custom.push(o);persist();closeModal();renderAll();toast('Esercizio salvato in Cloud')}
+function renderLibrary(){let q=document.getElementById('libSearch').value.toLowerCase(),list=allExercises().filter(x=>!q||[x.name,x.zone,x.main,x.tool].join(' ').toLowerCase().includes(q));document.getElementById('libraryList').innerHTML=list.map(x=>`<div class="machine-row">${(x.image||x.remoteImage)?`<img src="${esc(x.image||x.remoteImage)}" data-fb="${esc(x.remoteImage||'')}" onerror="if(this.dataset.fb&&this.src!==this.dataset.fb){this.src=this.dataset.fb}">`:`<div class="placeholder">🏋️</div>`}<div style="flex:1;min-width:0"><b>${esc(x.name)}</b><div class="small muted">${esc(x.zone)} · ${esc(x.tool)}</div><div class="small muted">${esc(x.main)}</div></div><button class="btn-soft btn-small" onclick="exerciseDetail('${x.id}')">Foto / Info</button><button class="btn-light btn-small" onclick="editLibraryExercise('${x.id}')">Modifica</button></div>`).join('')||'<div class="empty">La libreria è vuota. Aggiungi esercizi dal catalogo.</div>'}
+function editLibraryExercise(id){let x=getExercise(id);if(!x)return;if(!x.custom){modal(x.name,`<p>Questo esercizio appartiene al catalogo base. Puoi copiarlo nella tua libreria personale per sostituire la foto con quella scattata nella tua palestra o personalizzare le note.</p><button onclick="addExerciseToLibrary('${id}');closeModal()">Copia nella mia libreria</button>`);return}newCustomExercise(id)}
+
+const PLAN_DRAFT_KEY='mygym-plan-builder-draft-v2';
+function readPlanDraft(){try{return JSON.parse(localStorage.getItem(PLAN_DRAFT_KEY)||'null')}catch(e){return null}}
+function writePlanDraft(){
+  if(!window.planEditorOpen)return;
+  try{
+    const data={id:window.planEditingId||'',name:document.getElementById('planName')?.value||'',description:document.getElementById('planDesc')?.value||'',picked:[...(window.planPicked||new Set())],config:window.planConfig||{}};
+    localStorage.setItem(PLAN_DRAFT_KEY,JSON.stringify(data));
+  }catch(e){toast('Impossibile salvare la bozza: memoria del browser piena')}
+}
+function lastKnownKg(exId){
+  for(let i=db.history.length-1;i>=0;i--){
+    const item=(db.history[i].items||[]).find(it=>it.id===exId);
+    if(item){
+      const s=(item.sets||[]).find(st=>st.kg!==''&&st.kg!==undefined);
+      if(s) return String(s.kg);
+    }
+  }
+  return '';
+}
+function planConfigFor(id){
+  const ex=getExercise(id),c=(window.planConfig||{})[id]||{};
+  return {
+    sets:Math.max(1,Math.min(20,cleanNumber(c.sets??ex?.sets,3))),
+    reps:String(cleanNumber(c.reps??ex?.reps,10)),
+    kg:c.kg!==undefined ? String(c.kg) : ''
+  };
+}
+function newPlan(id){
+  let p=id?db.plans.find(x=>x.id===id):{name:'',description:'',ids:[],exerciseConfig:{}};
+  let draft=!id?readPlanDraft():null;
+  let picked=new Set(draft?.picked||p.ids);
+  window.planPicked=picked;
+  window.planConfig={...(p.exerciseConfig||{}),...(draft?.config||{})};
+  window.planEditingId=id||'';
+  window.planEditorOpen=true;
+  let name=draft?.name??p.name, description=draft?.description??(p.description||'');
+  modal(id?'Modifica scheda':'Crea nuova scheda',
+  `<div class="field"><label>Nome della scheda</label><input id="planName" value="${esc(name)}" placeholder="Es. Scheda A — Petto, Posturale e Stretching" oninput="writePlanDraft()"></div>
+  <div class="field"><label>Descrizione / obiettivo</label><textarea id="planDesc" oninput="writePlanDraft()">${esc(description)}</textarea></div>
+  <div class="field"><label>Filtra esercizi per gruppo</label><select id="planZone" onchange="filterPlanChoices()"><option value="">Tutti i gruppi (Pesi, Posturale, Stretching)</option>${[...new Set(allExercises().map(x=>x.zone))].map(z=>`<option>${esc(z)}</option>`).join('')}</select></div>
+  <input id="planSearch" placeholder="Cerca esercizio…" oninput="filterPlanChoices()">
+  <p class="small muted">Spunta gli esercizi e imposta <b>Serie</b>, <b>Ripetizioni</b> (e opzionalmente i <b>Kg</b>). Te li ritroverai già compilati di default quando inizi l'allenamento!</p>
+  <div id="planChoices" style="max-height:48vh;overflow-y:auto;overscroll-behavior:contain;margin:10px 0"></div>
+  <p class="small muted">Selezionati: <b id="pickedCount">${picked.size}</b></p>
+  <div class="row"><button class="btn-light" onclick="closePlanEditor()">Chiudi (bozza salvata)</button><button class="btn-green" onclick="savePlan('${id||''}')">Salva scheda in Cloud</button></div>`);
+  filterPlanChoices();
+  writePlanDraft();
+}
+function closePlanEditor(){writePlanDraft();window.planEditorOpen=false;closeModal();toast('Bozza salvata. Riapri Crea scheda per continuare.')}
+function filterPlanChoices(){
+  let zone=document.getElementById('planZone')?.value||'',q=document.getElementById('planSearch')?.value.toLowerCase()||'',picked=window.planPicked||new Set();
+  let list=allExercises().filter(x=>(!zone||x.zone===zone)&&(!q||[x.name,x.zone,x.main,x.tool].join(' ').toLowerCase().includes(q)));
+  let el=document.getElementById('planChoices');if(!el)return;
+  el.innerHTML=list.map(x=>{
+    let c=planConfigFor(x.id);
+    const thumb = x.image || x.remoteImage || '';
+    return `<div class="machine-row" style="display:flex;align-items:center;gap:9px;padding:10px;border-bottom:1px solid var(--line)">
+      <input type="checkbox" ${picked.has(x.id)?'checked':''} onchange="togglePicked('${x.id}',this.checked)" style="width:20px;height:20px;flex:0 0 20px">
+      ${thumb?`<img src="${esc(thumb)}" data-fb="${esc(x.remoteImage||'')}" onerror="if(this.dataset.fb&&this.src!==this.dataset.fb){this.src=this.dataset.fb}" style="width:52px;height:44px;object-fit:cover;border-radius:8px">`:''}
+      <div style="flex:1;min-width:0"><b>${esc(x.name)}</b><div class="small muted">${esc(x.zone)} · ${esc(x.tool)}</div>
+      ${picked.has(x.id)?`<div class="row" style="gap:8px;margin-top:7px">
+        <label class="small">Serie <input type="number" min="1" max="20" value="${c.sets}" style="width:62px" oninput="setPlanExerciseConfig('${x.id}','sets',this.value)"></label>
+        <label class="small">Ripetizioni <input type="number" min="1" value="${esc(c.reps)}" style="width:72px" oninput="setPlanExerciseConfig('${x.id}','reps',this.value)"></label>
+        <label class="small">Kg (opz.) <input type="number" min="0" step=".5" value="${esc(c.kg||'')}" placeholder="kg" style="width:72px" oninput="setPlanExerciseConfig('${x.id}','kg',this.value)"></label>
+      </div>`:''}</div>
+    </div>`;
+  }).join('')||'<p class="muted">Nessun esercizio trovato.</p>';
+  document.getElementById('pickedCount').textContent=picked.size;
+}
+function setPlanExerciseConfig(id,key,value){
+  if(!window.planConfig[id])window.planConfig[id]={...planConfigFor(id)};
+  if(key==='sets')window.planConfig[id].sets=Math.max(1,Math.min(20,parseInt(value)||3));
+  else if(key==='reps')window.planConfig[id].reps=String(cleanNumber(value,10));
+  else if(key==='kg')window.planConfig[id].kg=String(value??'');
+  writePlanDraft();
+}
+function togglePicked(id,on){
+  if(!window.planPicked)window.planPicked=new Set();
+  on?window.planPicked.add(id):window.planPicked.delete(id);
+  writePlanDraft();
+  filterPlanChoices();
+}
+
+if(!window.__myGymDraftLifecycle){
+ window.__myGymDraftLifecycle=true;
+ window.addEventListener('beforeunload',()=>{try{writePlanDraft()}catch(e){}});
+ document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='hidden'){try{writePlanDraft()}catch(e){}}else{syncFromCloud(false);}});
+}
+
+function savePlan(id){
+  const name=document.getElementById('planName')?.value.trim()||'',description=document.getElementById('planDesc')?.value.trim()||'',ids=[...(window.planPicked||new Set())];
+  if(!name)return toast('Dai un nome alla scheda');
+  if(!ids.length)return toast('Seleziona almeno un esercizio');
+  const exerciseConfig={};ids.forEach(exId=>exerciseConfig[exId]=planConfigFor(exId));
+  let p=id?db.plans.find(x=>x.id===id):null;
+  if(p)Object.assign(p,{name,description,ids,exerciseConfig});
+  else{p={id:'plan-'+Date.now(),name,description,ids,exerciseConfig};db.plans.push(p);db.activePlan=p.id}
+  persist();try{localStorage.removeItem(PLAN_DRAFT_KEY)}catch(e){}
+  window.planEditorOpen=false;closeModal();renderAll();toast('☁️ Scheda salvata e sincronizzata in Cloud');
+}
+function renderPlans(){
+ const draft=readPlanDraft();
+ const resume=draft?`<div class="card" style="margin-bottom:13px;border:2px solid var(--accent)"><b>Hai una scheda non terminata</b><p class="small muted">${esc(draft.name||'Nuova scheda')} · ${(draft.picked||[]).length} esercizi selezionati</p><div class="row"><button class="btn-green" onclick="newPlan()">▶ Riprendi bozza</button><button class="btn-light btn-small" onclick="discardPlanDraft()">Elimina bozza</button></div></div>`:'';
+ document.getElementById('plansList').innerHTML=resume+(db.plans.map(p=>`<div class="card" style="margin-bottom:13px"><div class="row" style="justify-content:space-between;gap:10px"><div><h3>${esc(p.name)} ${p.id===db.activePlan?'<span class="pill green">ATTIVA</span>':''}</h3><p class="muted small">${esc(p.description||'Nessuna descrizione')} · ${p.ids.length} esercizi</p></div><div class="row"><button class="btn-soft btn-small" onclick="newPlan('${p.id}')">Modifica</button><button class="btn-danger btn-small" onclick="deletePlan('${p.id}')">Elimina</button></div></div><div class="small muted">${p.ids.map(id=>{const ex=getExercise(id);const cfg=p.exerciseConfig?.[id];if(!ex)return '';const s=cleanNumber(cfg?.sets??ex.sets,3),r=cleanNumber(cfg?.reps??ex.reps,10);return `<span class="pill">${esc(ex.name)} (${s}×${r})</span>`}).filter(Boolean).join(' ')}</div><div class="row" style="margin-top:13px"><button class="btn-green" onclick="setActivePlan('${p.id}')">${p.id===db.activePlan?'✓ Scheda attiva':'Usa questa scheda'}</button><button class="btn-dark" onclick="beginWorkout('${p.id}')">▶ Inizia allenamento</button></div></div>`).join('')||'<div class="empty"><b>Non hai ancora creato schede</b>Inizia scegliendo i gruppi muscolari, posturali o stretching che vuoi allenare.<br><br><button onclick="newPlan()">Crea la prima scheda</button></div>')}
+function discardPlanDraft(){if(confirm('Eliminare la bozza non salvata?')){localStorage.removeItem(PLAN_DRAFT_KEY);renderPlans();toast('Bozza eliminata')}}
+function setActivePlan(id){db.activePlan=id;persist();renderAll();toast('Scheda attiva aggiornata')}
+function deletePlan(id){if(!confirm('Eliminare questa scheda?'))return;db.plans=db.plans.filter(p=>p.id!==id);if(db.activePlan===id)db.activePlan=db.plans[0]?.id||null;persist();renderPlans()}
+function beginActiveWorkout(){if(!db.activePlan)return newPlan();beginWorkout(db.activePlan)}
+
+function beginWorkout(id){
+  let p=db.plans.find(x=>x.id===id);
+  if(!p)return;
+  clearInterval(timerHandle);
+  timerHandle=null;
+  db.activePlan=id;
+  workState={
+    planId:id,
+    started:Date.now(),
+    index:0,
+    exercises:p.ids.map(exId=>{
+      const ex=getExercise(exId);
+      const cfg=p.exerciseConfig?.[exId]||{};
+      const count=Math.max(1,Math.min(20,cleanNumber(cfg.sets??ex?.sets,3)));
+      const defaultReps=String(cleanNumber(cfg.reps??ex?.reps,10));
+      const defaultKg=cfg.kg!==undefined && cfg.kg!=='' ? String(cfg.kg) : lastKnownKg(exId);
+      return {
+        id:exId,
+        sets:Array.from({length:count},()=>({
+          kg:defaultKg,
+          reps:defaultReps,
+          targetReps:defaultReps,
+          done:false,
+          started:false
+        })),
+        rest:db.settings.rest||60,
+        resting:false,
+        completed:false
+      };
+    })
+  };
+  persist();
+  persistWorkState();
+  go('workout');
+}
+
+function renderWorkout(){
+  let root=document.getElementById('workoutRoot');
+  if(!workState){
+    let p=db.plans.find(x=>x.id===db.activePlan);
+    root.innerHTML=p?`<div class="card"><h2>${esc(p.name)}</h2><p class="muted">${p.ids.length} esercizi pronti con serie e ripetizioni già precompilate dalla tua scheda.</p><button class="btn-green" onclick="beginWorkout('${p.id}')">▶ Avvia allenamento</button></div>`:'<div class="empty"><b>Nessun allenamento in corso</b>Seleziona una scheda e premi Inizia.<br><br><button onclick="go(\'plans\')">Vai alle schede</button></div>';
+    return;
+  }
+  let exs=workState.exercises,cur=exs[workState.index],ex=getExercise(cur?.id);
+  if(!ex){root.innerHTML='<div class="empty">Scheda non disponibile.</div>';return}
+  const plan=db.plans.find(p=>p.id===workState.planId);
+  const planCfg=plan?.exerciseConfig?.[cur.id]||{};
+  const fallbackReps=String(cleanNumber(planCfg.reps??ex.reps,10));
+  cur.sets.forEach(s=>{
+    if(s.reps===''||s.reps===undefined||isNaN(Number(s.reps))){
+      s.reps=String(cleanNumber(s.targetReps||fallbackReps,10));
+    }
+  });
+  let done=exs.filter(x=>x.completed).length,all=exs.length,finishedSets=exs.reduce((n,x)=>n+x.sets.filter(s=>s.done).length,0),totalSets=exs.reduce((n,x)=>n+x.sets.length,0);
+  root.innerHTML=`
+  <div class="row" style="justify-content:space-between;align-items:center">
+    <div>
+      <span class="eyebrow">SESSIONE IN CORSO</span>
+      <h2 style="margin:4px 0">${esc(plan?.name||'Allenamento')}</h2>
+      <p class="muted small">${done} di ${all} esercizi completati · ${finishedSets}/${totalSets} serie</p>
+    </div>
+    <button class="btn-light btn-small" onclick="cancelWorkout()">Esci</button>
+  </div>
+  <div class="progressbar"><span style="width:${all?done/all*100:0}%"></span></div>
+  <div class="section-head"><h2>${esc(ex.name)}</h2><span class="pill">Esercizio ${workState.index+1} / ${all}</span></div>
+  <div class="card work-card">
+    ${imageHtml(ex,'work-photo')}
+    <div class="work-content">
+      <div><span class="pill">${esc(ex.zone)}</span><span class="pill">${esc(ex.tool)}</span></div>
+      <p class="small"><b>Muscolo:</b> ${esc(ex.main)} · <b>Secondari:</b> ${esc(ex.secondary)}</p>
+      <details><summary style="cursor:pointer;font-weight:700;margin:10px 0">Tecnica e regolazioni</summary><p class="small">${esc(ex.how)}</p><p class="small"><b>Preparazione:</b> ${esc(ex.setup)}</p><p class="small"><b>Errori da evitare:</b> ${esc(ex.mistakes)}</p></details>
+      <div class="section-head">
+        <div>
+          <h3 style="margin:0">Serie e Ripetizioni</h3>
+          <span class="small muted">Valori già inseriti dalla scheda (modificabili in ogni momento)</span>
+        </div>
+        <div class="row">
+          ${cur.sets.length>1?`<button class="btn-light btn-small" onclick="removeSet()">－ Serie</button>`:''}
+          <button class="btn-soft btn-small" onclick="addSet()">＋ Serie</button>
+        </div>
+      </div>
+      <div id="timerArea"></div>
+      <div class="sethead"><div>#</div><div>Peso (${esc(db.settings.unit)})</div><div>Ripetizioni</div><div>Stato / Azione</div></div>
+      <div id="setsList">
+        ${cur.sets.map((s,i)=>`
+          <div class="setline ${s.started&&!s.done?'active-set':''} ${s.done?'done-set':''}">
+            <div class="setnum">${i+1}</div>
+            <input type="number" min="0" step=".5" placeholder="kg" value="${esc(s.kg)}" oninput="updateSet(${i},'kg',this.value)" title="Peso serie ${i+1}">
+            <input type="number" min="1" placeholder="rip." value="${esc(s.reps)}" oninput="updateSet(${i},'reps',this.value)" title="Ripetizioni serie ${i+1}">
+            ${s.done
+              ? `<span class="pill green" style="justify-content:center;padding:8px 10px">✓ Serie ${i+1} fatta</span>`
+              : `<button class="${s.started?'btn-orange':'btn-green'} btn-small" onclick="${s.started?`completeSet(${i})`:`startSetManually(${i})`}">${s.started?`⏹ FINE SERIE ${i+1}`:`▶ INIZIA SERIE ${i+1}`}</button>`
+            }
+          </div>
+        `).join('')}
+      </div>
+      <div class="field" style="margin-top:14px">
+        <label>Recupero automatico tra le serie</label>
+        <select onchange="workState.exercises[workState.index].rest=+this.value;persistWorkState()">
+          ${[30,45,60,75,90,120,150,180].map(n=>`<option value="${n}" ${n===cur.rest?'selected':''}>${n} secondi</option>`).join('')}
+        </select>
+      </div>
+      <div class="row" style="justify-content:space-between;margin-top:14px">
+        <button class="btn-light btn-small" onclick="moveExercise(-1)" ${workState.index===0?'disabled':''}>← Precedente</button>
+        <button class="btn-green" onclick="finishExercise()">${workState.index===all-1?'🏁 Termina allenamento':'Completa esercizio →'}</button>
+        <button class="btn-light btn-small" onclick="moveExercise(1)" ${workState.index===all-1?'disabled':''}>Successivo →</button>
+      </div>
+    </div>
+  </div>
+  <div class="notice" style="margin-top:12px">
+    <b>Flusso automatico attivo:</b> Premi <b>▶ INIZIA SERIE 1</b> e poi <b>⏹ FINE SERIE 1</b>. Parte subito il recupero e, allo scadere del timer, la <b>2ª e 3ª serie partono da sole in automatico!</b> Puoi correggere ripetizioni o kg anche dopo aver concluso la serie.
+  </div>`;
+}
+
+function updateSet(i,k,v){
+  const cur=workState.exercises[workState.index];
+  cur.sets[i][k]=v;
+  if(k==='kg' && i===0){
+    cur.sets.forEach((st,idx)=>{if(idx>0 && !st.done && st.kg==='') st.kg=v;});
+  }
+  persistWorkState();
+}
+function addSet(){
+  const cur=workState.exercises[workState.index];
+  const last=cur.sets.at(-1)||{kg:'',reps:'10',targetReps:'10'};
+  cur.sets.push({kg:last.kg||'',reps:last.reps||'10',targetReps:last.targetReps||'10',done:false,started:false});
+  persistWorkState();
+  renderWorkout();
+}
+function removeSet(){
+  const cur=workState.exercises[workState.index];
+  if(cur.sets.length<=1)return;
+  cur.sets.pop();
+  persistWorkState();
+  renderWorkout();
+}
+function startSetManually(i){
+  let cur=workState.exercises[workState.index],s=cur.sets[i];
+  if(s.done)return;
+  if(cur.resting){
+    stopRestAndStartNext(i);
+    return;
+  }
+  if(i>0&&!cur.sets[i-1].done)return toast('Completa prima la serie precedente');
+  s.started=true;
+  persistWorkState();
+  renderWorkout();
+  toast(`Serie ${i+1} in corso! Quando finisci premi FINE SERIE ${i+1}`);
+}
+function completeSet(i){
+  let cur=workState.exercises[workState.index],s=cur.sets[i];
+  if(s.done)return;
+  if(!s.started)s.started=true;
+  if(s.reps===''||+s.reps<=0){
+    s.reps=String(cleanNumber(s.targetReps,10));
+  }
+  s.done=true;
+  let nextIdx=cur.sets.findIndex((x,j)=>j>i&&!x.done);
+  if(nextIdx>=0){
+    cur.resting=true;
+    persistWorkState();
+    renderWorkout();
+    startRest(cur.rest,nextIdx);
+  } else {
+    cur.resting=false;
+    persistWorkState();
+    renderWorkout();
+    toast('Tutte le serie completate! Puoi passare al prossimo esercizio.');
+  }
+}
+function startRest(seconds,nextIndex){
+  clearInterval(timerHandle);
+  let left=seconds;
+  const area=document.getElementById('timerArea');
+  if(!area)return;
+  area.innerHTML=`
+    <div class="timerbox">
+      <small>⏱️ RECUPERO IN CORSO · LA SERIE ${nextIndex+1} PARTIRÀ IN AUTOMATICO</small>
+      <strong id="timerValue">${fmtTime(left)}</strong>
+      <div class="row" style="justify-content:center;margin-top:8px">
+        <button class="btn-light btn-small" onclick="stopRestAndStartNext(${nextIndex})">⏭ Salta recupero e inizia Serie ${nextIndex+1}</button>
+      </div>
+    </div>`;
+  timerHandle=setInterval(()=>{
+    left--;
+    let v=document.getElementById('timerValue');
+    if(v)v.textContent=fmtTime(Math.max(0,left));
+    if(left<=0){
+      clearInterval(timerHandle);
+      timerHandle=null;
+      autoStartNextSet(nextIndex);
+    }
+  },1000);
+}
+function autoStartNextSet(nextIndex){
+  let cur=workState?.exercises?.[workState.index];
+  if(!cur)return;
+  cur.resting=false;
+  if(cur.sets[nextIndex] && !cur.sets[nextIndex].done){
+    cur.sets[nextIndex].started=true;
+  }
+  persistWorkState();
+  try{navigator.vibrate?.([250,100,250])}catch(e){}
+  playBeep();
+  renderWorkout();
+  let a=document.getElementById('timerArea');
+  if(a){
+    a.innerHTML=`<div class="notice" style="background:#e8faf3;border-color:#8ce0c0;color:#0f6848"><b>🔥 Serie ${nextIndex+1} avviata in automatico!</b><br>Esegui l'esercizio e premi <b>⏹ FINE SERIE ${nextIndex+1}</b> appena hai terminato.</div>`;
+  }
+  toast(`🔥 Recupero finito: Serie ${nextIndex+1} avviata in automatico!`);
+}
+function stopRestAndStartNext(nextIndex){
+  clearInterval(timerHandle);
+  timerHandle=null;
+  autoStartNextSet(nextIndex);
+}
+function fmtTime(s){return Math.floor(s/60)+':'+String(s%60).padStart(2,'0')}
+function finishExercise(){
+  clearInterval(timerHandle);
+  timerHandle=null;
+  let cur=workState.exercises[workState.index];
+  cur.resting=false;
+  if(cur.sets.some(s=>!s.done))return toast('Completa tutte le serie prima di passare oltre');
+  const plan=db.plans.find(p=>p.id===workState.planId);
+  if(plan){
+    if(!plan.exerciseConfig) plan.exerciseConfig={};
+    const lastSet=cur.sets.at(-1);
+    plan.exerciseConfig[cur.id]={
+      sets:cur.sets.length,
+      reps:String(lastSet?.reps||10),
+      kg:String(lastSet?.kg||'')
+    };
+  }
+  cur.completed=true;
+  persistWorkState();
+  if(workState.exercises.every(x=>x.completed)){
+    finishWorkout();
+    return;
+  }
+  let next=workState.exercises.findIndex(x=>!x.completed);
+  workState.index=next;
+  persistWorkState();
+  renderWorkout();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function moveExercise(d){
+  clearInterval(timerHandle);
+  timerHandle=null;
+  let n=workState.index+d;
+  if(n<0||n>=workState.exercises.length)return;
+  workState.exercises[workState.index].resting=false;
+  workState.index=n;
+  persistWorkState();
+  renderWorkout();
+}
+function cancelWorkout(){if(!confirm('Vuoi uscire? La sessione in corso non verrà registrata.'))return;clearInterval(timerHandle);timerHandle=null;workState=null;persistWorkState();go('home')}
+function finishWorkout(){clearInterval(timerHandle);timerHandle=null;let duration=Math.max(1,Math.round((Date.now()-workState.started)/60000));let items=workState.exercises.map(e=>({id:e.id,name:getExercise(e.id)?.name||'Esercizio',sets:e.sets.map(s=>({...s}))}));db.history.push({id:'hist-'+Date.now(),date:new Date().toISOString(),plan:db.plans.find(p=>p.id===workState.planId)?.name||'Allenamento',minutes:duration,items});workState=null;persistWorkState();persist();modal('Allenamento completato!',`<div class="empty"><b>Ottimo lavoro! 💪</b>Hai registrato il tuo allenamento in ${duration} minuti (salvato anche in Cloud).</div><br><button onclick="closeModal();go('progress')">Visualizza progressi</button>`)}
+function renderProgress(){let count=db.history.length,minutes=db.history.reduce((s,h)=>s+(h.minutes||0),0),w=db.measurements.at(-1);document.getElementById('pCount').textContent=count;document.getElementById('pTime').textContent=minutes+' min';document.getElementById('pWeight').textContent=w?w.value+' '+(w.unit||'kg'):'—';let ms=db.measurements.slice(-8),max=Math.max(...ms.map(x=>x.value),1),min=Math.min(...ms.map(x=>x.value),0);document.getElementById('weightChart').innerHTML=ms.length?`<div class="chart">${ms.map(x=>`<div class="bar" title="${x.value} ${x.unit}" style="height:${Math.max(8,(x.value-min+1)/(max-min+1)*100)}%"><small>${dateFmt(x.date).slice(0,5)}</small></div>`).join('')}</div>`:'<p class="muted small">Registra il peso corporeo per visualizzare l’andamento.</p>';let hs=db.history.slice(-8),vol=hs.map(h=>h.items.reduce((s,e)=>s+e.sets.reduce((n,x)=>n+(+x.kg||0)*(+x.reps||0),0),0)),vmax=Math.max(...vol,1);document.getElementById('volumeChart').innerHTML=hs.length?`<div class="chart">${vol.map((x,i)=>`<div class="bar" title="Volume ${Math.round(x)}" style="height:${Math.max(8,x/vmax*100)}%"><small>${i+1}</small></div>`).join('')}</div><p class="small muted">Volume indicativo: kg × ripetizioni registrate.</p>`:'<p class="muted small">Completa gli allenamenti e registra carichi e ripetizioni.</p>';document.getElementById('historyList').innerHTML=db.history.slice().reverse().map(h=>`<div class="card" style="margin:8px 0"><div class="row" style="justify-content:space-between"><div><b>${esc(h.plan)}</b><div class="muted small">${dateFmt(h.date)} · ${h.minutes||0} min · ${h.items.length} esercizi</div></div><button class="btn-soft btn-small" onclick="viewHistory('${h.id}')">Dettagli</button></div></div>`).join('')||'<div class="empty">Ancora nessun allenamento registrato.</div>'}
+function viewHistory(id){let h=db.history.find(x=>x.id===id);if(!h)return;modal('Dettaglio allenamento',`<p>${esc(h.plan)} · ${dateFmt(h.date)} · ${h.minutes||0} min</p>${h.items.map(e=>`<div class="card"><b>${esc(e.name)}</b><table class="table"><tr><th>Serie</th><th>Kg</th><th>Rip.</th><th>Stato</th></tr>${e.sets.map((s,i)=>`<tr><td>${i+1}</td><td>${esc(s.kg||'—')}</td><td>${esc(s.reps||'—')}</td><td>${s.done?'✓':'—'}</td></tr>`).join('')}</table></div>`).join('')}`)}
+function addMeasurement(){modal('Registra il peso corporeo',`<div class="field"><label>Peso (${esc(db.settings.unit)})</label><input type="number" id="measureValue" step=".1" min="0" placeholder="Es. 78.5"></div><div class="field"><label>Data</label><input type="date" id="measureDate" value="${new Date().toISOString().slice(0,10)}"></div><button onclick="saveMeasurement()">Salva misurazione</button>`)}
+function saveMeasurement(){let value=+measureValue.value;if(!value)return toast('Inserisci un peso valido');db.measurements.push({value,unit:db.settings.unit,date:measureDate.value||new Date().toISOString()});db.measurements.sort((a,b)=>a.date.localeCompare(b.date));persist();closeModal();renderProgress()}
+function syncSettings(){document.getElementById('defaultRest').value=db.settings.rest;document.getElementById('weightUnit').value=db.settings.unit}
+function saveSettings(){db.settings.rest=+defaultRest.value;db.settings.unit=weightUnit.value;persist();toast('Impostazioni salvate in Cloud')}
+function openBackup(){modal('Cloud Sync & Backup',`<p class="muted small">I tuoi dati sono già sincronizzati automaticamente nel Cloud (Firebase <code>titan_gym</code>). Puoi anche scaricare o ripristinare una copia su file JSON.</p><div class="row"><button class="btn-green" onclick="syncFromCloud(true)">🔄 Sincronizza ora col Cloud</button><button onclick="exportBackup()">⇩ Scarica backup JSON</button></div><div class="field"><label>Ripristina un file JSON</label><input type="file" id="backupImport" accept=".json,application/json" onchange="restoreBackup(event)"></div><div class="notice">Qualsiasi scheda o allenamento salvato viene replicato automaticamente sul Cloud.</div>`)}
+function exportBackup(){let blob=new Blob([JSON.stringify({app:'TITAN GYM',version:9.5,exported:new Date().toISOString(),data:db},null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='titan-gym-backup-'+new Date().toISOString().slice(0,10)+'.json';a.click();URL.revokeObjectURL(a.href);toast('Backup preparato')}
+function restoreBackup(e){let f=e.target.files?.[0];if(!f)return;let r=new FileReader();r.onload=()=>{try{let o=JSON.parse(r.result),next=o.data||o;if(!Array.isArray(next.plans)||!Array.isArray(next.history))throw Error();if(!confirm('Il ripristino sostituirà i dati attuali. Continuare?'))return;db=Object.assign(blankDB(),next);persist();closeModal();renderAll();toast('Backup ripristinato e salvato in Cloud')}catch(err){toast('File di backup non valido')}};r.readAsText(f)}
+function installApp(){if(deferredInstall){deferredInstall.prompt();deferredInstall.userChoice.finally(()=>{deferredInstall=null;installBtn.disabled=true})}else toast('Apri il menu del browser e scegli “Aggiungi a schermata Home”')}
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredInstall=e;installBtn.disabled=false;installHelp.textContent='Il dispositivo supporta l’installazione.'});
+window.addEventListener('online',()=>{renderAll();syncFromCloud(false);});
+window.addEventListener('offline',()=>renderAll());
+window.addEventListener('focus',()=>syncFromCloud(false));
+setInterval(()=>syncFromCloud(false), 15000);
+if('serviceWorker' in navigator && location.protocol.startsWith('http')){
+  navigator.serviceWorker.getRegistrations().then(regs=>regs.forEach(r=>r.update())).catch(()=>{});
+  navigator.serviceWorker.register('./sw.js').catch(()=>{});
+}
+renderAll();
+syncFromCloud(false);
+</script></body></html>
