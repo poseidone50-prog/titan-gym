@@ -3,43 +3,57 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow">
-<meta name="theme-color" content="#111a3a"><meta name="description" content="TITAN GYM: schede personalizzate, esercizi muscolari, posturali e stretching con foto reali, recupero automatico e Cloud Sync.">
+<meta name="theme-color" content="#111a3a"><meta name="description" content="TITAN GYM: schede personalizzate, calcolo massimali 1RM (Forza, Ipertrofia, Resistenza), esercizi muscolari, posturali e stretching con Cloud Sync.">
 <link rel="manifest" href="manifest.json">
-<title>TITAN GYM — Forza, Postura, Risultati</title>
+<title>TITAN GYM — Forza, 1RM, Postura, Cloud</title>
 <style>
 :root{--navy:#111a3a;--navy2:#1b2852;--blue:#5267f2;--accent:#5267f2;--cyan:#19b6c9;--violet:#8b5cf6;--green:#16a679;--orange:#f59e0b;--bg:#f3f5fb;--card:#fff;--ink:#17213c;--muted:#6b7691;--line:#e4e8f2;--shadow:0 12px 34px #17234a0d}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer;border:0;border-radius:12px;padding:11px 15px;font-weight:700;background:var(--blue);color:white;transition:.15s}button:hover{filter:brightness(1.05);transform:translateY(-1px)}button:disabled{opacity:.45;cursor:not-allowed;transform:none}.btn-dark{background:var(--navy)}.btn-soft{background:#edf0ff;color:#3e50cf}.btn-light{background:#eef1f7;color:#35415e}.btn-green{background:var(--green)}.btn-orange{background:var(--orange);color:#fff}.btn-danger{background:#fff0f0;color:#c43c48}.btn-small{padding:8px 11px;font-size:13px}
 .row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .app{min-height:100vh}.sidebar{position:fixed;inset:0 auto 0 0;width:238px;background:linear-gradient(165deg,#0d142c,#1d2b5e 70%,#253f7d);color:white;padding:25px 15px;display:flex;flex-direction:column;z-index:15}.brand{display:flex;gap:11px;align-items:center;padding:4px 10px 28px}.brandmark{width:44px;height:44px;border-radius:14px;background:linear-gradient(135deg,#f59e0b,#ef4444 55%,#7c8cff);display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:0 6px 18px #f59e0b44}.brand strong{font-size:20px;letter-spacing:.6px}.brand small{display:block;color:#aab6e4;font-size:10px;letter-spacing:.8px;margin-top:2px}.navlabel{color:#8190c2;font-size:10px;font-weight:800;letter-spacing:1.3px;padding:12px 12px 7px}.navbtn{display:flex;align-items:center;gap:12px;width:100%;text-align:left;background:transparent;color:#c7d0f0;padding:12px;border-radius:12px;margin:2px 0;font-weight:600}.navbtn.active,.navbtn:hover{background:#ffffff19;color:#fff}.navbtn span:first-child{width:23px;text-align:center;font-size:18px}.sidefoot{margin-top:auto;color:#9ba9d4;font-size:11px;padding:12px}
 .main{margin-left:238px;max-width:1500px;padding:28px 34px 50px}.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:25px;gap:10px;flex-wrap:wrap}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:1.4px;color:var(--blue);font-weight:800}.topbar h1{margin:3px 0 0;font-size:27px}.top-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.online{font-size:12px;color:var(--muted);background:#fff;padding:8px 12px;border-radius:20px;border:1px solid var(--line);font-weight:600}.cloud-badge{font-size:12px;color:#0f6848;background:#e8faf3;padding:8px 12px;border-radius:20px;border:1px solid #8ce0c0;font-weight:700}
-.page{display:none}.page.active{display:block}.grid{display:grid;gap:16px}.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}.grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}.card{background:var(--card);border:1px solid var(--line);border-radius:19px;padding:19px;box-shadow:var(--shadow);min-width:0}.card h3{margin:0 0 8px}.muted{color:var(--muted)}.small{font-size:12px}.hero{background:linear-gradient(120deg,#16204a,#4458e3 58%,#14a8be);color:white;border-radius:22px;padding:25px;position:relative;overflow:hidden;box-shadow:0 16px 36px #4558c533}.hero:after{content:"";position:absolute;width:220px;height:220px;border:36px solid #ffffff18;border-radius:50%;right:-50px;top:-95px}.hero h2{font-size:25px;margin:5px 0 8px}.hero p{color:#e3e8ff;max-width:580px;margin:0 0 18px}.hero button{background:white;color:#283bc0;position:relative;z-index:1}.stat{display:flex;align-items:center;gap:12px}.stat-icon{width:43px;height:43px;border-radius:14px;background:#eef0ff;display:grid;place-items:center;font-size:20px}.stat strong{display:block;font-size:24px}.stat small{color:var(--muted)}
-.section-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:24px 0 12px}.section-head h2{font-size:18px;margin:0}.field{margin:10px 0}.field label{display:block;font-size:12px;font-weight:700;color:#68748e;margin:0 0 6px}.field input,.field select,.field textarea,input,select,textarea{width:100%;border:1px solid #dce2ef;border-radius:11px;background:#fff;padding:11px 12px;color:var(--ink);outline:none}.field input:focus,.field select:focus,.field textarea:focus,input:focus,select:focus,textarea:focus{border-color:#8492ff;box-shadow:0 0 0 3px #5369f21b}.field textarea{min-height:78px;resize:vertical}.filters{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:10px}.pill{display:inline-flex;align-items:center;gap:5px;padding:5px 9px;background:#eff2ff;color:#4d5ac2;border-radius:30px;font-size:11px;font-weight:700;margin:2px}.pill.green{background:#e8faf3;color:#16835e}.pill.orange{background:#fff5df;color:#a76a00}.pill.violet{background:#f3e8ff;color:#6d28d9}
+.page{display:none}.page.active{display:block}.grid{display:grid;gap:16px}.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}.grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}.card{background:var(--card);border:1px solid var(--line);border-radius:19px;padding:19px;box-shadow:var(--shadow);min-width:0}.card h3{margin:0 0 8px}.muted{color:var(--muted)}.small{font-size:12px}.hero{background:linear-gradient(120deg,#16204a,#4458e3 58%,#14a8be);color:white;border-radius:22px;padding:25px;position:relative;overflow:hidden;box-shadow:0 16px 36px #4558c533}.hero:after{content:"";position:absolute;width:220px;height:220px;border:36px solid #ffffff18;border-radius:50%;right:-50px;top:-95px}.hero h2{font-size:25px;margin:5px 0 8px}.hero p{color:#e3e8ff;max-width:620px;margin:0 0 18px}.hero button{background:white;color:#283bc0;position:relative;z-index:1}.stat{display:flex;align-items:center;gap:12px}.stat-icon{width:43px;height:43px;border-radius:14px;background:#eef0ff;display:grid;place-items:center;font-size:20px}.stat strong{display:block;font-size:24px}.stat small{color:var(--muted)}
+.section-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:24px 0 12px;flex-wrap:wrap}.section-head h2{font-size:18px;margin:0}.field{margin:10px 0}.field label{display:block;font-size:12px;font-weight:700;color:#68748e;margin:0 0 6px}.field input,.field select,.field textarea,input,select,textarea{width:100%;border:1px solid #dce2ef;border-radius:11px;background:#fff;padding:11px 12px;color:var(--ink);outline:none}.field input:focus,.field select:focus,.field textarea:focus,input:focus,select:focus,textarea:focus{border-color:#8492ff;box-shadow:0 0 0 3px #5369f21b}.field textarea{min-height:78px;resize:vertical}.filters{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:10px}.pill{display:inline-flex;align-items:center;gap:5px;padding:5px 9px;background:#eff2ff;color:#4d5ac2;border-radius:30px;font-size:11px;font-weight:700;margin:2px}.pill.green{background:#e8faf3;color:#16835e}.pill.orange{background:#fff5df;color:#a76a00}.pill.violet{background:#f3e8ff;color:#6d28d9}
 .exercise-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.exercise-card{background:white;border:1px solid var(--line);border-radius:17px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .15s,box-shadow .15s}.exercise-card:hover{transform:translateY(-2px);box-shadow:0 16px 38px #17234a17}.exercise-img{height:190px;background:#f8fafc;display:grid;place-items:center;color:#7a87b7;font-size:35px;overflow:hidden;position:relative;border-bottom:1px solid var(--line)}.exercise-img img{width:100%;height:100%;object-fit:cover;transition:opacity .2s}.exercise-img .photo-tag{position:absolute;bottom:8px;left:8px;background:#111a3acc;backdrop-filter:blur(4px);color:white;padding:4px 8px;border-radius:7px;font-size:10px;font-weight:700;pointer-events:none}.exercise-img .phase-btn{position:absolute;bottom:8px;right:8px;background:#ffffffeb;color:#111a3a;border:1px solid #cbd5e1;padding:4px 9px;border-radius:8px;font-size:11px;font-weight:700;box-shadow:0 2px 8px #0002;cursor:pointer}.exercise-img .phase-btn:hover{background:#5267f2;color:#fff;border-color:#5267f2}.exercise-body{padding:14px;display:flex;flex-direction:column;gap:8px;flex:1}.exercise-body h3{font-size:16px;margin:0}.exercise-body p{font-size:12px;line-height:1.45;color:var(--muted);margin:0}.exercise-actions{display:flex;gap:7px;margin-top:auto;padding-top:5px}.exercise-actions button{flex:1}
 .machine-row{display:flex;gap:12px;align-items:center;border:1px solid var(--line);padding:10px;border-radius:13px;background:#fff;margin:8px 0}.machine-row img{width:78px;height:66px;object-fit:cover;border-radius:10px;border:1px solid var(--line)}.machine-row .placeholder{width:78px;height:66px;display:grid;place-items:center;background:#eef1ff;border-radius:10px;font-size:24px}
 .work-card{padding:0;overflow:hidden}.work-photo{height:260px;background:#f8fafc;display:grid;place-items:center;overflow:hidden;position:relative;border-bottom:1px solid var(--line)}.work-photo img{width:100%;height:100%;object-fit:contain;background:#f8fafc}.work-photo .photo-tag{position:absolute;bottom:10px;left:10px;background:#111a3acc;color:white;padding:5px 9px;border-radius:8px;font-size:11px;font-weight:700}.work-photo .phase-btn{position:absolute;bottom:10px;right:10px;background:#ffffffeb;color:#111a3a;border:1px solid #cbd5e1;padding:6px 11px;border-radius:9px;font-size:12px;font-weight:700;cursor:pointer}.work-content{padding:20px}
 .sethead{display:grid;grid-template-columns:42px 1fr 1fr 165px;gap:8px;padding:0 0 6px;font-size:11px;font-weight:800;color:var(--muted);text-transform:uppercase;border-bottom:1px solid var(--line)}
 .setline{display:grid;grid-template-columns:42px 1fr 1fr 165px;gap:8px;align-items:center;padding:10px 6px;border-bottom:1px solid var(--line);border-radius:12px;transition:background .2s}.setline:last-child{border-bottom:0}.setline.active-set{background:#eef4ff;border:1px solid #93afff;padding:10px 8px;margin:4px 0}.setline.done-set{background:#f7fcf9}.setnum{width:32px;height:32px;border-radius:10px;background:#edf0ff;color:#4658d0;display:grid;place-items:center;font-weight:800}.setline.active-set .setnum{background:var(--blue);color:#fff}.setline.done-set .setnum{background:var(--green);color:#fff}.setline input{padding:9px;font-weight:600}
 .timerbox{border-radius:16px;background:linear-gradient(120deg,#141f47,#344da8);color:white;padding:18px;text-align:center;margin:14px 0;box-shadow:0 12px 28px #1e2f6f33}.timerbox strong{font-size:42px;display:block;font-variant-numeric:tabular-nums;margin:4px 0}.timerbox small{color:#d4ddff;font-weight:700;letter-spacing:.6px}.progressbar{height:8px;border-radius:20px;background:#e9edf6;overflow:hidden}.progressbar span{display:block;height:100%;background:linear-gradient(90deg,var(--blue),var(--cyan));width:0;transition:width .3s}
+/* Stili Scheda 1RM & Programmi (isp. PDF) */
+.rm-sheet{background:linear-gradient(180deg,#eaf0f8,#f5f8fc);border:1px solid #cfdbe8;border-radius:20px;padding:20px;margin-bottom:18px}
+.rm-result-banner{background:linear-gradient(120deg,#11244d,#254387);color:#fff;border-radius:15px;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin:12px 0}
+.rm-result-banner strong{font-size:32px;color:#ffd88a}
+.rm-prog-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:12px}
+.rm-prog-box{background:#fff;border:1px solid #d8e2ef;border-radius:15px;padding:15px;display:flex;flex-direction:column;justify-content:space-between;gap:8px;box-shadow:0 4px 14px #11244d0a}
+.rm-prog-box.forza{border-top:4px solid #ef4444}
+.rm-prog-box.ipertrofia{border-top:4px solid #5267f2}
+.rm-prog-box.resistenza{border-top:4px solid #16a679}
+.rm-prog-box h4{margin:0;font-size:15px;color:#11244d;letter-spacing:.4px}
+.rm-prog-weight{background:#f3f6fb;border-radius:11px;padding:10px 12px;text-align:center;margin-top:4px}
+.rm-prog-weight small{display:block;font-size:10px;font-weight:800;color:#5a6982;text-transform:uppercase}
+.rm-prog-weight strong{font-size:21px;color:#11244d}
 .empty{padding:28px;text-align:center;color:var(--muted);border:1px dashed #cbd3e4;border-radius:16px;background:#ffffff8c}.empty b{display:block;color:var(--ink);margin-bottom:6px}.modal{display:none;position:fixed;inset:0;background:#0c143b88;z-index:40;align-items:center;justify-content:center;padding:15px}.modal.open{display:flex}.modal-box{width:min(760px,100%);max-height:92vh;overflow:auto;background:#fff;border-radius:22px;padding:22px;box-shadow:0 25px 80px #0003}.modal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.modal-head h2{font-size:20px;margin:0}.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#111a3a;color:white;border-radius:12px;padding:12px 18px;z-index:90;display:none;box-shadow:0 8px 30px #0003;font-weight:600}.table{width:100%;border-collapse:collapse;font-size:13px}.table th,.table td{text-align:left;padding:11px;border-bottom:1px solid var(--line)}.table th{color:var(--muted);font-size:11px;text-transform:uppercase}.chart{display:flex;align-items:end;gap:8px;height:150px;padding:12px 5px 0;border-bottom:1px solid var(--line)}.bar{flex:1;min-width:10px;background:linear-gradient(180deg,#1ab7c8,#5869ef);border-radius:7px 7px 0 0;position:relative}.bar small{position:absolute;bottom:-22px;left:50%;transform:translateX(-50%);font-size:9px;color:var(--muted);white-space:nowrap}
 .dual-photos{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}.dual-photos figure{margin:0;background:#f8fafc;border:1px solid var(--line);border-radius:14px;overflow:hidden;position:relative}.dual-photos img{width:100%;height:200px;object-fit:cover;display:block}.dual-photos figcaption{padding:6px 10px;font-size:11px;font-weight:700;color:var(--muted);text-align:center;background:#fff;border-top:1px solid var(--line)}
 .mobilebar{display:none}.hidden{display:none!important}.notice{background:#fff8e8;border:1px solid #f6e2b6;color:#77530c;border-radius:13px;padding:12px;font-size:12px;line-height:1.45}
-@media(max-width:1100px){.exercise-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-4{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:760px){.sidebar{display:none}.main{margin:0;padding:17px 14px 95px}.topbar{margin-bottom:17px}.topbar h1{font-size:22px}.online{display:none}.mobilebar{display:grid;position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--line);grid-template-columns:repeat(5,1fr);padding:5px 4px calc(5px + env(safe-area-inset-bottom));z-index:20;box-shadow:0 -5px 18px #17234a0a}.mobilebar button{background:transparent;color:#65708a;padding:6px 1px;border-radius:9px;font-size:10px}.mobilebar button.active{color:var(--blue);background:#f0f2ff}.mobilebar span{display:block;font-size:18px;margin-bottom:2px}.grid-2,.grid-3{grid-template-columns:1fr}.exercise-grid{grid-template-columns:1fr 1fr;gap:9px}.exercise-img{height:135px}.exercise-body{padding:10px}.exercise-body h3{font-size:14px}.exercise-body p{font-size:11px}.exercise-actions{flex-direction:column}.filters{grid-template-columns:1fr}.hero{padding:20px}.hero h2{font-size:21px}.card{padding:15px}.sethead,.setline{grid-template-columns:32px 1fr 1fr 130px;gap:5px}.setline input{padding:8px 6px;font-size:13px}.work-photo{height:200px}.dual-photos{grid-template-columns:1fr}}
+@media(max-width:1100px){.exercise-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-4{grid-template-columns:repeat(2,minmax(0,1fr))}.rm-prog-grid{grid-template-columns:1fr}}
+@media(max-width:760px){.sidebar{display:none}.main{margin:0;padding:17px 14px 95px}.topbar{margin-bottom:17px}.topbar h1{font-size:22px}.online{display:none}.mobilebar{display:grid;position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--line);grid-template-columns:repeat(6,1fr);padding:5px 2px calc(5px + env(safe-area-inset-bottom));z-index:20;box-shadow:0 -5px 18px #17234a0a}.mobilebar button{background:transparent;color:#65708a;padding:6px 1px;border-radius:9px;font-size:10px}.mobilebar button.active{color:var(--blue);background:#f0f2ff}.mobilebar span{display:block;font-size:17px;margin-bottom:2px}.grid-2,.grid-3{grid-template-columns:1fr}.exercise-grid{grid-template-columns:1fr 1fr;gap:9px}.exercise-img{height:135px}.exercise-body{padding:10px}.exercise-body h3{font-size:14px}.exercise-body p{font-size:11px}.exercise-actions{flex-direction:column}.filters{grid-template-columns:1fr}.hero{padding:20px}.hero h2{font-size:21px}.card{padding:15px}.sethead,.setline{grid-template-columns:32px 1fr 1fr 130px;gap:5px}.setline input{padding:8px 6px;font-size:13px}.work-photo{height:200px}.dual-photos{grid-template-columns:1fr}}
 .photo-placeholder{display:flex;align-items:center;justify-content:center;text-align:center;min-height:130px;padding:18px;color:#64748b;font-size:13px;font-weight:700;background:linear-gradient(135deg,#edf2f7,#dce5ef);border-radius:12px}
 </style></head>
 <body><div class="app">
 <aside class="sidebar">
- <div class="brand"><div class="brandmark">⚡</div><div><strong>TITAN GYM</strong><small>FORZA · POSTURA · CLOUD</small></div></div>
+ <div class="brand"><div class="brandmark">⚡</div><div><strong>TITAN GYM</strong><small>FORZA · 1RM · POSTURA</small></div></div>
  <div class="navlabel">IL TUO SPAZIO</div>
  <button class="navbtn active" data-page="home" onclick="go('home')"><span>⌂</span>Panoramica</button>
  <button class="navbtn" data-page="catalog" onclick="go('catalog')"><span>▦</span>Catalogo esercizi</button>
  <button class="navbtn" data-page="plans" onclick="go('plans')"><span>▤</span>Schede allenamento</button>
  <button class="navbtn" data-page="workout" onclick="go('workout')"><span>▶</span>Allenamento</button>
+ <button class="navbtn" data-page="maxes" onclick="go('maxes')"><span>🎯</span>Massimali 1RM</button>
  <button class="navbtn" data-page="progress" onclick="go('progress')"><span>↗</span>Progressi</button>
  <div class="navlabel">GESTIONE</div>
  <button class="navbtn" data-page="library" onclick="go('library')"><span>🏋</span>I miei attrezzi</button>
  <button class="navbtn" data-page="settings" onclick="go('settings')"><span>⚙</span>Impostazioni e Cloud</button>
- <div class="sidefoot">TITAN GYM Cloud · Sincronizzato in tempo reale</div>
+ <div class="sidefoot">TITAN GYM Cloud · 1RM & Programmi</div>
 </aside>
 <main class="main">
  <div class="topbar">
@@ -51,27 +65,90 @@
    </div>
  </div>
  <section id="home" class="page active">
-  <div class="hero"><div class="eyebrow" style="color:#ffd88a">⚡ TITAN GYM · CLOUD & PERSONAL TRAINER</div><h2>Supera i tuoi limiti, serie dopo serie.</h2><p>Include 157 esercizi completi (Sala Pesi, Posturali e Stretching con foto Fase 1 e Fase 2), avvio automatico della 2ª e 3ª serie dopo il recupero e salvataggio Cloud automatico tra PC e smartphone.</p><button onclick="beginActiveWorkout()">▶ Inizia allenamento ora</button></div>
+  <div class="hero"><div class="eyebrow" style="color:#ffd88a">⚡ TITAN GYM · SCHEDA 1RM & PERSONAL TRAINER CLOUD</div><h2>Supera i tuoi limiti, serie dopo serie.</h2><p>Calcolo automatico dei Massimali 1RM (Forza, Ipertrofia, Resistenza), 157 esercizi completi con foto Fase 1 e Fase 2, avvio automatico della 2ª e 3ª serie dopo il recupero e salvataggio Cloud.</p><div class="row"><button onclick="beginActiveWorkout()">▶ Inizia allenamento ora</button><button style="background:#ffffff24;color:#fff;border:1px solid #ffffff55" onclick="go('maxes')">🎯 Calcola Massimali 1RM</button></div></div>
   <div class="grid grid-4" style="margin-top:16px">
    <div class="card stat"><div class="stat-icon">📋</div><div><strong id="statPlans">0</strong><small>Schede in Cloud</small></div></div>
-   <div class="card stat"><div class="stat-icon">🏋️</div><div><strong id="statExercises">0</strong><small>Esercizi con foto</small></div></div>
+   <div class="card stat"><div class="stat-icon">🎯</div><div><strong id="statMaxes">0</strong><small>Massimali 1RM</small></div></div>
    <div class="card stat"><div class="stat-icon">🔥</div><div><strong id="statWorkouts">0</strong><small>Allenamenti registrati</small></div></div>
    <div class="card stat"><div class="stat-icon">⏱️</div><div><strong id="statMinutes">0</strong><small>Minuti allenati</small></div></div>
   </div>
   <div class="grid grid-2" style="margin-top:16px"><div class="card"><div class="section-head" style="margin-top:0"><h2>La tua scheda attiva</h2><button class="btn-soft btn-small" onclick="go('plans')">Gestisci</button></div><div id="activePlanBox"></div></div><div class="card"><div class="section-head" style="margin-top:0"><h2>Ultimo allenamento</h2><button class="btn-soft btn-small" onclick="go('progress')">Progressi</button></div><div id="lastWorkout"></div></div></div>
-  <div class="section-head"><h2>Accesso rapido</h2></div><div class="grid grid-3"><div class="card"><h3>🧘 Posturali & Stretching</h3><p class="muted small">35 esercizi specifici per postura, schiena, cervicale, psoas e mobilità.</p><button class="btn-soft" onclick="openZoneQuick('Posturale')">Esplora Posturali</button></div><div class="card"><h3>📝 Crea una scheda</h3><p class="muted small">Imposta serie, ripetizioni e peso predefinito per ogni esercizio.</p><button class="btn-soft" onclick="newPlan()">Nuova scheda</button></div><div class="card"><h3>📈 Registra il peso</h3><p class="muted small">Tieni traccia delle misurazioni personali sincronizzate in Cloud.</p><button class="btn-soft" onclick="addMeasurement()">Aggiungi misurazione</button></div></div>
+  <div class="section-head"><h2>Accesso rapido</h2></div><div class="grid grid-3"><div class="card"><h3>🎯 Scheda 1RM & Programmi</h3><p class="muted small">Inserisci carico e ripetizioni: calcola 1RM e i pesi per Forza, Ipertrofia e Resistenza.</p><button class="btn-soft" onclick="go('maxes')">Apri Scheda 1RM</button></div><div class="card"><h3>🧘 Posturali & Stretching</h3><p class="muted small">35 esercizi specifici per postura, schiena, cervicale, psoas e mobilità.</p><button class="btn-soft" onclick="openZoneQuick('Posturale')">Esplora Posturali</button></div><div class="card"><h3>📝 Crea una scheda</h3><p class="muted small">Imposta serie, ripetizioni o applica direttamente i carichi 1RM.</p><button class="btn-soft" onclick="newPlan()">Nuova scheda</button></div></div>
  </section>
  <section id="catalog" class="page">
-  <div class="card"><p class="muted small" style="margin-top:0">Catalogo completo organizzato per distretto muscolare, <b>Posturale</b> e <b>Stretching</b>. Ogni scheda include le foto reali (premi <b>⇄ Fase 2</b> sulla foto per vedere il movimento finale, oppure apri <b>Dettagli</b> per vedere entrambe le fasi affiancate).</p><div class="filters"><input id="catSearch" placeholder="⌕ Cerca esercizio, postura, stretching, muscolo, attrezzo…" oninput="renderCatalog()"><select id="catZone" onchange="renderCatalog()"><option value="">Tutti i gruppi (Pesi, Posturale, Stretching)</option></select><select id="catTool" onchange="renderCatalog()"><option value="">Tutte le attrezzature</option></select></div></div>
+  <div class="card"><p class="muted small" style="margin-top:0">Catalogo completo organizzato per distretto muscolare, <b>Posturale</b> e <b>Stretching</b>. Ogni scheda include le foto reali (premi <b>⇄ Fase 2</b> sulla foto per vedere il movimento finale, oppure apri <b>Dettagli</b> per vedere entrambe le fasi e il calcolo 1RM).</p><div class="filters"><input id="catSearch" placeholder="⌕ Cerca esercizio, postura, stretching, muscolo, attrezzo…" oninput="renderCatalog()"><select id="catZone" onchange="renderCatalog()"><option value="">Tutti i gruppi (Pesi, Posturale, Stretching)</option></select><select id="catTool" onchange="renderCatalog()"><option value="">Tutte le attrezzature</option></select></div></div>
   <div class="section-head"><h2 id="catalogCount">Esercizi</h2><span class="muted small">Clicca su ⇄ Fase 2 per vedere l'esecuzione o su Dettagli</span></div><div class="exercise-grid" id="catalogGrid"></div>
  </section>
  <section id="plans" class="page"><div class="section-head" style="margin-top:0"><div><h2>Le tue schede</h2><p class="muted small">Sincronizzate automaticamente in Cloud tra PC e telefono. Serie e ripetizioni sono già pronte quando avvii l'allenamento.</p></div><button onclick="newPlan()">＋ Nuova scheda</button></div><div id="plansList"></div></section>
  <section id="workout" class="page"><div id="workoutRoot"></div></section>
+
+ <!-- NUOVA SEZIONE SCHEDA 1RM • PROGRAMMI DI ALLENAMENTO -->
+ <section id="maxes" class="page">
+  <div class="rm-sheet">
+    <div class="row" style="justify-content:space-between;align-items:flex-start">
+      <div>
+        <span class="eyebrow" style="color:#1b2852">SCHEDA 1RM • PROGRAMMI DI ALLENAMENTO</span>
+        <h2 style="margin:4px 0 6px;color:#11244d">Calcolatore Massimale & Carichi di Lavoro</h2>
+        <p class="muted small" style="margin:0">Inserisci carico sollevato e ripetizioni (1–12): il massimale 1RM medio (Epley, Brzycki, Lombardi) e i carichi per Forza, Ipertrofia e Resistenza si aggiornano automaticamente.</p>
+      </div>
+      <button class="btn-soft btn-small" onclick="open1RMInfo()">ℹ️ Criteri di calcolo</button>
+    </div>
+    <div class="grid grid-3" style="margin-top:14px">
+      <div class="field" style="margin:0">
+        <label>FILTRA GRUPPO MUSCOLARE</label>
+        <select id="rmZoneFilter" onchange="populateRMExerciseSelect()"></select>
+      </div>
+      <div class="field" style="margin:0">
+        <label>ESERCIZIO</label>
+        <select id="rmExSelect" onchange="onRMExerciseChange()"></select>
+      </div>
+      <div class="field" style="margin:0">
+        <label>ATTREZZO / GRUPPO</label>
+        <input id="rmExMeta" readonly style="background:#eef2f8;color:#475569;font-weight:600">
+      </div>
+    </div>
+    <div class="grid grid-3" style="margin-top:10px">
+      <div class="field" style="margin:0">
+        <label>CARICO SOLLEVATO (KG)</label>
+        <input type="number" id="rmWeight" min="0.5" step="0.5" placeholder="Es. 60" oninput="updateRMCalculatorPreview()">
+      </div>
+      <div class="field" style="margin:0">
+        <label>RIPETIZIONI ESEGUITE (1–12)</label>
+        <input type="number" id="rmReps" min="1" max="20" value="8" placeholder="Es. 8" oninput="updateRMCalculatorPreview()">
+      </div>
+      <div class="field" style="margin:0">
+        <label>NOTE PERSONALI (OPZ.)</label>
+        <input type="text" id="rmNotes" placeholder="Es. Sedile pos. 4, presa media…" oninput="updateRMCalculatorPreview()">
+      </div>
+    </div>
+    <div id="rmLiveResult"></div>
+    <div class="row" style="margin-top:14px;justify-content:flex-end">
+      <button class="btn-green" onclick="saveCurrentRM()">💾 Salva Massimale 1RM in Cloud</button>
+    </div>
+  </div>
+
+  <div class="section-head">
+    <div>
+      <h2>I tuoi Massimali 1RM registrati (<span id="rmSavedCount">0</span>)</h2>
+      <p class="muted small" style="margin:2px 0 0">Include sia i test salvati qui sopra sia i massimali calcolati automaticamente dai tuoi allenamenti e dalle tue schede.</p>
+    </div>
+    <input id="rmListSearch" placeholder="⌕ Filtra tra i tuoi massimali…" style="max-width:280px" oninput="renderMaxesList()">
+  </div>
+  <div id="rmSavedList"></div>
+ </section>
+
  <section id="library" class="page"><div class="section-head" style="margin-top:0"><div><h2>I miei attrezzi ed esercizi</h2><p class="muted small">La tua raccolta personale, con foto e dettagli modificabili.</p></div><button onclick="newCustomExercise()">＋ Personalizzato</button></div><input id="libSearch" placeholder="Cerca nella tua libreria…" oninput="renderLibrary()"><div id="libraryList" style="margin-top:12px"></div></section>
  <section id="progress" class="page"><div class="grid grid-3"><div class="card"><div class="muted small">Allenamenti completati</div><strong style="font-size:28px" id="pCount">0</strong></div><div class="card"><div class="muted small">Tempo totale registrato</div><strong style="font-size:28px" id="pTime">0 min</strong></div><div class="card"><div class="muted small">Peso corporeo più recente</div><strong style="font-size:28px" id="pWeight">—</strong></div></div><div class="grid grid-2" style="margin-top:16px"><div class="card"><div class="section-head" style="margin-top:0"><h2>Andamento peso</h2><button class="btn-soft btn-small" onclick="addMeasurement()">＋ Registra</button></div><div id="weightChart"></div></div><div class="card"><div class="section-head" style="margin-top:0"><h2>Volume allenamento</h2></div><div id="volumeChart"></div></div></div><div class="section-head"><h2>Storico allenamenti</h2></div><div id="historyList"></div></section>
- <section id="settings" class="page"><div class="grid grid-2"><div class="card"><h3>⏱️ Recupero predefinito</h3><p class="muted small">Puoi comunque cambiare il recupero in ogni esercizio.</p><div class="field"><label>Secondi di recupero</label><select id="defaultRest" onchange="saveSettings()"><option>30</option><option>45</option><option>60</option><option>75</option><option>90</option><option>120</option><option>150</option><option>180</option></select></div><div class="field"><label>Unità di peso</label><select id="weightUnit" onchange="saveSettings()"><option value="kg">Chilogrammi (kg)</option><option value="lb">Libbre (lb)</option></select></div></div><div class="card"><h3>☁️ Cloud Sync & Backup</h3><p class="muted small">I tuoi dati sono salvati automaticamente sul tuo Cloud Firebase (<code>titan_gym</code>) così non vanno mai persi e sono sempre aggiornati su PC e cellulare.</p><div class="row"><button class="btn-green" onclick="syncFromCloud(true)">🔄 Sincronizza ora con il Cloud</button><button class="btn-soft" onclick="openBackup()">Esporta JSON</button></div><div class="field"><label>Ripristina un backup JSON</label><input type="file" id="restoreFile" accept=".json,application/json" onchange="restoreBackup(event)"></div></div><div class="card"><h3>📲 Installazione su Smartphone e PC</h3><p class="muted small">Apri il link di TITAN GYM sul telefono o PC e premi "Installa app" (o "Aggiungi a schermata Home" dal menu del browser).</p><button class="btn-soft" id="installBtn" onclick="installApp()" disabled>Installa app</button><p class="small muted" id="installHelp">Disponibile quando il browser riconosce l'app installabile.</p></div><div class="card"><h3>ℹ️ Informazioni</h3><p class="muted small">TITAN GYM è collegata al Cloud esattamente come Apollo Events: ogni modifica fatta da qui o da qualsiasi dispositivo è salvata in tempo reale.</p><span class="pill green">TITAN GYM Cloud</span><span class="pill violet">Posturale & Stretching</span></div></div></section>
+ <section id="settings" class="page"><div class="grid grid-2"><div class="card"><h3>⏱️ Recupero predefinito</h3><p class="muted small">Puoi comunque cambiare il recupero in ogni esercizio.</p><div class="field"><label>Secondi di recupero</label><select id="defaultRest" onchange="saveSettings()"><option>30</option><option>45</option><option>60</option><option>75</option><option>90</option><option>120</option><option>150</option><option>180</option></select></div><div class="field"><label>Unità di peso</label><select id="weightUnit" onchange="saveSettings()"><option value="kg">Chilogrammi (kg)</option><option value="lb">Libbre (lb)</option></select></div></div><div class="card"><h3>☁️ Cloud Sync & Backup</h3><p class="muted small">I tuoi dati sono salvati automaticamente sul tuo Cloud Firebase (<code>titan_gym</code>) così non vanno mai persi e sono sempre aggiornati su PC e cellulare.</p><div class="row"><button class="btn-green" onclick="syncFromCloud(true)">🔄 Sincronizza ora con il Cloud</button><button class="btn-soft" onclick="openBackup()">Esporta JSON</button></div><div class="field"><label>Ripristina un backup JSON</label><input type="file" id="restoreFile" accept=".json,application/json" onchange="restoreBackup(event)"></div></div><div class="card"><h3>📲 Installazione su Smartphone e PC</h3><p class="muted small">Apri il link di TITAN GYM sul telefono o PC e premi "Installa app" (o "Aggiungi a schermata Home" dal menu del browser).</p><button class="btn-soft" id="installBtn" onclick="installApp()" disabled>Installa app</button><p class="small muted" id="installHelp">Disponibile quando il browser riconosce l'app installabile.</p></div><div class="card"><h3>ℹ️ Informazioni</h3><p class="muted small">TITAN GYM è collegata al Cloud esattamente come Apollo Events: ogni modifica fatta da qui o da qualsiasi dispositivo è salvata in tempo reale.</p><span class="pill green">TITAN GYM Cloud</span><span class="pill orange">1RM Forza · Ipertrofia · Resistenza</span></div></div></section>
 </main>
-<nav class="mobilebar"><button class="active" data-page="home" onclick="go('home')"><span>⌂</span>Home</button><button data-page="catalog" onclick="go('catalog')"><span>▦</span>Esercizi</button><button data-page="plans" onclick="go('plans')"><span>▤</span>Schede</button><button data-page="workout" onclick="go('workout')"><span>▶</span>Workout</button><button data-page="progress" onclick="go('progress')"><span>↗</span>Progressi</button></nav>
+<nav class="mobilebar">
+  <button class="active" data-page="home" onclick="go('home')"><span>⌂</span>Home</button>
+  <button data-page="catalog" onclick="go('catalog')"><span>▦</span>Esercizi</button>
+  <button data-page="plans" onclick="go('plans')"><span>▤</span>Schede</button>
+  <button data-page="workout" onclick="go('workout')"><span>▶</span>Workout</button>
+  <button data-page="maxes" onclick="go('maxes')"><span>🎯</span>1RM</button>
+  <button data-page="progress" onclick="go('progress')"><span>↗</span>Progressi</button>
+</nav>
 </div>
 <div class="modal" id="modal" onclick="window.planEditorOpen?closePlanEditor():closeModal()"><div class="modal-box" onclick="event.stopPropagation()"><div class="modal-head"><h2 id="modalTitle"></h2><button class="btn-light btn-small" onclick="window.planEditorOpen?closePlanEditor():closeModal()">Chiudi ✕</button></div><div id="modalBody"></div></div></div><div class="toast" id="toast"></div>
 <script>
@@ -209,7 +286,7 @@ const extraRaw=[
 ["Stretching","Stretching quadricipite in piedi","Corpo libero","Quadricipite femorale","Ileopsoas","In piedi, afferra la caviglia e avvicina il tallone al gluteo mantenendo il bacino in leggera retroversione.","Ginocchia vicine tra loro e mano opposta in appoggio per equilibrio.","Inarcare la zona lombare o aprire il ginocchio verso l'esterno.","Quad stretch","3","30"],
 ["Stretching","Stretching femorali in piedi","Corpo libero / rialzo","Ischiocrurali","Gastrocnemio, catena posteriore","Appoggia il tallone avanti con gamba distesa e inclina il busto in avanti partendo dal bacino.","Schiena dritta e testa in linea con il rachide.","Curvare la parte alta della schiena o molleggiare.","Hamstring stretch","3","30"],
 ["Stretching","Stretching femorali seduto a terra","Tappetino","Ischiocrurali","Polpacci, erettori spinali","Da seduto con gambe distese, fletti il busto in avanti mantenendo l'allungamento assiale della colonna.","Ischi ben appoggiati a terra, caviglie rilassate.","Tirare con strappi o trattenere il respiro.","Seated floor hamstring stretch","3","30"],
-["Stretching","Stretching glutei e piriforme a terra","Tappetino","Grande gluteo e piriforme"," Medio gluteo, pelvi-trocanterici","Sdraiato supino, incrocia una caviglia sul ginocchio opposto e tira delicatamente la coscia verso il petto.","Sacro e spalle ben appoggiati al tappetino, mento retratto.","Sollevare la testa o il bacino dal pavimento.","Glute stretch","3","30"],
+["Stretching","Stretching glutei e piriforme a terra","Tappetino","Grande gluteo e piriforme","Medio gluteo, pelvi-trocanterici","Sdraiato supino, incrocia una caviglia sul ginocchio opposto e tira delicatamente la coscia verso il petto.","Sacro e spalle ben appoggiati al tappetino, mento retratto.","Sollevare la testa o il bacino dal pavimento.","Glute stretch","3","30"],
 ["Stretching","Stretching polpacci alla parete","Parete","Gastrocnemio e soleo","Tendine d'Achille, fascia plantare","Con le mani alla parete, porta indietro una gamba mantenendo il tallone incollato a terra.","Piede posteriore dritto in avanti e bacino allineato.","Sollevare il tallone o ruotare il piede verso l'esterno.","Calf stretch","3","30"],
 ["Stretching","Stretching Ileopsoas in affondo","Tappetino","Ileopsoas e retto femorale","Flessori dell'anca","Con un ginocchio a terra e l'altro piede avanti a 90°, spingi dolcemente il bacino in avanti attivando il gluteo posteriore.","Busto eretto, addome attivo in retroversione pelvica.","Inarcare la schiena invece di estendere l'anca.","Kneeling hip flexor stretch","3","30"],
 ["Stretching","Stretching del Corridore (Runner Stretch)","Tappetino","Flessori dell'anca e ischiocrurali","Glutei, polpacci","Da affondo profondo appoggia le mani a terra all'interno del piede anteriore, allungando l'anca posteriore.","Colonna allungata e ginocchio anteriore sopra la caviglia.","Incassare le spalle o forzare se c'è rigidità articolare.","Runners stretch","3","30"],
@@ -225,7 +302,7 @@ const extraRaw=[
 ["Posturale","Posizione del Bambino (Scarico Lombare)","Tappetino","Muscoli paravertebrali lombari","Gran dorsale, glutei, spalle","In ginocchio, porta i glutei sui talloni e allunga le braccia avanti a terra appoggiando la fronte al tappetino.","Respira profondamente gonfiando la zona dorso-lombare.","Tenere le spalle contratte o forzare le ginocchia.","Childs pose","3","45"],
 ["Posturale","Torsione Spinale Posturale (Spinal Twist)","Tappetino","Paravertebrali, obliqui e multifido","Piriforme, pettorale, fascia toraco-lombare","Da seduto o supino, incrocia una gamba e ruota dolcemente il busto dal lato opposto allungando la colonna verso l'alto.","Cresci con il vertice della testa verso il soffitto prima di ruotare.","Forzare la rotazione con la leva delle braccia a schiena curva.","Spinal stretch","3","30"],
 ["Posturale","Retroversione Bacino e Ponte Posturale","Tappetino","Grande gluteo e trasverso dell'addome","Ischiocrurali, erettori spinali, pavimento pelvico","Supino con ginocchia piegate: appiattisci la zona lombare a terra (retroversione) e solleva il bacino vertebra dopo vertebra.","Piedi paralleli alla larghezza delle anche, collo lungo e mento retratto.","Spanciare o inarcare la schiena in cima al movimento.","Pelvic tilt into bridge","3","12"],
-["Posturale","Controllo Posturale del Bacino in piedi","Corpo libero / Parete","Trasverso dell'addome e glutei","Rettori spinali, pavimento pelvico","In piedi (o appoggiato al muro), esegui una dolce retroversione del bacino riducendo l'iperlordosi lombare.","Ginocchia sbloccate, spalle rilassate e respirazione fluida.","Contrarre le spalle o bloccare il respiro.","Standing pelvic tilt","3","15"],
+["Posturale","Controllo Posturale del Bacino in piedi","Corpo libero / Parete","Trasverso dell'addome e glutei","Erettori spinali, pavimento pelvico","In piedi (o appoggiato al muro), esegui una dolce retroversione del bacino riducendo l'iperlordosi lombare.","Ginocchia sbloccate, spalle rilassate e respirazione fluida.","Contrarre le spalle o bloccare il respiro.","Standing pelvic tilt","3","15"],
 ["Posturale","Dead Bug (Stabilizzazione Lombo-Pelvica)","Tappetino","Trasverso dell'addome e core profondo","Retto addominale, flessori dell'anca","Supino con braccia verso il soffitto e gambe a 90°: distendi lentamente braccio e gamba opposti senza mai staccare la zona lombare da terra.","Zona lombare incollata al pavimento per tutta l'esecuzione.","Inarcare la schiena quando gamba e braccio scendono.","Dead bug","3","10"],
 ["Posturale","Superman Posturale (Catena Posteriore)","Tappetino","Erettori spinali, multifido e glutei","Deltoide posteriore, romboidi, trapezio inferiore","Prono a terra con fronte rivolta in basso, solleva contemporaneamente di pochi centimetri braccia e gambe allungandole lontano dal centro.","Sguardo sempre rivolto al tappetino per mantenere il collo in asse.","Iperestendere il collo guardando avanti o salire troppo di slancio.","Superman","3","10"],
 ["Posturale","Vacuum Addominale (Postura Profonda)","Corpo libero / Tappetino","Trasverso dell'addome e diaframma","Pavimento pelvico, obliqui interni","Espira tutta l'aria e richiama l'ombelico verso la colonna vertebrale come per stringere una cintura interna, mantenendo la tenuta.","Colonna ben allungata, spalle basse e torace aperto.","Alzare le spalle o curvare la schiena in avanti.","Stomach vacuum","3","20"],
@@ -239,7 +316,7 @@ const extraRaw=[
 ["Posturale","Allungamento Assiale Colonna da Seduto","Sedia / Panca","Muscoli paravertebrali, gran dorsale e spalle","Intercostali","Seduto sugli ischi, intreccia le dita e spingi i palmi verso l'alto allungando ogni vertebra verso il soffitto.","Mento in asse, spalle basse anche con le braccia sollevate.","Spingere la pancia in avanti inarcando i lombi.","Chair upper body stretch","3","30"],
 ["Posturale","Rotazione Toracica da Seduto (Dorsale Medio)","Tappetino / Sedia","Romboidi, trapezio medio e rotatori toracici","Obliqui, paravertebrali","Seduto con schiena eretta, ruota il torace a destra e a sinistra mantenendo il bacino immobile.","Incrocia le braccia al petto e guida il movimento con le spalle, non col collo.","Curvare la schiena durante la rotazione.","Middle back stretch","3","12"],
 ["Posturale","Mobilità Dinamica Scapolo-Toracica","Corpo libero","Romboidi, trapezio e pettorale","Deltoidi, colonna dorsale","Alterna un'apertura ampia delle braccia (adduzione scapolare inspirando) a una chiusura anteriore (abduzione scapolare espirando).","Postura eretta, ginocchia morbide e movimento ritmico col respiro.","Alzare le spalle verso le orecchie.","Dynamic back stretch","3","12"],
-["Posturale","World's Greatest Stretch (Mobilità Globale)","Tappetino","Catena posteriore, anca, psoas e rachide toracico","Glutei, pettorale, deltoide","Da affondo lungo, appoggia una mano a terra e ruota il braccio opposto verso il soffitto aprendo tutto il torace.","Segui la mano superiore con lo sguardo respirando profondamente.","Collapsare sulla spalla d'appoggio.","Worlds greatest stretch","3","8"]
+["Posturale","World's Greatest Stretch (Mobilità Globale)","Tappetino","Catena posteriore, anca, psoas e rachide toracico","Glutei, pettorale, deltoide","Da affondo lungo, appoggia una mano a terra e ruota il braccio opposto verso il soffitto aprendo tutto il torace.","Segui la mano superiore con lo sguardo respirando profondamente.","Collassare sulla spalla d'appoggio.","Worlds greatest stretch","3","8"]
 ];
 
 const existingNames=new Set(seedRaw.map(x=>x[1].toLowerCase()));
@@ -368,8 +445,6 @@ const photoDbMap={
   "Press-Calf":"Calf_Press_On_The_Leg_Press_Machine",
   "Donkey Calf":"Donkey_Calf_Raises",
   "Wrist Curl":"Palms-Up_Dumbbell_Wrist_Curl_Over_A_Bench",
-
-  // Stretching
   "Stretching tricipite sopra la testa":"Triceps_Stretch",
   "Stretching pettorale alla parete":"Chest_And_Front_Of_Shoulder_Stretch",
   "Stretching dorsale in allungamento":"Upper_Back_Stretch",
@@ -386,8 +461,6 @@ const photoDbMap={
   "Stretching Catena Laterale da seduto":"Seated_Overhead_Stretch",
   "Stretching Quadricipite in quadrupedia":"All_Fours_Quad_Stretch",
   "Rilascio Piriforme su rullo (Foam Roller)":"Piriformis-SMR",
-
-  // Posturali
   "Gatto-Mucca (Cat-Cow Mobilità Colonna)":"Cat_Stretch",
   "Posizione del Bambino (Scarico Lombare)":"Childs_Pose",
   "Torsione Spinale Posturale (Spinal Twist)":"Spinal_Stretch",
@@ -447,6 +520,90 @@ const catalog=seedRaw.map((x,i)=>{
   };
 });
 
+// --- MOTORE SCIENTIFICO 1RM (EPLEY, BRZYCKI, LOMBARDI) & PROGRAMMI ---
+function round05(n){
+  return Math.round(n * 2) / 2;
+}
+function fmtKg(n){
+  if(!n || isNaN(n)) return '—';
+  const r = round05(n);
+  return Number.isInteger(r) ? String(r) : r.toFixed(1);
+}
+function calc1RM(weight, reps){
+  const w = parseFloat(weight);
+  const r = parseInt(reps, 10);
+  if(!w || w <= 0 || !r || r <= 0) return null;
+  if(r === 1){
+    return {
+      weight: w, reps: 1,
+      epley: w, brzycki: w, lombardi: w,
+      oneRM: w,
+      forza: { min: round05(w * 0.85), max: round05(w * 0.95), target: round05(w * 0.90), sets: 4, reps: 4, rest: 180 },
+      ipertrofia: { min: round05(w * 0.75), max: round05(w * 0.85), target: round05(w * 0.80), sets: 4, reps: 10, rest: 90 },
+      resistenza: { min: round05(w * 0.65), max: round05(w * 0.75), target: round05(w * 0.70), sets: 3, reps: 15, rest: 90 }
+    };
+  }
+  const safeR = Math.min(r, 30);
+  const epley = w * (1 + safeR / 30);
+  const brzycki = w * (36 / (37 - Math.min(safeR, 35)));
+  const lombardi = w * Math.pow(safeR, 0.10);
+  const oneRM = (epley + brzycki + lombardi) / 3;
+  return {
+    weight: w,
+    reps: r,
+    epley: Math.round(epley * 10) / 10,
+    brzycki: Math.round(brzycki * 10) / 10,
+    lombardi: Math.round(lombardi * 10) / 10,
+    oneRM: Math.round(oneRM * 10) / 10,
+    forza: { min: round05(oneRM * 0.85), max: round05(oneRM * 0.95), target: round05(oneRM * 0.90), sets: 4, reps: 4, rest: 180 },
+    ipertrofia: { min: round05(oneRM * 0.75), max: round05(oneRM * 0.85), target: round05(oneRM * 0.80), sets: 4, reps: 10, rest: 90 },
+    resistenza: { min: round05(oneRM * 0.65), max: round05(oneRM * 0.75), target: round05(oneRM * 0.70), sets: 3, reps: 15, rest: 90 }
+  };
+}
+
+// Ricava il miglior 1RM per un esercizio (da db.maxes salvati, oppure dallo storico allenamenti o dalle schede)
+function getBestRMRecord(exId){
+  if(db.maxes && db.maxes[exId] && db.maxes[exId].weight > 0){
+    const m = db.maxes[exId];
+    const c = calc1RM(m.weight, m.reps || 8);
+    if(c) return { ...c, notes: m.notes || '', date: m.date || '', source: m.source || 'Test 1RM' };
+  }
+  // Cerca nello storico allenamenti
+  let best = null;
+  (db.history || []).forEach(h => {
+    (h.items || []).forEach(it => {
+      if(it.id === exId){
+        (it.sets || []).forEach(s => {
+          const c = calc1RM(s.kg, s.reps);
+          if(c && (!best || c.oneRM > best.oneRM)){
+            best = { ...c, notes: '', date: h.date, source: 'Da allenamento' };
+          }
+        });
+      }
+    });
+  });
+  if(best) return best;
+  // Cerca nelle schede se l'utente ha impostato i kg
+  for(const p of (db.plans || [])){
+    const cfg = p.exerciseConfig?.[exId];
+    if(cfg && +cfg.kg > 0){
+      const c = calc1RM(cfg.kg, cfg.reps || 10);
+      if(c) return { ...c, notes: '', date: '', source: 'Dalla scheda ' + p.name };
+    }
+  }
+  return null;
+}
+
+function getAllTrackedMaxes(){
+  const results = [];
+  allExercises().forEach(ex => {
+    if(ex.zone === 'Stretching' || ex.zone === 'Posturale') return;
+    const rec = getBestRMRecord(ex.id);
+    if(rec) results.push({ ex, rec });
+  });
+  return results.sort((a,b) => b.rec.oneRM - a.rec.oneRM);
+}
+
 // --- SINCRONIZZAZIONE AUTOMATICA IN CLOUD (FIREBASE FIRESTORE) ---
 const KEY='mygym-professional-v9-clean';
 const WORK_KEY='mygym-active-workout-v9';
@@ -454,11 +611,14 @@ const CLOUD_URL='https://firestore.googleapis.com/v1/projects/apollo-evens-2be21
 
 let db=loadDB(),currentPage='home',deferredInstall=null,workState=loadWorkState(),timerHandle=null;
 
-function blankDB(){return {plans:[],activePlan:null,custom:[],history:[],measurements:[],settings:{rest:60,unit:'kg'},updatedAt:0}}
+function blankDB(){return {plans:[],activePlan:null,custom:[],history:[],measurements:[],maxes:{},settings:{rest:60,unit:'kg'},updatedAt:0}}
 function loadDB(){
   try{
     let fresh=localStorage.getItem(KEY);
-    if(fresh)return Object.assign(blankDB(),JSON.parse(fresh));
+    if(fresh){
+      const parsed=JSON.parse(fresh);
+      return Object.assign(blankDB(),parsed,{maxes:parsed.maxes||{}});
+    }
     let legacy=JSON.parse(localStorage.getItem('mygym-v4')||'null');
     if(legacy){
       let migrated=blankDB(),map={};
@@ -520,8 +680,7 @@ async function syncFromCloud(manual=false){
   try{
     const res = await fetch(CLOUD_URL, { cache: 'no-store' });
     if(res.status === 404){
-      // Primo avvio assoluto sul Cloud: carica subito i dati presenti sul PC!
-      if(db.plans.length || db.custom.length || db.history.length || db.measurements.length){
+      if(db.plans.length || db.custom.length || db.history.length || db.measurements.length || Object.keys(db.maxes||{}).length){
         db.updatedAt = Date.now();
         await pushToCloud();
         if(manual) toast('Dati caricati sul Cloud!');
@@ -535,17 +694,18 @@ async function syncFromCloud(manual=false){
     const remoteDB = JSON.parse(raw);
     const remoteTime = Number(doc?.fields?.updatedAt?.integerValue || remoteDB.updatedAt || 0);
     const localTime = Number(db.updatedAt || 0);
-    const localEmpty = !db.plans.length && !db.custom.length && !db.history.length && !db.measurements.length;
+    const localEmpty = !db.plans.length && !db.custom.length && !db.history.length && !db.measurements.length && !Object.keys(db.maxes||{}).length;
 
     if(localEmpty || remoteTime > localTime){
-      // Unisce comunque eventuali elementi creati localmente non ancora presenti
       const mergedPlans = remoteTime >= localTime ? mergeById(remoteDB.plans, db.plans) : mergeById(db.plans, remoteDB.plans);
       const mergedCustom = mergeById(db.custom, remoteDB.custom);
       const mergedHistory = mergeById(db.history, remoteDB.history);
+      const mergedMaxes = Object.assign({}, db.maxes||{}, remoteDB.maxes||{});
       db = Object.assign(blankDB(), remoteDB, {
         plans: mergedPlans,
         custom: mergedCustom,
         history: mergedHistory,
+        maxes: mergedMaxes,
         activePlan: remoteDB.activePlan || db.activePlan || mergedPlans[0]?.id || null,
         updatedAt: Math.max(remoteTime, localTime)
       });
@@ -598,7 +758,7 @@ function playBeep(){
 }
 
 function toast(s){const t=document.getElementById('toast');t.textContent=s;t.style.display='block';clearTimeout(toast.t);toast.t=setTimeout(()=>t.style.display='none',2800)}
-function go(page){currentPage=page;document.querySelectorAll('.page').forEach(e=>e.classList.toggle('active',e.id===page));document.querySelectorAll('[data-page]').forEach(e=>e.classList.toggle('active',e.dataset.page===page));const titles={home:'Panoramica',catalog:'Catalogo esercizi',plans:'Schede allenamento',workout:'Allenamento',library:'I miei attrezzi',progress:'Progressi',settings:'Impostazioni e Cloud'};document.getElementById('pageTitle').textContent=titles[page];document.getElementById('eyebrow').textContent=page==='workout'?'SESSIONE IN CORSO':'TITAN GYM · IL TUO PERCORSO';renderAll();window.scrollTo({top:0,behavior:'smooth'})}
+function go(page){currentPage=page;document.querySelectorAll('.page').forEach(e=>e.classList.toggle('active',e.id===page));document.querySelectorAll('[data-page]').forEach(e=>e.classList.toggle('active',e.dataset.page===page));const titles={home:'Panoramica',catalog:'Catalogo esercizi',plans:'Schede allenamento',workout:'Allenamento',maxes:'Scheda 1RM & Programmi',library:'I miei attrezzi',progress:'Progressi',settings:'Impostazioni e Cloud'};document.getElementById('pageTitle').textContent=titles[page];document.getElementById('eyebrow').textContent=page==='workout'?'SESSIONE IN CORSO':page==='maxes'?'SCHEDA 1RM • FORZA · IPERTROFIA · RESISTENZA':'TITAN GYM · IL TUO PERCORSO';renderAll();window.scrollTo({top:0,behavior:'smooth'})}
 function openZoneQuick(zoneName){
   go('catalog');
   const z=document.getElementById('catZone');
@@ -610,8 +770,230 @@ function esc(s=''){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt
 function allExercises(){return [...catalog,...db.custom]}
 function getExercise(id){return allExercises().find(x=>x.id===id)}
 function dateFmt(d){return new Date(d).toLocaleDateString('it-IT',{day:'2-digit',month:'short',year:'numeric'})}
-function renderAll(){renderHome();if(currentPage==='catalog')renderCatalog();if(currentPage==='plans')renderPlans();if(currentPage==='workout')renderWorkout();if(currentPage==='library')renderLibrary();if(currentPage==='progress')renderProgress();if(currentPage==='settings')syncSettings();document.getElementById('connection').textContent=navigator.onLine?'● Online':'● Offline';}
-function renderHome(){document.getElementById('statPlans').textContent=db.plans.length;document.getElementById('statExercises').textContent=allExercises().length;document.getElementById('statWorkouts').textContent=db.history.length;document.getElementById('statMinutes').textContent=db.history.reduce((s,h)=>s+(h.minutes||0),0);let p=db.plans.find(x=>x.id===db.activePlan);document.getElementById('activePlanBox').innerHTML=p?`<h3>${esc(p.name)}</h3><p class="muted small">${p.ids.length} esercizi · ${esc(p.description||'Pronta per iniziare')}</p><div class="row"><button class="btn-green" onclick="beginActiveWorkout()">▶ Inizia questa scheda</button><button class="btn-soft btn-small" onclick="newPlan('${p.id}')">Modifica</button></div>`:'<div class="empty"><b>Nessuna scheda attiva</b>Crea una scheda per iniziare.<br><br><button onclick="newPlan()">Crea scheda</button></div>';let h=db.history.at(-1);document.getElementById('lastWorkout').innerHTML=h?`<b>${esc(h.plan)}</b><p class="muted small">${dateFmt(h.date)} · ${h.items.length} esercizi · ${h.minutes||0} min</p>`:'<p class="muted">Non hai ancora registrato allenamenti.</p>'}
+function renderAll(){renderHome();if(currentPage==='catalog')renderCatalog();if(currentPage==='plans')renderPlans();if(currentPage==='workout')renderWorkout();if(currentPage==='maxes')renderMaxesPage();if(currentPage==='library')renderLibrary();if(currentPage==='progress')renderProgress();if(currentPage==='settings')syncSettings();document.getElementById('connection').textContent=navigator.onLine?'● Online':'● Offline';}
+function renderHome(){document.getElementById('statPlans').textContent=db.plans.length;document.getElementById('statMaxes').textContent=getAllTrackedMaxes().length;document.getElementById('statWorkouts').textContent=db.history.length;document.getElementById('statMinutes').textContent=db.history.reduce((s,h)=>s+(h.minutes||0),0);let p=db.plans.find(x=>x.id===db.activePlan);document.getElementById('activePlanBox').innerHTML=p?`<h3>${esc(p.name)}</h3><p class="muted small">${p.ids.length} esercizi · ${esc(p.description||'Pronta per iniziare')}</p><div class="row"><button class="btn-green" onclick="beginActiveWorkout()">▶ Inizia questa scheda</button><button class="btn-soft btn-small" onclick="newPlan('${p.id}')">Modifica</button></div>`:'<div class="empty"><b>Nessuna scheda attiva</b>Crea una scheda per iniziare.<br><br><button onclick="newPlan()">Crea scheda</button></div>';let h=db.history.at(-1);document.getElementById('lastWorkout').innerHTML=h?`<b>${esc(h.plan)}</b><p class="muted small">${dateFmt(h.date)} · ${h.items.length} esercizi · ${h.minutes||0} min</p>`:'<p class="muted">Non hai ancora registrato allenamenti.</p>'}
+
+// --- FUNZIONI PAGINA SCHEDA 1RM & PROGRAMMI ---
+function strengthExercises(){
+  return allExercises().filter(x => x.zone !== 'Stretching' && x.zone !== 'Posturale');
+}
+function renderProgramBoxesHtml(c, exId=''){
+  if(!c) return `<div class="empty" style="margin-top:12px">Inserisci il <b>Carico sollevato (kg)</b> e le <b>Ripetizioni (1–12)</b> per calcolare automaticamente il tuo <b>1RM Medio Stimato</b> e i carichi di lavoro per Forza, Ipertrofia e Resistenza.</div>`;
+  const unit = esc(db.settings.unit || 'kg');
+  return `
+    <div class="rm-result-banner">
+      <div>
+        <div class="small" style="color:#b9cdfa;font-weight:700;text-transform:uppercase">1RM MEDIO STIMATO (${unit.toUpperCase()})</div>
+        <strong>${fmtKg(c.oneRM)} ${unit}</strong>
+        <div class="small" style="color:#dbe7ff">Media scientifica: Epley (${c.epley}) · Brzycki (${c.brzycki}) · Lombardi (${c.lombardi})</div>
+      </div>
+      <div style="text-align:right">
+        <span class="pill orange" style="font-size:12px;padding:6px 12px">Test: ${fmtKg(c.weight)} ${unit} × ${c.reps} rip.</span>
+      </div>
+    </div>
+    <div class="rm-prog-grid">
+      <div class="rm-prog-box forza">
+        <div>
+          <h4>💪 FORZA</h4>
+          <div class="small muted" style="margin-top:4px"><b>85–95% 1RM</b> • 3–5 ripetizioni<br>Recupero: 3–5 minuti • Serie: 3–5</div>
+        </div>
+        <div class="rm-prog-weight">
+          <small>CARICO CONSIGLIATO (${unit.toUpperCase()})</small>
+          <strong>${fmtKg(c.forza.min)} – ${fmtKg(c.forza.max)} ${unit}</strong>
+          <div class="small muted">Ideale: ~${fmtKg(c.forza.target)} ${unit}</div>
+        </div>
+      </div>
+      <div class="rm-prog-box ipertrofia">
+        <div>
+          <h4>🔥 IPERTROFIA</h4>
+          <div class="small muted" style="margin-top:4px"><b>75–85% 1RM</b> • 8–12 ripetizioni<br>Recupero: 90 secondi • Serie: 3–5</div>
+        </div>
+        <div class="rm-prog-weight">
+          <small>CARICO CONSIGLIATO (${unit.toUpperCase()})</small>
+          <strong>${fmtKg(c.ipertrofia.min)} – ${fmtKg(c.ipertrofia.max)} ${unit}</strong>
+          <div class="small muted">Ideale: ~${fmtKg(c.ipertrofia.target)} ${unit}</div>
+        </div>
+      </div>
+      <div class="rm-prog-box resistenza">
+        <div>
+          <h4>⚡ RESISTENZA</h4>
+          <div class="small muted" style="margin-top:4px"><b>65–75% 1RM</b> • >12 ripetizioni<br>Recupero: 90 secondi • Serie: da 3 in poi</div>
+        </div>
+        <div class="rm-prog-weight">
+          <small>CARICO CONSIGLIATO (${unit.toUpperCase()})</small>
+          <strong>${fmtKg(c.resistenza.min)} – ${fmtKg(c.resistenza.max)} ${unit}</strong>
+          <div class="small muted">Ideale: ~${fmtKg(c.resistenza.target)} ${unit}</div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function renderMaxesPage(selectedExId){
+  const list = strengthExercises();
+  const zones = [...new Set(list.map(x => x.zone))];
+  const zSel = document.getElementById('rmZoneFilter');
+  if(zSel && !zSel.dataset.ready){
+    zSel.innerHTML = '<option value="">Tutti i gruppi muscolari</option>' + zones.map(z => `<option>${esc(z)}</option>`).join('');
+    zSel.dataset.ready = '1';
+  }
+  populateRMExerciseSelect(selectedExId);
+  renderMaxesList();
+}
+
+function populateRMExerciseSelect(selectedExId){
+  const zSel = document.getElementById('rmZoneFilter');
+  const exSel = document.getElementById('rmExSelect');
+  if(!exSel) return;
+  const zone = zSel?.value || '';
+  const list = strengthExercises().filter(x => !zone || x.zone === zone);
+  const currentVal = selectedExId || exSel.value;
+  exSel.innerHTML = list.map(x => `<option value="${esc(x.id)}">${esc(x.name)} (${esc(x.zone)})</option>`).join('');
+  if(currentVal && list.some(x => x.id === currentVal)){
+    exSel.value = currentVal;
+  }
+  onRMExerciseChange();
+}
+
+function onRMExerciseChange(){
+  const exId = document.getElementById('rmExSelect')?.value;
+  const ex = getExercise(exId);
+  if(!ex) return;
+  document.getElementById('rmExMeta').value = `${ex.zone} · ${ex.tool}`;
+  const rec = getBestRMRecord(exId);
+  const wInput = document.getElementById('rmWeight');
+  const rInput = document.getElementById('rmReps');
+  const nInput = document.getElementById('rmNotes');
+  if(rec){
+    wInput.value = rec.weight;
+    rInput.value = rec.reps;
+    nInput.value = rec.notes || '';
+  } else {
+    wInput.value = '';
+    rInput.value = cleanNumber(ex.reps, 8);
+    nInput.value = '';
+  }
+  updateRMCalculatorPreview();
+}
+
+function updateRMCalculatorPreview(){
+  const exId = document.getElementById('rmExSelect')?.value || '';
+  const w = document.getElementById('rmWeight')?.value;
+  const r = document.getElementById('rmReps')?.value;
+  const c = calc1RM(w, r);
+  const box = document.getElementById('rmLiveResult');
+  if(box) box.innerHTML = renderProgramBoxesHtml(c, exId);
+}
+
+function saveCurrentRM(){
+  const exId = document.getElementById('rmExSelect')?.value;
+  const w = parseFloat(document.getElementById('rmWeight')?.value);
+  const r = parseInt(document.getElementById('rmReps')?.value, 10) || 8;
+  const notes = document.getElementById('rmNotes')?.value.trim() || '';
+  if(!exId) return toast('Seleziona un esercizio');
+  if(!w || w <= 0) return toast('Inserisci un carico in kg valido');
+  if(!db.maxes) db.maxes = {};
+  db.maxes[exId] = {
+    weight: w,
+    reps: r,
+    notes,
+    date: new Date().toISOString(),
+    source: 'Scheda 1RM'
+  };
+  persist();
+  renderMaxesList();
+  renderHome();
+  toast('🎯 Massimale 1RM e carichi di lavoro salvati in Cloud!');
+}
+
+function deleteRM(exId){
+  if(!db.maxes || !db.maxes[exId]) return;
+  if(!confirm('Rimuovere il test manuale 1RM per questo esercizio?')) return;
+  delete db.maxes[exId];
+  persist();
+  renderMaxesPage(exId);
+  toast('Test 1RM rimosso');
+}
+
+function openCalculatorFor(exId){
+  closeModal();
+  go('maxes');
+  const zSel = document.getElementById('rmZoneFilter');
+  if(zSel) zSel.value = '';
+  populateRMExerciseSelect(exId);
+}
+
+function renderMaxesList(){
+  const q = (document.getElementById('rmListSearch')?.value || '').toLowerCase();
+  const tracked = getAllTrackedMaxes().filter(item => !q || [item.ex.name, item.ex.zone, item.ex.tool, item.rec.notes].join(' ').toLowerCase().includes(q));
+  const countEl = document.getElementById('rmSavedCount');
+  if(countEl) countEl.textContent = tracked.length;
+  const container = document.getElementById('rmSavedList');
+  if(!container) return;
+  const unit = esc(db.settings.unit || 'kg');
+  if(!tracked.length){
+    container.innerHTML = `<div class="empty"><b>Nessun massimale ancora registrato</b>Usa il calcolatore qui sopra per inserire il carico e le ripetizioni di un esercizio, oppure completa un allenamento: i tuoi massimali 1RM compariranno automaticamente qui!</div>`;
+    return;
+  }
+  container.innerHTML = tracked.map(({ ex, rec }) => {
+    const thumb = ex.image || ex.remoteImage || '';
+    return `
+      <div class="card" style="margin-bottom:14px">
+        <div class="row" style="justify-content:space-between;align-items:center;gap:12px">
+          <div class="row" style="gap:12px">
+            ${thumb ? `<img src="${esc(thumb)}" data-fb="${esc(ex.remoteImage||'')}" onerror="if(this.dataset.fb&&this.src!==this.dataset.fb){this.src=this.dataset.fb}" style="width:68px;height:58px;object-fit:cover;border-radius:10px;border:1px solid var(--line)">` : ''}
+            <div>
+              <div class="row" style="gap:6px">
+                <span class="pill">${esc(ex.zone)}</span>
+                <span class="pill green">${esc(rec.source)}</span>
+              </div>
+              <h3 style="margin:4px 0 2px">${esc(ex.name)}</h3>
+              <div class="small muted">${esc(ex.tool)} · Test: <b>${fmtKg(rec.weight)} ${unit} × ${rec.reps} rip.</b>${rec.notes ? ` · 📝 ${esc(rec.notes)}` : ''}</div>
+            </div>
+          </div>
+          <div style="text-align:right">
+            <div class="small muted">1RM STIMATO</div>
+            <strong style="font-size:26px;color:var(--blue)">${fmtKg(rec.oneRM)} ${unit}</strong>
+            <div class="row" style="justify-content:flex-end;margin-top:4px">
+              <button class="btn-soft btn-small" onclick="openCalculatorFor('${ex.id}')">Modifica</button>
+              ${db.maxes?.[ex.id] ? `<button class="btn-danger btn-small" onclick="deleteRM('${ex.id}')">✕</button>` : ''}
+            </div>
+          </div>
+        </div>
+        <div class="rm-prog-grid" style="margin-top:12px">
+          <div class="rm-prog-box forza" style="padding:10px 12px">
+            <div class="row" style="justify-content:space-between"><b>💪 FORZA (85–95%)</b><span class="small muted">3–5×3–5 · Rec 3–5m</span></div>
+            <strong style="font-size:17px;color:#b91c1c">${fmtKg(rec.forza.min)} – ${fmtKg(rec.forza.max)} ${unit}</strong>
+          </div>
+          <div class="rm-prog-box ipertrofia" style="padding:10px 12px">
+            <div class="row" style="justify-content:space-between"><b>🔥 IPERTROFIA (75–85%)</b><span class="small muted">3–5×8–12 · Rec 90s</span></div>
+            <strong style="font-size:17px;color:#3e50cf">${fmtKg(rec.ipertrofia.min)} – ${fmtKg(rec.ipertrofia.max)} ${unit}</strong>
+          </div>
+          <div class="rm-prog-box resistenza" style="padding:10px 12px">
+            <div class="row" style="justify-content:space-between"><b>⚡ RESISTENZA (65–75%)</b><span class="small muted">3+×12–15 · Rec 90s</span></div>
+            <strong style="font-size:17px;color:#0f6848">${fmtKg(rec.resistenza.min)} – ${fmtKg(rec.resistenza.max)} ${unit}</strong>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function open1RMInfo(){
+  modal('Istruzioni e Criteri di Calcolo 1RM', `
+    <h3>1RM Medio Stimato</h3>
+    <p class="small">TITAN GYM calcola la media di tre formule predittive scientifiche: <b>Epley</b>, <b>Brzycki</b> e <b>Lombardi</b>. La stima è particolarmente precisa con 2–10 ripetizioni (accetta da 1 a 12+).</p>
+    <h3>💪 Forza</h3>
+    <p class="small"><b>85–95% dell'1RM</b> • 3–5 ripetizioni • recupero 3–5 minuti (180s) • 3–5 serie.</p>
+    <h3>🔥 Ipertrofia</h3>
+    <p class="small"><b>75–85% dell'1RM</b> • 8–12 ripetizioni • recupero 90 secondi • 3–5 serie.</p>
+    <h3>⚡ Resistenza</h3>
+    <p class="small"><b>65–75% dell'1RM</b> • oltre 12 ripetizioni • recupero 90 secondi • almeno 3 serie.</p>
+    <h3>Manubri e Bilanciere</h3>
+    <p class="small">Per il bilanciere inserisci il peso totale. Per i manubri inserisci il peso di un singolo manubrio e mantieni lo stesso criterio nei test successivi.</p>
+    <div class="notice">Sono indicazioni generali: adatta carichi, volume e recuperi a esperienza, tecnica e recupero individuale. Non testare il massimale reale su 1 ripetizione senza adeguata assistenza.</div>
+  `);
+}
 
 function imageHtml(ex,cls='exercise-img'){
   const src1 = ex.image || ex.remoteImage || '';
@@ -660,9 +1042,11 @@ function renderCatalog(){
   let q=document.getElementById('catSearch').value.toLowerCase(),zone=z.value,tool=t.value;
   let list=catalog.filter(x=>(!zone||x.zone===zone)&&(!tool||x.tool===tool)&&(!q||[x.name,x.zone,x.main,x.secondary,x.tool].join(' ').toLowerCase().includes(q)));
   document.getElementById('catalogCount').textContent=list.length+' esercizi disponibili';
+  const unit = esc(db.settings.unit || 'kg');
   document.getElementById('catalogGrid').innerHTML=list.map(x=>{
     const pillClass = x.zone==='Posturale' ? 'pill violet' : x.zone==='Stretching' ? 'pill green' : 'pill';
-    return `<article class="exercise-card">${imageHtml(x)}<div class="exercise-body"><div><span class="${pillClass}">${esc(x.zone)}</span></div><h3>${esc(x.name)}</h3><p><b>Principale:</b> ${esc(x.main)}<br><b>Secondari:</b> ${esc(x.secondary)}<br><b>Attrezzo:</b> ${esc(x.tool)}</p><div class="exercise-actions"><button class="btn-soft btn-small" onclick="exerciseDetail('${x.id}')">Dettagli</button><button class="btn-small" onclick="addExerciseToLibrary('${x.id}')">＋ Libreria</button></div></div></article>`;
+    const rmRec = (x.zone!=='Stretching' && x.zone!=='Posturale') ? getBestRMRecord(x.id) : null;
+    return `<article class="exercise-card">${imageHtml(x)}<div class="exercise-body"><div><span class="${pillClass}">${esc(x.zone)}</span>${rmRec?`<span class="pill orange">1RM: ${fmtKg(rmRec.oneRM)} ${unit}</span>`:''}</div><h3>${esc(x.name)}</h3><p><b>Principale:</b> ${esc(x.main)}<br><b>Secondari:</b> ${esc(x.secondary)}<br><b>Attrezzo:</b> ${esc(x.tool)}</p><div class="exercise-actions"><button class="btn-soft btn-small" onclick="exerciseDetail('${x.id}')">Dettagli</button>${(x.zone!=='Stretching'&&x.zone!=='Posturale')?`<button class="btn-light btn-small" onclick="openCalculatorFor('${x.id}')">🎯 1RM</button>`:`<button class="btn-small" onclick="addExerciseToLibrary('${x.id}')">＋ Libreria</button>`}</div></div></article>`;
   }).join('')||'<div class="empty">Nessun esercizio corrisponde ai filtri.</div>';
 }
 
@@ -684,7 +1068,17 @@ function exerciseDetail(id){
       </figure>
     </div>` : (src1 ? `<img src="${esc(src1)}" style="width:100%;max-height:260px;object-fit:contain;border-radius:14px;background:#f8fafc;margin-bottom:12px">` : '');
   const unitLabel = (x.zone==='Stretching' || (x.zone==='Posturale' && +x.reps>=20)) ? 'secondi / rip.' : 'ripetizioni';
-  modal(x.name,`${photosHtml}<div class="pill">${esc(x.zone)}</div><div class="pill">${esc(x.tool)}</div><p><b>Muscolo/Distretto principale:</b> ${esc(x.main)}<br><b>Coinvolti:</b> ${esc(x.secondary)}</p><h3>Esecuzione tecnica</h3><p>${esc(x.how)}</p><h3>Allineamento posturale e preparazione</h3><p>${esc(x.setup)}</p><h3>Errori da evitare</h3><p>${esc(x.mistakes)}</p><p><b>Indicazione iniziale:</b> ${esc(x.sets)} serie · ${esc(x.reps)} ${unitLabel}</p><div class="notice">Esegui ogni movimento con controllo e respirazione fluida. Se avverti dolore acuto, interrompi.</div><br><button onclick="addExerciseToLibrary('${x.id}');closeModal()">＋ Aggiungi alla libreria</button>`);
+  const isStrength = x.zone!=='Stretching' && x.zone!=='Posturale';
+  const rmRec = isStrength ? getBestRMRecord(x.id) : null;
+  const rmSection = isStrength ? `
+    <div style="margin:14px 0;padding:14px;background:#f3f6fb;border-radius:14px;border:1px solid var(--line)">
+      <div class="row" style="justify-content:space-between">
+        <b>🎯 Scheda Massimale 1RM (${esc(x.name)})</b>
+        <button class="btn-soft btn-small" onclick="openCalculatorFor('${x.id}')">${rmRec?'Aggiorna Test 1RM':'Calcola 1RM'}</button>
+      </div>
+      ${rmRec ? renderProgramBoxesHtml(rmRec, x.id) : `<p class="small muted" style="margin:6px 0 0">Nessun massimale ancora calcolato per questo esercizio. Premi "Calcola 1RM" per scoprire i carichi consigliati per Forza, Ipertrofia e Resistenza.</p>`}
+    </div>` : '';
+  modal(x.name,`${photosHtml}<div class="pill">${esc(x.zone)}</div><div class="pill">${esc(x.tool)}</div><p><b>Muscolo/Distretto principale:</b> ${esc(x.main)}<br><b>Coinvolti:</b> ${esc(x.secondary)}</p><h3>Esecuzione tecnica</h3><p>${esc(x.how)}</p><h3>Allineamento posturale e preparazione</h3><p>${esc(x.setup)}</p><h3>Errori da evitare</h3><p>${esc(x.mistakes)}</p><p><b>Indicazione iniziale:</b> ${esc(x.sets)} serie · ${esc(x.reps)} ${unitLabel}</p>${rmSection}<div class="notice">Esegui ogni movimento con controllo e respirazione fluida. Se avverti dolore acuto, interrompi.</div><br><div class="row"><button onclick="addExerciseToLibrary('${x.id}');closeModal()">＋ Aggiungi alla libreria</button></div>`);
 }
 
 function addExerciseToLibrary(id){let x=getExercise(id);if(!x)return;if(db.custom.some(e=>e.sourceId===id)){toast('È già nella tua libreria');return}db.custom.push({...x,id:'custom-'+Date.now(),sourceId:id,image:x.image||'',imageSource:'',custom:true});persist();renderAll();toast('Esercizio aggiunto alla libreria')}
@@ -704,6 +1098,8 @@ function writePlanDraft(){
   }catch(e){toast('Impossibile salvare la bozza: memoria del browser piena')}
 }
 function lastKnownKg(exId){
+  const rec = getBestRMRecord(exId);
+  if(rec && rec.ipertrofia?.target) return String(rec.ipertrofia.target);
   for(let i=db.history.length-1;i>=0;i--){
     const item=(db.history[i].items||[]).find(it=>it.id===exId);
     if(item){
@@ -718,9 +1114,32 @@ function planConfigFor(id){
   return {
     sets:Math.max(1,Math.min(20,cleanNumber(c.sets??ex?.sets,3))),
     reps:String(cleanNumber(c.reps??ex?.reps,10)),
-    kg:c.kg!==undefined ? String(c.kg) : ''
+    kg:c.kg!==undefined ? String(c.kg) : '',
+    rest:cleanNumber(c.rest??db.settings.rest, 60),
+    goal:c.goal||''
   };
 }
+// Applica i parametri del programma (Forza / Ipertrofia / Resistenza) nella creazione scheda!
+function applyPlanGoal(exId, goal){
+  const rec = getBestRMRecord(exId);
+  const cfg = planConfigFor(exId);
+  cfg.goal = goal;
+  if(goal === 'forza'){
+    cfg.sets = 4; cfg.reps = '4'; cfg.rest = 180;
+    if(rec) cfg.kg = String(rec.forza.target);
+  } else if(goal === 'ipertrofia'){
+    cfg.sets = 4; cfg.reps = '10'; cfg.rest = 90;
+    if(rec) cfg.kg = String(rec.ipertrofia.target);
+  } else if(goal === 'resistenza'){
+    cfg.sets = 3; cfg.reps = '15'; cfg.rest = 90;
+    if(rec) cfg.kg = String(rec.resistenza.target);
+  }
+  window.planConfig[exId] = cfg;
+  writePlanDraft();
+  filterPlanChoices();
+  toast(rec ? `Programma ${goal.toUpperCase()} applicato con carico 1RM (${cfg.kg} kg)!` : `Serie, ripetizioni e recupero impostati per ${goal.toUpperCase()}`);
+}
+
 function newPlan(id){
   let p=id?db.plans.find(x=>x.id===id):{name:'',description:'',ids:[],exerciseConfig:{}};
   let draft=!id?readPlanDraft():null;
@@ -735,7 +1154,7 @@ function newPlan(id){
   <div class="field"><label>Descrizione / obiettivo</label><textarea id="planDesc" oninput="writePlanDraft()">${esc(description)}</textarea></div>
   <div class="field"><label>Filtra esercizi per gruppo</label><select id="planZone" onchange="filterPlanChoices()"><option value="">Tutti i gruppi (Pesi, Posturale, Stretching)</option>${[...new Set(allExercises().map(x=>x.zone))].map(z=>`<option>${esc(z)}</option>`).join('')}</select></div>
   <input id="planSearch" placeholder="Cerca esercizio…" oninput="filterPlanChoices()">
-  <p class="small muted">Spunta gli esercizi e imposta <b>Serie</b>, <b>Ripetizioni</b> (e opzionalmente i <b>Kg</b>). Te li ritroverai già compilati di default quando inizi l'allenamento!</p>
+  <p class="small muted">Spunta gli esercizi: puoi impostare <b>Serie</b>, <b>Ripetizioni</b> e <b>Kg</b> manualmente oppure cliccare su <b>💪 Forza</b>, <b>🔥 Ipertrofia</b> o <b>⚡ Resistenza</b> per applicare automaticamente i calcoli della Scheda 1RM!</p>
   <div id="planChoices" style="max-height:48vh;overflow-y:auto;overscroll-behavior:contain;margin:10px 0"></div>
   <p class="small muted">Selezionati: <b id="pickedCount">${picked.size}</b></p>
   <div class="row"><button class="btn-light" onclick="closePlanEditor()">Chiudi (bozza salvata)</button><button class="btn-green" onclick="savePlan('${id||''}')">Salva scheda in Cloud</button></div>`);
@@ -747,18 +1166,28 @@ function filterPlanChoices(){
   let zone=document.getElementById('planZone')?.value||'',q=document.getElementById('planSearch')?.value.toLowerCase()||'',picked=window.planPicked||new Set();
   let list=allExercises().filter(x=>(!zone||x.zone===zone)&&(!q||[x.name,x.zone,x.main,x.tool].join(' ').toLowerCase().includes(q)));
   let el=document.getElementById('planChoices');if(!el)return;
+  const unit = esc(db.settings.unit || 'kg');
   el.innerHTML=list.map(x=>{
     let c=planConfigFor(x.id);
     const thumb = x.image || x.remoteImage || '';
+    const isStrength = x.zone!=='Stretching' && x.zone!=='Posturale';
+    const rmRec = isStrength ? getBestRMRecord(x.id) : null;
     return `<div class="machine-row" style="display:flex;align-items:center;gap:9px;padding:10px;border-bottom:1px solid var(--line)">
       <input type="checkbox" ${picked.has(x.id)?'checked':''} onchange="togglePicked('${x.id}',this.checked)" style="width:20px;height:20px;flex:0 0 20px">
       ${thumb?`<img src="${esc(thumb)}" data-fb="${esc(x.remoteImage||'')}" onerror="if(this.dataset.fb&&this.src!==this.dataset.fb){this.src=this.dataset.fb}" style="width:52px;height:44px;object-fit:cover;border-radius:8px">`:''}
-      <div style="flex:1;min-width:0"><b>${esc(x.name)}</b><div class="small muted">${esc(x.zone)} · ${esc(x.tool)}</div>
-      ${picked.has(x.id)?`<div class="row" style="gap:8px;margin-top:7px">
-        <label class="small">Serie <input type="number" min="1" max="20" value="${c.sets}" style="width:62px" oninput="setPlanExerciseConfig('${x.id}','sets',this.value)"></label>
-        <label class="small">Ripetizioni <input type="number" min="1" value="${esc(c.reps)}" style="width:72px" oninput="setPlanExerciseConfig('${x.id}','reps',this.value)"></label>
-        <label class="small">Kg (opz.) <input type="number" min="0" step=".5" value="${esc(c.kg||'')}" placeholder="kg" style="width:72px" oninput="setPlanExerciseConfig('${x.id}','kg',this.value)"></label>
-      </div>`:''}</div>
+      <div style="flex:1;min-width:0"><b>${esc(x.name)}</b> <span class="small muted">(${esc(x.zone)} · ${esc(x.tool)})</span> ${rmRec?`<span class="pill orange">1RM: ${fmtKg(rmRec.oneRM)} ${unit}</span>`:''}
+      ${picked.has(x.id)?`
+        ${isStrength?`<div class="row" style="gap:5px;margin-top:6px">
+          <button type="button" class="btn-small ${c.goal==='forza'?'btn-dark':'btn-light'}" style="padding:4px 8px;font-size:11px" onclick="applyPlanGoal('${x.id}','forza')">💪 Forza ${rmRec?`(${fmtKg(rmRec.forza.target)}${unit})`:'(3-5 rip)'}</button>
+          <button type="button" class="btn-small ${c.goal==='ipertrofia'?'btn-dark':'btn-light'}" style="padding:4px 8px;font-size:11px" onclick="applyPlanGoal('${x.id}','ipertrofia')">🔥 Ipertrofia ${rmRec?`(${fmtKg(rmRec.ipertrofia.target)}${unit})`:'(8-12 rip)'}</button>
+          <button type="button" class="btn-small ${c.goal==='resistenza'?'btn-dark':'btn-light'}" style="padding:4px 8px;font-size:11px" onclick="applyPlanGoal('${x.id}','resistenza')">⚡ Resistenza ${rmRec?`(${fmtKg(rmRec.resistenza.target)}${unit})`:'(15 rip)'}</button>
+        </div>`:''}
+        <div class="row" style="gap:8px;margin-top:7px">
+          <label class="small">Serie <input type="number" min="1" max="20" value="${c.sets}" style="width:58px" oninput="setPlanExerciseConfig('${x.id}','sets',this.value)"></label>
+          <label class="small">Rip. <input type="number" min="1" value="${esc(c.reps)}" style="width:66px" oninput="setPlanExerciseConfig('${x.id}','reps',this.value)"></label>
+          <label class="small">Kg <input type="number" min="0" step=".5" value="${esc(c.kg||'')}" placeholder="kg" style="width:68px" oninput="setPlanExerciseConfig('${x.id}','kg',this.value)"></label>
+          <label class="small">Rec(s) <input type="number" min="15" step="15" value="${esc(c.rest||60)}" style="width:66px" oninput="setPlanExerciseConfig('${x.id}','rest',this.value)"></label>
+        </div>`:''}</div>
     </div>`;
   }).join('')||'<p class="muted">Nessun esercizio trovato.</p>';
   document.getElementById('pickedCount').textContent=picked.size;
@@ -768,6 +1197,7 @@ function setPlanExerciseConfig(id,key,value){
   if(key==='sets')window.planConfig[id].sets=Math.max(1,Math.min(20,parseInt(value)||3));
   else if(key==='reps')window.planConfig[id].reps=String(cleanNumber(value,10));
   else if(key==='kg')window.planConfig[id].kg=String(value??'');
+  else if(key==='rest')window.planConfig[id].rest=cleanNumber(value,60);
   writePlanDraft();
 }
 function togglePicked(id,on){
@@ -797,7 +1227,7 @@ function savePlan(id){
 function renderPlans(){
  const draft=readPlanDraft();
  const resume=draft?`<div class="card" style="margin-bottom:13px;border:2px solid var(--accent)"><b>Hai una scheda non terminata</b><p class="small muted">${esc(draft.name||'Nuova scheda')} · ${(draft.picked||[]).length} esercizi selezionati</p><div class="row"><button class="btn-green" onclick="newPlan()">▶ Riprendi bozza</button><button class="btn-light btn-small" onclick="discardPlanDraft()">Elimina bozza</button></div></div>`:'';
- document.getElementById('plansList').innerHTML=resume+(db.plans.map(p=>`<div class="card" style="margin-bottom:13px"><div class="row" style="justify-content:space-between;gap:10px"><div><h3>${esc(p.name)} ${p.id===db.activePlan?'<span class="pill green">ATTIVA</span>':''}</h3><p class="muted small">${esc(p.description||'Nessuna descrizione')} · ${p.ids.length} esercizi</p></div><div class="row"><button class="btn-soft btn-small" onclick="newPlan('${p.id}')">Modifica</button><button class="btn-danger btn-small" onclick="deletePlan('${p.id}')">Elimina</button></div></div><div class="small muted">${p.ids.map(id=>{const ex=getExercise(id);const cfg=p.exerciseConfig?.[id];if(!ex)return '';const s=cleanNumber(cfg?.sets??ex.sets,3),r=cleanNumber(cfg?.reps??ex.reps,10);return `<span class="pill">${esc(ex.name)} (${s}×${r})</span>`}).filter(Boolean).join(' ')}</div><div class="row" style="margin-top:13px"><button class="btn-green" onclick="setActivePlan('${p.id}')">${p.id===db.activePlan?'✓ Scheda attiva':'Usa questa scheda'}</button><button class="btn-dark" onclick="beginWorkout('${p.id}')">▶ Inizia allenamento</button></div></div>`).join('')||'<div class="empty"><b>Non hai ancora creato schede</b>Inizia scegliendo i gruppi muscolari, posturali o stretching che vuoi allenare.<br><br><button onclick="newPlan()">Crea la prima scheda</button></div>')}
+ document.getElementById('plansList').innerHTML=resume+(db.plans.map(p=>`<div class="card" style="margin-bottom:13px"><div class="row" style="justify-content:space-between;gap:10px"><div><h3>${esc(p.name)} ${p.id===db.activePlan?'<span class="pill green">ATTIVA</span>':''}</h3><p class="muted small">${esc(p.description||'Nessuna descrizione')} · ${p.ids.length} esercizi</p></div><div class="row"><button class="btn-soft btn-small" onclick="newPlan('${p.id}')">Modifica</button><button class="btn-danger btn-small" onclick="deletePlan('${p.id}')">Elimina</button></div></div><div class="small muted">${p.ids.map(id=>{const ex=getExercise(id);const cfg=p.exerciseConfig?.[id];if(!ex)return '';const s=cleanNumber(cfg?.sets??ex.sets,3),r=cleanNumber(cfg?.reps??ex.reps,10),k=cfg?.kg?` @ ${cfg.kg}kg`:'';return `<span class="pill">${esc(ex.name)} (${s}×${r}${esc(k)})</span>`}).filter(Boolean).join(' ')}</div><div class="row" style="margin-top:13px"><button class="btn-green" onclick="setActivePlan('${p.id}')">${p.id===db.activePlan?'✓ Scheda attiva':'Usa questa scheda'}</button><button class="btn-dark" onclick="beginWorkout('${p.id}')">▶ Inizia allenamento</button></div></div>`).join('')||'<div class="empty"><b>Non hai ancora creato schede</b>Inizia scegliendo i gruppi muscolari, posturali o stretching che vuoi allenare.<br><br><button onclick="newPlan()">Crea la prima scheda</button></div>')}
 function discardPlanDraft(){if(confirm('Eliminare la bozza non salvata?')){localStorage.removeItem(PLAN_DRAFT_KEY);renderPlans();toast('Bozza eliminata')}}
 function setActivePlan(id){db.activePlan=id;persist();renderAll();toast('Scheda attiva aggiornata')}
 function deletePlan(id){if(!confirm('Eliminare questa scheda?'))return;db.plans=db.plans.filter(p=>p.id!==id);if(db.activePlan===id)db.activePlan=db.plans[0]?.id||null;persist();renderPlans()}
@@ -819,6 +1249,7 @@ function beginWorkout(id){
       const count=Math.max(1,Math.min(20,cleanNumber(cfg.sets??ex?.sets,3)));
       const defaultReps=String(cleanNumber(cfg.reps??ex?.reps,10));
       const defaultKg=cfg.kg!==undefined && cfg.kg!=='' ? String(cfg.kg) : lastKnownKg(exId);
+      const defaultRest=cleanNumber(cfg.rest??db.settings.rest,60);
       return {
         id:exId,
         sets:Array.from({length:count},()=>({
@@ -828,7 +1259,7 @@ function beginWorkout(id){
           done:false,
           started:false
         })),
-        rest:db.settings.rest||60,
+        rest:defaultRest,
         resting:false,
         completed:false
       };
@@ -856,6 +1287,8 @@ function renderWorkout(){
       s.reps=String(cleanNumber(s.targetReps||fallbackReps,10));
     }
   });
+  const rmRec = (ex.zone!=='Stretching' && ex.zone!=='Posturale') ? getBestRMRecord(ex.id) : null;
+  const unit = esc(db.settings.unit || 'kg');
   let done=exs.filter(x=>x.completed).length,all=exs.length,finishedSets=exs.reduce((n,x)=>n+x.sets.filter(s=>s.done).length,0),totalSets=exs.reduce((n,x)=>n+x.sets.length,0);
   root.innerHTML=`
   <div class="row" style="justify-content:space-between;align-items:center">
@@ -871,7 +1304,7 @@ function renderWorkout(){
   <div class="card work-card">
     ${imageHtml(ex,'work-photo')}
     <div class="work-content">
-      <div><span class="pill">${esc(ex.zone)}</span><span class="pill">${esc(ex.tool)}</span></div>
+      <div class="row"><span class="pill">${esc(ex.zone)}</span><span class="pill">${esc(ex.tool)}</span>${rmRec?`<span class="pill orange">🎯 1RM: ${fmtKg(rmRec.oneRM)} ${unit} (Forza: ${fmtKg(rmRec.forza.target)}${unit} · Ipertrofia: ${fmtKg(rmRec.ipertrofia.target)}${unit} · Resistenza: ${fmtKg(rmRec.resistenza.target)}${unit})</span>`:''}</div>
       <p class="small"><b>Muscolo:</b> ${esc(ex.main)} · <b>Secondari:</b> ${esc(ex.secondary)}</p>
       <details><summary style="cursor:pointer;font-weight:700;margin:10px 0">Tecnica e regolazioni</summary><p class="small">${esc(ex.how)}</p><p class="small"><b>Preparazione:</b> ${esc(ex.setup)}</p><p class="small"><b>Errori da evitare:</b> ${esc(ex.mistakes)}</p></details>
       <div class="section-head">
@@ -885,7 +1318,7 @@ function renderWorkout(){
         </div>
       </div>
       <div id="timerArea"></div>
-      <div class="sethead"><div>#</div><div>Peso (${esc(db.settings.unit)})</div><div>Ripetizioni</div><div>Stato / Azione</div></div>
+      <div class="sethead"><div>#</div><div>Peso (${unit})</div><div>Ripetizioni</div><div>Stato / Azione</div></div>
       <div id="setsList">
         ${cur.sets.map((s,i)=>`
           <div class="setline ${s.started&&!s.done?'active-set':''} ${s.done?'done-set':''}">
@@ -902,7 +1335,7 @@ function renderWorkout(){
       <div class="field" style="margin-top:14px">
         <label>Recupero automatico tra le serie</label>
         <select onchange="workState.exercises[workState.index].rest=+this.value;persistWorkState()">
-          ${[30,45,60,75,90,120,150,180].map(n=>`<option value="${n}" ${n===cur.rest?'selected':''}>${n} secondi</option>`).join('')}
+          ${[30,45,60,75,90,120,150,180,240,300].map(n=>`<option value="${n}" ${n===cur.rest?'selected':''}>${n} secondi</option>`).join('')}
         </select>
       </div>
       <div class="row" style="justify-content:space-between;margin-top:14px">
@@ -913,7 +1346,7 @@ function renderWorkout(){
     </div>
   </div>
   <div class="notice" style="margin-top:12px">
-    <b>Flusso automatico attivo:</b> Premi <b>▶ INIZIA SERIE 1</b> e poi <b>⏹ FINE SERIE 1</b>. Parte subito il recupero e, allo scadere del timer, la <b>2ª e 3ª serie partono da sole in automatico!</b> Puoi correggere ripetizioni o kg anche dopo aver concluso la serie.
+    <b>Flusso automatico attivo:</b> Premi <b>▶ INIZIA SERIE 1</b> e poi <b>⏹ FINE SERIE 1</b>. Parte subito il recupero e, allo scadere del timer, la <b>2ª e 3ª serie partono da sole in automatico!</b> Ogni nuovo record di carico aggiorna automaticamente anche il tuo Massimale 1RM.
   </div>`;
 }
 
@@ -960,6 +1393,21 @@ function completeSet(i){
     s.reps=String(cleanNumber(s.targetReps,10));
   }
   s.done=true;
+  // Se ha inserito un peso valido, controlla se aggiorna il Massimale 1RM
+  if(+s.kg > 0 && +s.reps > 0){
+    const newRM = calc1RM(s.kg, s.reps);
+    const oldRM = getBestRMRecord(cur.id);
+    if(newRM && (!oldRM || newRM.oneRM >= oldRM.oneRM)){
+      if(!db.maxes) db.maxes = {};
+      db.maxes[cur.id] = {
+        weight: +s.kg,
+        reps: +s.reps,
+        notes: db.maxes[cur.id]?.notes || '',
+        date: new Date().toISOString(),
+        source: 'Da allenamento'
+      };
+    }
+  }
   let nextIdx=cur.sets.findIndex((x,j)=>j>i&&!x.done);
   if(nextIdx>=0){
     cur.resting=true;
@@ -1033,7 +1481,8 @@ function finishExercise(){
     plan.exerciseConfig[cur.id]={
       sets:cur.sets.length,
       reps:String(lastSet?.reps||10),
-      kg:String(lastSet?.kg||'')
+      kg:String(lastSet?.kg||''),
+      rest:cur.rest||60
     };
   }
   cur.completed=true;
@@ -1059,15 +1508,15 @@ function moveExercise(d){
   renderWorkout();
 }
 function cancelWorkout(){if(!confirm('Vuoi uscire? La sessione in corso non verrà registrata.'))return;clearInterval(timerHandle);timerHandle=null;workState=null;persistWorkState();go('home')}
-function finishWorkout(){clearInterval(timerHandle);timerHandle=null;let duration=Math.max(1,Math.round((Date.now()-workState.started)/60000));let items=workState.exercises.map(e=>({id:e.id,name:getExercise(e.id)?.name||'Esercizio',sets:e.sets.map(s=>({...s}))}));db.history.push({id:'hist-'+Date.now(),date:new Date().toISOString(),plan:db.plans.find(p=>p.id===workState.planId)?.name||'Allenamento',minutes:duration,items});workState=null;persistWorkState();persist();modal('Allenamento completato!',`<div class="empty"><b>Ottimo lavoro! 💪</b>Hai registrato il tuo allenamento in ${duration} minuti (salvato anche in Cloud).</div><br><button onclick="closeModal();go('progress')">Visualizza progressi</button>`)}
+function finishWorkout(){clearInterval(timerHandle);timerHandle=null;let duration=Math.max(1,Math.round((Date.now()-workState.started)/60000));let items=workState.exercises.map(e=>({id:e.id,name:getExercise(e.id)?.name||'Esercizio',sets:e.sets.map(s=>({...s}))}));db.history.push({id:'hist-'+Date.now(),date:new Date().toISOString(),plan:db.plans.find(p=>p.id===workState.planId)?.name||'Allenamento',minutes:duration,items});workState=null;persistWorkState();persist();modal('Allenamento completato!',`<div class="empty"><b>Ottimo lavoro! 💪</b>Hai registrato il tuo allenamento in ${duration} minuti (salvato anche in Cloud insieme agli eventuali nuovi Massimali 1RM).</div><br><div class="row"><button onclick="closeModal();go('progress')">Visualizza progressi</button><button class="btn-soft" onclick="closeModal();go('maxes')">🎯 Vedi Massimali 1RM</button></div>`)}
 function renderProgress(){let count=db.history.length,minutes=db.history.reduce((s,h)=>s+(h.minutes||0),0),w=db.measurements.at(-1);document.getElementById('pCount').textContent=count;document.getElementById('pTime').textContent=minutes+' min';document.getElementById('pWeight').textContent=w?w.value+' '+(w.unit||'kg'):'—';let ms=db.measurements.slice(-8),max=Math.max(...ms.map(x=>x.value),1),min=Math.min(...ms.map(x=>x.value),0);document.getElementById('weightChart').innerHTML=ms.length?`<div class="chart">${ms.map(x=>`<div class="bar" title="${x.value} ${x.unit}" style="height:${Math.max(8,(x.value-min+1)/(max-min+1)*100)}%"><small>${dateFmt(x.date).slice(0,5)}</small></div>`).join('')}</div>`:'<p class="muted small">Registra il peso corporeo per visualizzare l’andamento.</p>';let hs=db.history.slice(-8),vol=hs.map(h=>h.items.reduce((s,e)=>s+e.sets.reduce((n,x)=>n+(+x.kg||0)*(+x.reps||0),0),0)),vmax=Math.max(...vol,1);document.getElementById('volumeChart').innerHTML=hs.length?`<div class="chart">${vol.map((x,i)=>`<div class="bar" title="Volume ${Math.round(x)}" style="height:${Math.max(8,x/vmax*100)}%"><small>${i+1}</small></div>`).join('')}</div><p class="small muted">Volume indicativo: kg × ripetizioni registrate.</p>`:'<p class="muted small">Completa gli allenamenti e registra carichi e ripetizioni.</p>';document.getElementById('historyList').innerHTML=db.history.slice().reverse().map(h=>`<div class="card" style="margin:8px 0"><div class="row" style="justify-content:space-between"><div><b>${esc(h.plan)}</b><div class="muted small">${dateFmt(h.date)} · ${h.minutes||0} min · ${h.items.length} esercizi</div></div><button class="btn-soft btn-small" onclick="viewHistory('${h.id}')">Dettagli</button></div></div>`).join('')||'<div class="empty">Ancora nessun allenamento registrato.</div>'}
 function viewHistory(id){let h=db.history.find(x=>x.id===id);if(!h)return;modal('Dettaglio allenamento',`<p>${esc(h.plan)} · ${dateFmt(h.date)} · ${h.minutes||0} min</p>${h.items.map(e=>`<div class="card"><b>${esc(e.name)}</b><table class="table"><tr><th>Serie</th><th>Kg</th><th>Rip.</th><th>Stato</th></tr>${e.sets.map((s,i)=>`<tr><td>${i+1}</td><td>${esc(s.kg||'—')}</td><td>${esc(s.reps||'—')}</td><td>${s.done?'✓':'—'}</td></tr>`).join('')}</table></div>`).join('')}`)}
 function addMeasurement(){modal('Registra il peso corporeo',`<div class="field"><label>Peso (${esc(db.settings.unit)})</label><input type="number" id="measureValue" step=".1" min="0" placeholder="Es. 78.5"></div><div class="field"><label>Data</label><input type="date" id="measureDate" value="${new Date().toISOString().slice(0,10)}"></div><button onclick="saveMeasurement()">Salva misurazione</button>`)}
 function saveMeasurement(){let value=+measureValue.value;if(!value)return toast('Inserisci un peso valido');db.measurements.push({value,unit:db.settings.unit,date:measureDate.value||new Date().toISOString()});db.measurements.sort((a,b)=>a.date.localeCompare(b.date));persist();closeModal();renderProgress()}
 function syncSettings(){document.getElementById('defaultRest').value=db.settings.rest;document.getElementById('weightUnit').value=db.settings.unit}
 function saveSettings(){db.settings.rest=+defaultRest.value;db.settings.unit=weightUnit.value;persist();toast('Impostazioni salvate in Cloud')}
-function openBackup(){modal('Cloud Sync & Backup',`<p class="muted small">I tuoi dati sono già sincronizzati automaticamente nel Cloud (Firebase <code>titan_gym</code>). Puoi anche scaricare o ripristinare una copia su file JSON.</p><div class="row"><button class="btn-green" onclick="syncFromCloud(true)">🔄 Sincronizza ora col Cloud</button><button onclick="exportBackup()">⇩ Scarica backup JSON</button></div><div class="field"><label>Ripristina un file JSON</label><input type="file" id="backupImport" accept=".json,application/json" onchange="restoreBackup(event)"></div><div class="notice">Qualsiasi scheda o allenamento salvato viene replicato automaticamente sul Cloud.</div>`)}
-function exportBackup(){let blob=new Blob([JSON.stringify({app:'TITAN GYM',version:9.5,exported:new Date().toISOString(),data:db},null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='titan-gym-backup-'+new Date().toISOString().slice(0,10)+'.json';a.click();URL.revokeObjectURL(a.href);toast('Backup preparato')}
+function openBackup(){modal('Cloud Sync & Backup',`<p class="muted small">I tuoi dati sono già sincronizzati automaticamente nel Cloud (Firebase <code>titan_gym</code>). Puoi anche scaricare o ripristinare una copia su file JSON.</p><div class="row"><button class="btn-green" onclick="syncFromCloud(true)">🔄 Sincronizza ora col Cloud</button><button onclick="exportBackup()">⇩ Scarica backup JSON</button></div><div class="field"><label>Ripristina un file JSON</label><input type="file" id="backupImport" accept=".json,application/json" onchange="restoreBackup(event)"></div><div class="notice">Qualsiasi scheda, massimale 1RM o allenamento salvato viene replicato automaticamente sul Cloud.</div>`)}
+function exportBackup(){let blob=new Blob([JSON.stringify({app:'TITAN GYM',version:9.7,exported:new Date().toISOString(),data:db},null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='titan-gym-backup-'+new Date().toISOString().slice(0,10)+'.json';a.click();URL.revokeObjectURL(a.href);toast('Backup preparato')}
 function restoreBackup(e){let f=e.target.files?.[0];if(!f)return;let r=new FileReader();r.onload=()=>{try{let o=JSON.parse(r.result),next=o.data||o;if(!Array.isArray(next.plans)||!Array.isArray(next.history))throw Error();if(!confirm('Il ripristino sostituirà i dati attuali. Continuare?'))return;db=Object.assign(blankDB(),next);persist();closeModal();renderAll();toast('Backup ripristinato e salvato in Cloud')}catch(err){toast('File di backup non valido')}};r.readAsText(f)}
 function installApp(){if(deferredInstall){deferredInstall.prompt();deferredInstall.userChoice.finally(()=>{deferredInstall=null;installBtn.disabled=true})}else toast('Apri il menu del browser e scegli “Aggiungi a schermata Home”')}
 window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredInstall=e;installBtn.disabled=false;installHelp.textContent='Il dispositivo supporta l’installazione.'});
